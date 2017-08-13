@@ -1,6 +1,10 @@
 # Axios Module
 [![npm](https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
 [![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/axios/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
+[![CircleCI](https://img.shields.io/circleci/project/github/nuxt-community/axios-module.svg?style=flat-square)](https://circleci.com/gh/nuxt-community/axios-module)
+[![Codecov](https://img.shields.io/codecov/c/github/nuxt-community/axios-module.svg?style=flat-square)](https://codecov.io/gh/nuxt-community/axios-module)
+[![Greenkeeper badge](https://img.shields.io/badge/greenkeepr-enabled-green.svg?style=flat-square)](https://greenkeeper.io/)
+[![dependencies Status](https://david-dm.org/@nuxtjs/axios/status.svg?style=flat-square)](https://david-dm.org/@nuxtjs/axios)
 
 Secure and easy [axios](https://github.com/mzabriskie/axios) integration with Nuxt.js
 
