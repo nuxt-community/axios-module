@@ -1,0 +1,33 @@
+{
+  "name": "@nuxtjs/axios",
+  "version": "3.1.0",
+  "license": "MIT",
+  "main": "src/index.js",
+  "repository": "https://github.com/nuxt-community/axios-module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "chalk": "^2.1.0",
+    "nuxt": "^1.0.0-rc4",
+    "whatwg-url": "^6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4"
+  }
+}
