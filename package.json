@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest",
     "release": "standard-version",
-    "prepublish": "test"
+    "prepublish": "npm run test"
   },
   "jest": {
     "testEnvironment": "node",
