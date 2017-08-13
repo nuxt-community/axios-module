@@ -50,9 +50,7 @@
 ```js
 async asyncData({ app }) {
   const ip = await app.axios.$get('http://icanhazip.com')
-  return {
-    ip: data
-  }
+  return { ip }
 }
 ```
 
@@ -268,6 +266,6 @@ Details
 
 ## License
 
-MIT License
+[MIT License](./LICENSE)
 
 Copyright (c) 2017 Nuxt Community
