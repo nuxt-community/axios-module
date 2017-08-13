@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "eslint lib src test",
     "test": "npm run lint && jest",
-    "release": "standard-version",
+    "release": "standard-version && git push --follow-tags && npm publish",
     "prepublish": "npm run test"
   },
   "eslintIgnore": [
