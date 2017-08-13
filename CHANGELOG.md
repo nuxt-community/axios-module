@@ -3,13 +3,7 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="3.1.3"></a>
-## [3.1.3](https://github.com/nuxt-community/axios-module/compare/v3.1.2...v3.1.3) (2017-08-13)
-
-
-
-<a name="3.1.2"></a>
-## 3.1.2 (2017-08-13)
-
+## [3.1.3](https://github.com/nuxt-community/axios-module/compare/v3.1.1...v3.1.3) (2017-08-13)
 
 ### Bug Fixes
 
