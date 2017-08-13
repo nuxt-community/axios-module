@@ -4,8 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="3.1.1"></a>
 ## 3.1.1 (2017-08-13)
+ (repository moved from nuxt-community/modules)
 
+### Features
 
+* **axios:** fetch style requests
 
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/nuxt/modules/compare/@nuxtjs/axios@3.0.0...@nuxtjs/axios@3.0.1) (2017-07-25)
