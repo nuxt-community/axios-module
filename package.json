@@ -12,7 +12,7 @@
     "lint": "eslint lib src test",
     "test": "npm run lint && jest",
     "release": "standard-version && git push --follow-tags && npm publish",
-    "prepublish": "npm run test"
+    "prepare": "npm run test"
   },
   "eslintIgnore": [
     "*.template.*"
