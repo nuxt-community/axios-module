@@ -1,18 +1,18 @@
-# Axios
+# Axios Module
 [![npm](https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
 [![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/axios/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
 
-Secure and Easy [axios](https://github.com/mzabriskie/axios) integration with Nuxt.js
+Secure and easy [axios](https://github.com/mzabriskie/axios) integration with Nuxt.js
 
 ## Features
 
-- Automatically set base URL for client & server side
-- Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens.
+- [Automatically set base URL for client & server side](#baseurl)
+- [Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens](#setheadername-value-scopescommon).
 - Throws *nuxt-friendly* errors and optionally redirect on specific error codes.
 - Automatically enables `withCredentials` when requesting to base URL.
-- Proxy request headers in SSR.
-- Fetch style requests
-- [And more](https://github.com/mzabriskie/axios#features)
+- [Proxy request headers in SSR](#proxyheaders) (Useful for auth).
+- [Fetch Style requests](#fetch-style-requests)
+- [...and more](https://github.com/mzabriskie/axios#features)
 
 ## Setup
 - Add `@nuxtjs/axios` dependency using yarn or npm to your project
@@ -41,7 +41,7 @@ Secure and Easy [axios](https://github.com/mzabriskie/axios) integration with Nu
 
 ```js
 async asyncData({ app }) {
-  const {data} = await app.axios.get('http://icanhazip.com')
+  const ip = await app.axios.$get('http://icanhazip.com')
   return {
     ip: data
   }
