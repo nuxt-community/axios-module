@@ -1,22 +1,26 @@
 # Axios Module
-[![npm](https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
 [![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/axios/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
+[![npm](https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
 [![CircleCI](https://img.shields.io/circleci/project/github/nuxt-community/axios-module.svg?style=flat-square)](https://circleci.com/gh/nuxt-community/axios-module)
 [![Codecov](https://img.shields.io/codecov/c/github/nuxt-community/axios-module.svg?style=flat-square)](https://codecov.io/gh/nuxt-community/axios-module)
-[![Greenkeeper badge](https://img.shields.io/badge/greenkeepr-enabled-green.svg?style=flat-square)](https://greenkeeper.io/)
-[![dependencies Status](https://david-dm.org/@nuxtjs/axios/status.svg?style=flat-square)](https://david-dm.org/@nuxtjs/axios)
+[![Greenkeeper](https://img.shields.io/badge/greenkeepr-enabled-green.svg?style=flat-square)](https://greenkeeper.io/)
+[![Dependencies](https://david-dm.org/nuxt-community/axios-module/status.svg?style=flat-square)](https://david-dm.org/nuxt-community/axios-module)
+   
+[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
 
-Secure and easy [axios](https://github.com/mzabriskie/axios) integration with Nuxt.js
+> 🔒 Secure and easy [axios](https://github.com/mzabriskie/axios) integration with Nuxt.js.
+   
+[📖 **Release Notes**](./CHANGELOG.md)
 
 ## Features
 
 - [Automatically set base URL for client & server side](#baseurl)
-- [Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens](#setheadername-value-scopescommon).
-- Throws *nuxt-friendly* errors and optionally redirect on specific error codes.
-- Automatically enables `withCredentials` when requesting to base URL.
-- [Proxy request headers in SSR](#proxyheaders) (Useful for auth).
+- [Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens](#setheadername-value-scopescommon)
+- [Throws *nuxt-friendly* errors and optionally redirect on specific error codes](#redirecterror)
+- [Automatically enables `withCredentials` when requesting to base URL](#credentials)
+- [Proxy request headers in SSR](#proxyheaders) (Useful for auth)
 - [Fetch Style requests](#fetch-style-requests)
-- [...and more](https://github.com/mzabriskie/axios#features)
+- [...and more!](https://github.com/mzabriskie/axios#features)
 
 ## Setup
 - Add `@nuxtjs/axios` dependency using yarn or npm to your project
@@ -261,3 +265,9 @@ Details
   - This line creates a server middleware to pass requests from `/api` to `http://www.mocky.io/v2`
   - We used `pathRewrite` to remove `/api` from starting of requests and change it to `/v2`
   - For more information and advanced usage please refer to [proxy](../proxy) docs.
+
+## License
+
+MIT License
+
+Copyright (c) 2017 Nuxt Community
