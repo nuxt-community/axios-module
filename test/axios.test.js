@@ -46,4 +46,22 @@ describe('axios module', () => {
       expect(html).toContain('foo/bar')
     })
   })
+
+  test('ssr', async () => {
+    const makeReq = (login) => axios.get(url('/ssr' + (login ? '?login' : '')))
+      .then(r => r.data)
+      .then(h => /session-[0-9]+/.exec(h))
+      .then(m => (m && m[0]) ? m[0] : null)
+
+    let a = await makeReq()
+    let b = await makeReq(true)
+    let c = await makeReq()
+    let d = await makeReq(true)
+
+    expect(a).toBeNull()
+    expect(b).not.toBeNull()
+    expect(c).toBeNull() // Important!
+    expect(d).not.toBeNull()
+    expect(b).not.toBe(d)
+  })
 })
