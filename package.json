@@ -9,7 +9,6 @@
     "access": "public"
   },
   "scripts": {
-    "coverage": "codecov",
     "lint": "eslint lib src test",
     "test": "npm run lint && jest",
     "release": "standard-version",
@@ -35,6 +34,7 @@
     "whatwg-url": "^6.1.0"
   },
   "devDependencies": {
+    "codecov": "^2.3.0",
     "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",

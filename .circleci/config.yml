@@ -33,4 +33,4 @@ jobs:
       # Test
       - run:
           name: Tests
-          command: yarn test && yarn coverage
+          command: yarn test && yarn codecov
