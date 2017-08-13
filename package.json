@@ -3,16 +3,26 @@
   "version": "3.1.1",
   "description": "Secure and easy axios integration with Nuxt.js",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/nuxt-community/axios-module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "test": "jest",
+    "coverage": "codecov",
+    "lint": "eslint lib src test",
+    "test": "npm run lint && jest",
     "release": "standard-version",
     "prepublish": "npm run test"
   },
+  "eslintIgnore": [
+    "*.template.*"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "dist"
+  ],
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "./coverage/",
@@ -28,9 +38,11 @@
     "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^2.1.0",
     "jest": "^20.0.4",
     "standard-version": "^4.2.0"
   }
