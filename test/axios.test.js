@@ -1,19 +1,50 @@
+process.env.PORT = '5060'
 const { Nuxt, Builder } = require('nuxt')
-const { resolve } = require('path')
+const axios = require('axios')
+const config = require('./fixture/nuxt.config')
 
 process.env.NODE_ENV = 'production'
 
+const url = path => `http://localhost:${process.env.PORT}${path}`
+
 describe('axios module', () => {
   let nuxt
+  let addTemplate
 
   beforeAll(async () => {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000
-    nuxt = new Nuxt({ srcDir: resolve(__dirname, 'fixture'), dev: false })
-    let builder = new Builder(nuxt)
-    await builder.build()
+
+    config.modules.unshift(function () {
+      addTemplate = this.addTemplate = jest.fn(this.addTemplate)
+    })
+
+    nuxt = new Nuxt(config)
+    await new Builder(nuxt).build()
+    await nuxt.listen(process.env.PORT)
   })
 
-  test('test', () => {
-    expect(nuxt.options.dev).toBe(false)
+  afterAll(async () => {
+    await nuxt.close()
+  })
+
+  test('baseURL', () => {
+    let call = addTemplate.mock.calls.find(args => args[0].src.includes('plugin.template.js'))
+    expect(call).toBeDefined()
+    let options = call[0].options
+    expect(options.baseURL.toString()).toBe('http://localhost:5060/test_api')
+    expect(options.browserBaseURL.toString()).toBe('/test_api')
+  })
+
+  test('asyncData', async () => {
+    let html = (await axios.get(url('/asyncData'))).data
+    expect(html).toContain('foo/bar')
+  })
+
+  test('mounted', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/mounted'))
+    window.onNuxtReady(() => {
+      const html = window.document.body.innerHTML
+      expect(html).toContain('foo/bar')
+    })
   })
 })
