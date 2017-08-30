@@ -8,7 +8,7 @@
    
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
 
-> 🔒 Secure and easy [axios](https://github.com/mzabriskie/axios) integration with Nuxt.js.
+> Secure and Easy [Axios](https://github.com/mzabriskie/axios) integration with Nuxt.js.
    
 [📖 **Release Notes**](./CHANGELOG.md)
 
@@ -49,7 +49,7 @@
 
 ```js
 async asyncData({ app }) {
-  const ip = await app.axios.$get('http://icanhazip.com')
+  const ip = await app.$axios.$get('http://icanhazip.com')
   return { ip }
 }
 ```
@@ -57,29 +57,20 @@ async asyncData({ app }) {
 ### Store `nuxtServerInit`
 ```js
 async nuxtServerInit ({ commit }, { app }) {
-  const ip = await app.axios.$get('http://icanhazip.com')
+  const ip = await app.$axios.$get('http://icanhazip.com')
   commit('SET_IP', ip)
 }
 ```
 
 ### Store actions
-If you need axios instance in store actions, you may have to pass it when dispatching.
+(Needs Nuxt >= 1.0.0-RC8)
 
 ```js
-// In components
-export default {
-  methods: {
-    updateIP() {
-      this.$store.dispatch('getIP', { axios: this.$axios })
-    }
-  }
-}
-
 // In store
 {
   actions: {
-    async getIP ({ commit }, { axios }) {
-      const ip = await axios.$get('http://icanhazip.com')
+    async getIP ({ commit }) {
+      const ip = await this.$axios.$get('http://icanhazip.com')
       commit('SET_IP', ip)
     }
   }
@@ -159,10 +150,10 @@ requestInterceptor: (config, { store }) => {
 Axios plugin also supports fetch style requests with `$` prefixed methods:
 ```js
 // Normal usage with axios
-let data = (await axios.get('...')).data
+let data = (await $axios.get('...')).data
 
 // Fetch Style
-let data = await axios.$get('...')
+let data = await $axios.$get('...')
 ```
 
 ### `setHeader(name, value, scopes='common')`
@@ -245,9 +236,9 @@ Start Nuxt
 
 Now you can make requests to backend: (Works fine in both SSR and Browser)
 ```js
-async asyncData({app}) {
+async asyncData({ app }) {
   // Magically makes request to http://www.mocky.io/v2/59388bb4120000dc00a672e2
-  const nuxt = await app.axios.$get('59388bb4120000dc00a672e2')
+  const nuxt = await app.$axios.$get('59388bb4120000dc00a672e2')
 
   return {
     nuxt // -> { nuxt: 'Works!' }

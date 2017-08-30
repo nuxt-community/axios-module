@@ -10,7 +10,7 @@ export default {
   async fetch ({ app, route }) {
     let doLogin = route.query.login !== undefined
     if (doLogin) {
-      app.axios.setHeader('sessionId', reqCtr++)
+      app.$axios.setHeader('sessionId', reqCtr++)
     }
   },
   computed: {
