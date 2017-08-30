@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/nuxt-community/axios-module/compare/v3.1.4...v4.0.0) (2017-08-30)
+
+
+### Features
+
+* better baseURL message ([61432a1](https://github.com/nuxt-community/axios-module/commit/61432a1))
+* responseInterceptor and errorHandler ([b16d6bf](https://github.com/nuxt-community/axios-module/commit/b16d6bf))
+* upgrade for nuxt rc8 ([a341185](https://github.com/nuxt-community/axios-module/commit/a341185))
+
+
+### BREAKING CHANGES
+
+* app.axios is not available anymore (without $) should always use app.$axios
+
+
+
 <a name="3.1.4"></a>
 ## [3.1.4](https://github.com/nuxt-community/axios-module/compare/v3.1.3...v3.1.4) (2017-08-13)
 
