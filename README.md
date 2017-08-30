@@ -144,6 +144,25 @@ requestInterceptor: (config, { store }) => {
 }
 ```
 
+### `responseInterceptor`
+- Default: `null`
+
+Function for manipulating axios responses. 
+
+### `errorHandler`
+- Default: (Return promise rejection with error)
+
+Function for custom global error handler. 
+This example uses nuxt default error page.
+
+```js
+axios: {
+  errorHandler (error) {
+    this.error('Request Error: ' + error)
+  }
+},
+```
+
 ## Helpers
 
 ### Fetch Style requests
