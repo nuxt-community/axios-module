@@ -14,6 +14,9 @@ module.exports = {
   ],
   axios: {
     // Defaults
-    baseURL: `http://localhost:${process.env.PORT}/test_api`
+    baseURL: `http://localhost:${process.env.PORT}/test_api`,
+    init (axios) {
+
+    }
   }
 }

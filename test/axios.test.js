@@ -47,6 +47,14 @@ describe('axios module', () => {
     })
   })
 
+  test('init', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/mounted'))
+    window.onNuxtReady(() => {
+      const $axios = window.$nuxt.$axios
+      expect($axios.defaults.xsrfHeaderName).toBe('X-CSRF-TOKEN')
+    })
+  })
+
   test('ssr', async () => {
     const makeReq = (login) => axios.get(url('/ssr' + (login ? '?login' : '')))
       .then(r => r.data)
