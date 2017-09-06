@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/nuxt-community/axios-module/compare/v4.0.1...v4.1.0) (2017-09-06)
+
+
+### Bug Fixes
+
+* inject $axios in current ctx ([356b31f](https://github.com/nuxt-community/axios-module/commit/356b31f))
+
+
+### Features
+
+* add options.init ([8e0c0e8](https://github.com/nuxt-community/axios-module/commit/8e0c0e8))
+
+
+### Performance Improvements
+
+* move init outside of plugin ([bcd4710](https://github.com/nuxt-community/axios-module/commit/bcd4710))
+
+
+
 <a name="4.0.1"></a>
 ## [4.0.1](https://github.com/nuxt-community/axios-module/compare/v4.0.0...v4.0.1) (2017-09-04)
 
