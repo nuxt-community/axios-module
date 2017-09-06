@@ -25,7 +25,12 @@
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib",
+      "test",
+      "!test/fixture"
+    ]
   },
   "dependencies": {
     "axios": "^0.16.2",
