@@ -122,11 +122,9 @@ Also helps making consistent requests in both SSR and Client Side code.
 This option is a map from specific error codes to page which they should be redirect.
 For example if you want redirecting all `401` errors to `/login` use:
 ```js
-{
-  axios: {
-    redirectError: {
-      401: '/login'
-    }
+axios: {
+  redirectError: {
+    401: '/login'
   }
 }
 ```
@@ -154,7 +152,15 @@ Function for manipulating axios responses.
 ### `init`
 - Default: `null`
 
-Function `init(axios, ctx)` to do additional things with axios.
+Function `init(axios, ctx)` to do additional things with axios. Example:
+
+```js
+axios: {
+  init(axios, ctx) {
+    axios.defaults.xsrfHeaderName = 'X-CSRF-TOKEN'
+  }
+}
+```
 
 ### `errorHandler`
 - Default: (Return promise rejection with error)
