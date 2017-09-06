@@ -114,6 +114,8 @@ In SSR context, sets client request header as axios default request headers.
 This is useful for making requests which need cookie based auth on server side.
 Also helps making consistent requests in both SSR and Client Side code.
 
+> **NOTE:** If directing requests at a url protected by CloudFlare's CDN you should set this to false to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
+
 ### `redirectError`
 - Default: `{}`
 
