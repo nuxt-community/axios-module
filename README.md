@@ -151,6 +151,11 @@ requestInterceptor: (config, { store }) => {
 
 Function for manipulating axios responses. 
 
+### `init`
+- Default: `null`
+
+Function `init(axios, ctx)` to do additional things with axios.
+
 ### `errorHandler`
 - Default: (Return promise rejection with error)
 
