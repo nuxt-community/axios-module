@@ -1,16 +1,64 @@
-# Axios Module
-[![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/axios/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
-[![npm](https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/axios)
-[![CircleCI](https://img.shields.io/circleci/project/github/nuxt-community/axios-module.svg?style=flat-square)](https://circleci.com/gh/nuxt-community/axios-module)
-[![Codecov](https://img.shields.io/codecov/c/github/nuxt-community/axios-module.svg?style=flat-square)](https://codecov.io/gh/nuxt-community/axios-module)
-[![Greenkeeper](https://img.shields.io/badge/greenkeepr-enabled-green.svg?style=flat-square)](https://greenkeeper.io/)
-[![Dependencies](https://david-dm.org/nuxt-community/axios-module/status.svg?style=flat-square)](https://david-dm.org/nuxt-community/axios-module)
-   
-[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/5158436/30198853-4920594e-9485-11e7-81d8-38c4b51667eb.png">
+</p>
 
-> Secure and Easy [Axios](https://github.com/mzabriskie/axios) integration with Nuxt.js.
-   
-[📖 **Release Notes**](./CHANGELOG.md)
+<p align="center">
+<h1>Axios Module</h1>
+</p>
+
+<p align="center">
+<a href="https://npmjs.com/package/@nuxtjs/axios">
+    <img alt="" src="https://img.shields.io/npm/v/@nuxtjs/axios/latest.svg?style=flat-square">
+</a>
+<a href="https://npmjs.com/package/@nuxtjs/axios">
+    <img alt="" src="https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square">
+</a>
+<a href="https://circleci.com/gh/nuxt-community/axios-module">
+    <img alt="" src="https://img.shields.io/circleci/project/github/nuxt-community/axios-module.svg?style=flat-square">
+</a>
+<a href="https://codecov.io/gh/nuxt-community/axios-module">
+    <img alt="" src="https://img.shields.io/codecov/c/github/nuxt-community/axios-module.svg?style=flat-square">
+</a>
+<br>
+<a href="https://greenkeeper.io">
+    <img alt="" src="https://img.shields.io/badge/greenkeepr-enabled-green.svg?style=flat-square">
+</a>
+<a href="https://david-dm.org/nuxt-community/axios-module">
+    <img alt="" src="https://david-dm.org/nuxt-community/axios-module/status.svg?style=flat-square">
+</a>
+<a href="https://standardjs.com">
+    <img alt="" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square">
+</a>
+</p>
+
+<p align="center">
+Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js.
+<br> <a href="./CHANGELOG.md">📖 Release Notes</a>
+</p>
+
+# Table of Contents
+
+- [Features](#features)
+- [Setup](#setup)
+- [Usage](#usage)
+  - [Component](#component-asyncdata)
+  - [Store](#store-nuxtserverinit)
+  - [Store Actions](#store-actions)
+- [Options](#options)
+  - [browserBaseURL](#browser-base-url)
+  - [credentials](#credentials)
+  - [debug](#debug)
+  - [proxyHeaders](#proxy-headers)
+  - [redirectError](#redirect-error)
+  - [requestInterceptor](#request-interceptor)
+  - [responseInterceptor](#response-interceptor)
+  - [init](#init)
+  - [errorHandler](#error-handler)
+- [Helpers](#helpers)
+  - [Fetch Style Requests](#fetch-style-requests)
+  - [Set Header](#setheadername-value-scopescommon)
+  - [Set Token](#settokentoken-type-scopescommon)
+  - [Dynamic API Backend](#dynamic-api-backend)
 
 ## Features
 
@@ -21,32 +69,13 @@
 - Proxy request headers in SSR (Useful for auth)
 - Fetch Style requests
 
-# TOC
-
-- [Setup](#setup)
-- [Usage](#usage)
-  - [Component](#component-asyncdata)
-  - [Store](#store-nuxtserverinit)
-  - [Store Actions](#store-actions)
-- [Options](#options)
-  - [browserBaseURL](#browserBaseURL)
-  - [credentials](#credentials)
-  - [debug](#debug)
-  - [proxyHeaders](#proxyHeaders)
-  - [redirectError](#redirectError)
-  - [requestInterceptor](#requestInterceptor)
-  - [responseInterceptor](#responseInterceptor)
-  - [init](#init)
-  - [errorHandler](#errorHandler)
-- [Helpers](#helpers)
-  - [Fetch Style Requests](#fetch-style-requests)
-  - [Set Header](#setheadername-value-scopescommon)
-  - [Set Token](#settokentoken-type-scopescommon)
-  - [Dynamic API Backend](#dynamic-api-backend)
-
 ## Setup
-- Add `@nuxtjs/axios` dependency using yarn or npm to your project
-- Add `@nuxtjs/axios` to `modules` section of `nuxt.config.js`
+
+```bash
+>_ yarn add axios # or npm i axios
+```
+
+**nuxt.config.js**
 
 ```js
 {
