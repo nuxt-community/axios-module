@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/axios",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "Secure and easy axios integration with Nuxt.js",
   "license": "MIT",
   "main": "lib/index.js",
