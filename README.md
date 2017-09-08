@@ -14,13 +14,35 @@
 
 ## Features
 
-- [Automatically set base URL for client & server side](#baseurl)
-- [Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens](#setheadername-value-scopescommon)
-- [Throws *nuxt-friendly* errors and optionally redirect on specific error codes](#redirecterror)
-- [Automatically enables `withCredentials` when requesting to base URL](#credentials)
-- [Proxy request headers in SSR](#proxyheaders) (Useful for auth)
-- [Fetch Style requests](#fetch-style-requests)
-- [...and more!](https://github.com/mzabriskie/axios#features)
+- Automatically set base URL for client & server side
+- Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
+- Throws *nuxt-friendly* errors and optionally redirect on specific error codes
+- Automatically enables `withCredentials` when requesting to base URL](#credentials)
+- Proxy request headers in SSR (Useful for auth)
+- Fetch Style requests
+
+# TOC
+
+- [Setup](#setup)
+- [Usage](#usage)
+  - [Component](#component-asyncdata)
+  - [Store](#store-nuxtserverinit)
+  - [Store Actions](#store-actions)
+- [Options](#options)
+  - [browserBaseURL](#browserBaseURL)
+  - [credentials](#credentials)
+  - [debug](#debug)
+  - [proxyHeaders](#proxyHeaders)
+  - [redirectError](#redirectError)
+  - [requestInterceptor](#requestInterceptor)
+  - [responseInterceptor](#responseInterceptor)
+  - [init](#init)
+  - [errorHandler](#errorHandler)
+- [Helpers](#helpers)
+  - [Fetch Style Requests](#fetch-style-requests)
+  - [Set Header](#setheadername-value-scopescommon)
+  - [Set Token](#settokentoken-type-scopescommon)
+  - [Dynamic API Backend](#dynamic-api-backend)
 
 ## Setup
 - Add `@nuxtjs/axios` dependency using yarn or npm to your project
