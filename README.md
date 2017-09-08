@@ -1,9 +1,5 @@
 <p align="center">
-<img src="https://user-images.githubusercontent.com/5158436/30198853-4920594e-9485-11e7-81d8-38c4b51667eb.png">
-</p>
-
-<p align="center">
-<h1>Axios Module</h1>
+<img src="https://user-images.githubusercontent.com/5158436/30198986-d4c5d7f8-9485-11e7-9c3e-8b5f5f061f5f.png">
 </p>
 
 <p align="center">
@@ -31,10 +27,13 @@
 </a>
 </p>
 
+<h1 align="center">Axios Module</h1>
+
 <p align="center">
 Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js.
-<br> <a href="./CHANGELOG.md">📖 Release Notes</a>
 </p>
+
+[📖 Release Notes](./CHANGELOG.md)
 
 # Table of Contents
 
@@ -45,15 +44,15 @@ Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integrat
   - [Store](#store-nuxtserverinit)
   - [Store Actions](#store-actions)
 - [Options](#options)
-  - [browserBaseURL](#browser-base-url)
+  - [browserBaseURL](#browserbaseurl)
   - [credentials](#credentials)
   - [debug](#debug)
-  - [proxyHeaders](#proxy-headers)
-  - [redirectError](#redirect-error)
-  - [requestInterceptor](#request-interceptor)
-  - [responseInterceptor](#response-interceptor)
+  - [proxyHeaders](#proxyheaders)
+  - [redirectError](#redirecterror)
+  - [requestInterceptor](#requestinterceptor)
+  - [responseInterceptor](#responseinterceptor)
   - [init](#init)
-  - [errorHandler](#error-handler)
+  - [errorHandler](#errorhandler)
 - [Helpers](#helpers)
   - [Fetch Style Requests](#fetch-style-requests)
   - [Set Header](#setheadername-value-scopescommon)
@@ -71,8 +70,14 @@ Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integrat
 
 ## Setup
 
+Install with npm:
 ```bash
->_ yarn add axios # or npm i axios
+>_ npm install @nuxtjs/axios
+``` 
+
+Install with yarn:
+```bash
+>_ yarn add @nuxtjs/axios
 ```
 
 **nuxt.config.js**
@@ -85,8 +90,7 @@ Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integrat
 
     // With options
     ['@nuxtjs/axios', { credentials: false }],
- ],
-
+  ],
   // You can optionally use global options instead of inline form
   axios: {
     credentials: false
