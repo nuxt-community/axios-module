@@ -24,11 +24,9 @@
 </a>
 </p>
 
-<h1 align="center">Axios Module</h1>
+<h1 align="center">Axios</h1>
 
-<p align="center">
-Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js.
-</p>
+<p align="center"> Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js. </p>
 
 [📖 Release Notes](./CHANGELOG.md)
 
