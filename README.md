@@ -197,6 +197,13 @@ requestInterceptor: (config, { store }) => {
 ### `responseInterceptor`
 - Default: `null`
 
+```js
+responseInterceptor: (response, ctx) => {
+  return response
+}
+```
+
+
 Function for manipulating axios responses. 
 
 ### `init`
