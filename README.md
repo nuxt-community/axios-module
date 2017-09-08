@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-<a href="https://npmjs.com/package/@nuxtjs/axios">
-    <img alt="" src="https://img.shields.io/npm/v/@nuxtjs/axios/latest.svg?style=flat-square">
+<a href="https://david-dm.org/nuxt-community/axios-module">
+    <img alt="" src="https://david-dm.org/nuxt-community/axios-module/status.svg?style=flat-square">
 </a>
-<a href="https://npmjs.com/package/@nuxtjs/axios">
-    <img alt="" src="https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square">
+<a href="https://standardjs.com">
+    <img alt="" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square">
 </a>
 <a href="https://circleci.com/gh/nuxt-community/axios-module">
     <img alt="" src="https://img.shields.io/circleci/project/github/nuxt-community/axios-module.svg?style=flat-square">
@@ -16,14 +16,11 @@
     <img alt="" src="https://img.shields.io/codecov/c/github/nuxt-community/axios-module.svg?style=flat-square">
 </a>
 <br>
-<a href="https://greenkeeper.io">
-    <img alt="" src="https://img.shields.io/badge/greenkeepr-enabled-green.svg?style=flat-square">
+<a href="https://npmjs.com/package/@nuxtjs/axios">
+    <img alt="" src="https://img.shields.io/npm/v/@nuxtjs/axios/latest.svg?style=flat-square">
 </a>
-<a href="https://david-dm.org/nuxt-community/axios-module">
-    <img alt="" src="https://david-dm.org/nuxt-community/axios-module/status.svg?style=flat-square">
-</a>
-<a href="https://standardjs.com">
-    <img alt="" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square">
+<a href="https://npmjs.com/package/@nuxtjs/axios">
+    <img alt="" src="https://img.shields.io/npm/dt/@nuxtjs/axios.svg?style=flat-square">
 </a>
 </p>
 
