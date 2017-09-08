@@ -80,15 +80,11 @@ Install with yarn:
 ```js
 {
   modules: [
-    // Simple usage
     '@nuxtjs/axios',
-
-    // With options
-    ['@nuxtjs/axios', { credentials: false }],
   ],
-  // You can optionally use global options instead of inline form
+
   axios: {
-    credentials: false
+    // proxyHeaders: false
   }
 }
 ```
