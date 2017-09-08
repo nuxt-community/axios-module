@@ -170,8 +170,8 @@ This example uses nuxt default error page.
 
 ```js
 axios: {
-  errorHandler (error) {
-    this.error('Request Error: ' + error)
+  errorHandler (error, { error }) {
+    error('Request Error: ' + error)
   }
 },
 ```
