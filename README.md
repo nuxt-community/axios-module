@@ -223,8 +223,8 @@ This example uses nuxt default error page.
 
 ```js
 axios: {
-  errorHandler (error, { error }) {
-    error('Request Error: ' + error)
+  errorHandler (errorReason, { error }) {
+    error('Request Error: ' + errorReason)
   }
 },
 ```
