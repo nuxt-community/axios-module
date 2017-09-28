@@ -35,22 +35,22 @@
   "dependencies": {
     "axios": "^0.16.2",
     "chalk": "^2.1.0",
-    "debug": "^3.0.1",
-    "whatwg-url": "^6.1.0"
+    "debug": "^3.1.0",
+    "whatwg-url": "^6.3.0"
   },
   "devDependencies": {
-    "nuxt": "^1.0.0-rc8",
+    "nuxt": "^1.0.0-rc11",
     "codecov": "^2.3.0",
-    "eslint": "^4.5.0",
+    "eslint": "^4.7.2",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jest": "^20.0.3",
-    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-jest": "^21.2.0",
+    "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^2.1.0",
-    "jest": "^20.0.4",
-    "jsdom": "^11.1.0",
+    "jest": "^21.2.1",
+    "jsdom": "^11.2.0",
     "standard-version": "^4.2.0"
   }
 }
