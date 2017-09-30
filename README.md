@@ -43,6 +43,7 @@
   - [credentials](#credentials)
   - [debug](#debug)
   - [proxyHeaders](#proxyheaders)
+  - [proxyHeadersIgnore](#proxyHeadersIgnore)
   - [redirectError](#redirecterror)
   - [requestInterceptor](#requestinterceptor)
   - [responseInterceptor](#responseinterceptor)
@@ -161,6 +162,11 @@ This is useful for making requests which need cookie based auth on server side.
 Also helps making consistent requests in both SSR and Client Side code.
 
 > **NOTE:** If directing requests at a url protected by CloudFlare's CDN you should set this to false to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
+
+### `proxyHeadersIgnore`
+- Default `['host', 'accept']`
+
+Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
 
 ### `redirectError`
 - Default: `{}`
