@@ -43,7 +43,7 @@
   - [credentials](#credentials)
   - [debug](#debug)
   - [proxyHeaders](#proxyheaders)
-  - [proxyHeadersIgnore](#proxyHeadersIgnore)
+  - [proxyHeadersIgnore](#proxyheadersignore)
   - [redirectError](#redirecterror)
   - [requestInterceptor](#requestinterceptor)
   - [responseInterceptor](#responseinterceptor)
