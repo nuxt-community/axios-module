@@ -60,7 +60,7 @@
 - Automatically set base URL for client & server side
 - Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
 - Throws *nuxt-friendly* errors and optionally redirect on specific error codes
-- Automatically enables `withCredentials` when requesting to base URL](#credentials)
+- [Automatically enables `withCredentials` when requesting to base URL](#credentials)
 - Proxy request headers in SSR (Useful for auth)
 - Fetch Style requests
 
