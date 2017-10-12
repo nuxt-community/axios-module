@@ -48,6 +48,7 @@
   - [requestInterceptor](#requestinterceptor)
   - [responseInterceptor](#responseinterceptor)
   - [init](#init)
+  - [disableDefaultErrorHandler](#disabledefaulterrorhandler)
   - [errorHandler](#errorhandler)
 - [Helpers](#helpers)
   - [Fetch Style Requests](#fetch-style-requests)
@@ -69,7 +70,7 @@
 Install with npm:
 ```bash
 >_ npm install @nuxtjs/axios
-``` 
+```
 
 Install with yarn:
 ```bash
@@ -206,7 +207,7 @@ responseInterceptor: (response, ctx) => {
 ```
 
 
-Function for manipulating axios responses. 
+Function for manipulating axios responses.
 
 ### `init`
 - Default: `null`
@@ -221,11 +222,19 @@ axios: {
 }
 ```
 
+### `disableDefaultErrorHandler`
+- Default: `false`
+
+If you want to disable the default error handler for some reason, you can do it so
+by setting the option `disableDefaultErrorHandler` to true.
+
 ### `errorHandler`
 - Default: (Return promise rejection with error)
 
-Function for custom global error handler. 
+Function for custom global error handler.
 This example uses nuxt default error page.
+
+If you define a custom error handler, the default error handler provided by this package will be overridden.
 
 ```js
 axios: {
