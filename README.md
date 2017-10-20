@@ -322,7 +322,7 @@ on runtime! You may use [proxy](../proxy) module for dynamically route api reque
     '@nuxtjs/proxy'
  ],
   proxy: [
-    ['/api', { target: 'http://www.mocky.io', pathRewrite: { '^/api': '/v2' } }]
+    ['/api', { target: process.env.PROXY_API_URL || 'http://www.mocky.io', pathRewrite: { '^/api': '/v2' } }]
   ]
 }
 ```
