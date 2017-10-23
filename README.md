@@ -366,7 +366,7 @@ Details
 - `'/api': 'http://www.mocky.io/v2'`
   - This line creates a server middleware to pass requests from `/api` to `http://www.mocky.io/v2`
   - We used `pathRewrite` to remove `/api` from starting of requests and change it to `/v2`
-  - For more information and advanced usage please refer to [proxy](../proxy) docs.
+  - For more information and advanced usage please refer to [proxy](https://github.com/nuxt-community/modules/blob/master/packages/proxy) docs.
 
 ## License
 
