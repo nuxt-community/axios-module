@@ -35,7 +35,7 @@
 - [Features](#features)
 - [Setup](#setup)
 - [Usage](#usage)
-  - [Component](#component-asyncdata)
+  - [Component](#component)
   - [Store](#store-nuxtserverinit)
   - [Store Actions](#store-actions)
 - [Options](#options)
@@ -93,12 +93,25 @@ Install with yarn:
 
 ## Usage
 
-### Component `asyncData`
+### Component 
+
+**`asyncData`**
 
 ```js
 async asyncData({ app }) {
   const ip = await app.$axios.$get('http://icanhazip.com')
   return { ip }
+}
+```
+
+**`methods`/`created`/`mounted`/etc**
+
+```js
+methods: {
+  async fetchSomething() {
+    const ip = await this.$axios.$get('http://icanhazip.com')
+    this.ip = ip
+  }
 }
 ```
 
