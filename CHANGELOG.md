@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.5.0"></a>
+# [4.5.0](https://github.com/nuxt-community/axios-module/compare/v4.4.0...v4.5.0) (2017-XX-XX)
+
+
+### Features
+
+* upgrade axios dependency to 0.17.1
+
+
+
 <a name="4.4.0"></a>
 # [4.4.0](https://github.com/nuxt-community/axios-module/compare/v4.3.1...v4.4.0) (2017-09-30)
 
