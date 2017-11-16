@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="4.5.0"></a>
+# [4.5.0](https://github.com/nuxt-community/axios-module/compare/v4.4.0...v4.5.0) (2017-11-16)
+
+
+### Bug Fixes
+
+* link to the proxy page ([5449939](https://github.com/nuxt-community/axios-module/commit/5449939))
+
+
+### Features
+
+* disable sefault error handler ([#44](https://github.com/nuxt-community/axios-module/issues/44)) ([f1e95ff](https://github.com/nuxt-community/axios-module/commit/f1e95ff))
+
+
+
 <a name="4.4.0"></a>
 # [4.4.0](https://github.com/nuxt-community/axios-module/compare/v4.3.1...v4.4.0) (2017-09-30)
 
