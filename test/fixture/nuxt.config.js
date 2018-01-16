@@ -10,7 +10,8 @@ module.exports = {
   modules: ['@@'],
   serverMiddleware: ['~/api.js'],
   axios: {
-    baseURL: `http://localhost:${process.env.PORT || 3000}/test_api`,
+    prefix: `/test_api`,
+    proxyMode: true,
     init (axios) {},
     responseInterceptor: (response, { store }) => {
       /* eslint-disable no-console */

@@ -32,47 +32,50 @@
 
 # Table of Contents
 
-- [Features](#features)
-- [Setup](#setup)
-- [Usage](#usage)
-  - [Component](#component)
-  - [Store](#store-nuxtserverinit)
-  - [Store Actions](#store-actions)
-- [Options](#options)
-  - [browserBaseURL](#browserbaseurl)
-  - [credentials](#credentials)
-  - [debug](#debug)
-  - [proxyHeaders](#proxyheaders)
-  - [proxyHeadersIgnore](#proxyheadersignore)
-  - [redirectError](#redirecterror)
-  - [requestInterceptor](#requestinterceptor)
-  - [responseInterceptor](#responseinterceptor)
-  - [init](#init)
-  - [disableDefaultErrorHandler](#disabledefaulterrorhandler)
-  - [errorHandler](#errorhandler)
-- [Helpers](#helpers)
-  - [Fetch Style Requests](#fetch-style-requests)
-  - [Set Header](#setheadername-value-scopescommon)
-  - [Set Token](#settokentoken-type-scopescommon)
-  - [Dynamic API Backend](#dynamic-api-backend)
+* [Features](#features)
+* [Setup](#setup)
+* [Usage](#usage)
+  * [Component](#component)
+  * [Store](#store-nuxtserverinit)
+  * [Store Actions](#store-actions)
+* [Options](#options)
+  * [baseURL](#baseURL)
+  * [browserBaseURL](#browserbaseurl)
+  * [credentials](#credentials)
+  * [debug](#debug)
+  * [proxyHeaders](#proxyheaders)
+  * [proxyHeadersIgnore](#proxyheadersignore)
+  * [redirectError](#redirecterror)
+  * [requestInterceptor](#requestinterceptor)
+  * [responseInterceptor](#responseinterceptor)
+  * [init](#init)
+  * [disableDefaultErrorHandler](#disabledefaulterrorhandler)
+  * [errorHandler](#errorhandler)
+* [Helpers](#helpers)
+  * [Fetch Style Requests](#fetch-style-requests)
+  * [Set Header](#setheadername-value-scopescommon)
+  * [Set Token](#settokentoken-type-scopescommon)
+  * [Dynamic API Backend](#dynamic-api-backend)
 
 ## Features
 
-- Automatically set base URL for client & server side
-- Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
-- Throws *nuxt-friendly* errors and optionally redirect on specific error codes
-- Automatically enables `withCredentials` when requesting to base URL
-- Proxy request headers in SSR (Useful for auth)
-- Fetch Style requests
+* Automatically set base URL for client & server side
+* Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
+* Throws _nuxt-friendly_ errors and optionally redirect on specific error codes
+* Automatically enables `withCredentials` when requesting to base URL
+* Proxy request headers in SSR (Useful for auth)
+* Fetch Style requests
 
 ## Setup
 
 Install with npm:
+
 ```bash
 >_ npm install @nuxtjs/axios
 ```
 
 Install with yarn:
+
 ```bash
 >_ yarn add @nuxtjs/axios
 ```
@@ -93,7 +96,7 @@ Install with yarn:
 
 ## Usage
 
-### Component 
+### Component
 
 **`asyncData`**
 
@@ -116,6 +119,7 @@ methods: {
 ```
 
 ### Store `nuxtServerInit`
+
 ```js
 async nuxtServerInit ({ commit }, { app }) {
   const ip = await app.$axios.$get('http://icanhazip.com')
@@ -124,6 +128,7 @@ async nuxtServerInit ({ commit }, { app }) {
 ```
 
 ### Store actions
+
 (Needs Nuxt >= 1.0.0-RC8)
 
 ```js
@@ -139,37 +144,49 @@ async nuxtServerInit ({ commit }, { app }) {
 ```
 
 ## Options
-You can pass options using module options or `axios` section in  `nuxt.config.js`
+
+You can pass options using module options or `axios` section in `nuxt.config.js`
+
+### `prefix`, `host` and `port`
+
+This options are used for default values of `baseURL` and `browserBaseURL`.
+
+Can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables too.
+
+Default value of `prefix` is `/`.
 
 ### `baseURL`
-- Default: `http://[HOST]:[PORT]/api`
 
-Base URL is required for requests in server-side & SSR and prepended to all requests with relative path.
-You can also use environment variable `API_URL` which **overrides** `baseURL`.
+* Default: `http://[HOST]:[PORT][PREFIX]`
+
+Base URL is required for requests in server-side & SSR and prepended to all axios requests.
+
+Environment variable `API_URL` can be used to **override** `baseURL`.
 
 ### `browserBaseURL`
-- Default: `/api`
 
-Base URL which is used in client side prepended to all requests with relative path.
-You can also use environment variable `API_URL_BROWSER` which **overrides** `browserBaseURL`.
+* Default: `baseURL` (or `prefix` when `options.proxyMode` is `true`)
 
-- If `browserBaseURL` is not provided it defaults to `baseURL` value.
-  - If hostname & port of `browserbaseURL` are equal to nuxt server, it defaults to relative part of `baseURL`.
-    So if your nuxt application is being accessed under a different domain, requests go to same origin and prevents Cross-Origin problems.
+Base URL which is used in client side and prepended to all axios requests.
+
+Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
 
 ### `credentials`
-- Default: `true`
+
+* Default: `true`
 
 Adds an interceptor to automatically set `withCredentials` config of axios when requesting to `baseUrl`
 which allows passing authentication headers to backend.
 
 ### `debug`
-- Default: `false`
+
+* Default: `false`
 
 Adds interceptors to log all responses and requests
 
 ### `proxyHeaders`
-- Default: `true`
+
+* Default: `true`
 
 In SSR context, sets client request header as axios default request headers.
 This is useful for making requests which need cookie based auth on server side.
@@ -178,15 +195,18 @@ Also helps making consistent requests in both SSR and Client Side code.
 > **NOTE:** If directing requests at a url protected by CloudFlare's CDN you should set this to false to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
 
 ### `proxyHeadersIgnore`
-- Default `['host', 'accept']`
+
+* Default `['host', 'accept']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
 
 ### `redirectError`
-- Default: `{}`
+
+* Default: `{}`
 
 This option is a map from specific error codes to page which they should be redirect.
 For example if you want redirecting all `401` errors to `/login` use:
+
 ```js
 axios: {
   redirectError: {
@@ -196,7 +216,8 @@ axios: {
 ```
 
 ### `requestInterceptor`
-- Default: `null`
+
+* Default: `null`
 
 Function for manipulating axios requests. Useful for setting custom headers,
 for example based on the store state. The second argument is the nuxt context.
@@ -211,7 +232,8 @@ requestInterceptor: (config, { store }) => {
 ```
 
 ### `responseInterceptor`
-- Default: `null`
+
+* Default: `null`
 
 ```js
 responseInterceptor: (response, ctx) => {
@@ -219,11 +241,11 @@ responseInterceptor: (response, ctx) => {
 }
 ```
 
-
 Function for manipulating axios responses.
 
 ### `init`
-- Default: `null`
+
+* Default: `null`
 
 Function `init(axios, ctx)` to do additional things with axios. Example:
 
@@ -236,13 +258,15 @@ axios: {
 ```
 
 ### `disableDefaultErrorHandler`
-- Default: `false`
+
+* Default: `false`
 
 If you want to disable the default error handler for some reason, you can do it so
 by setting the option `disableDefaultErrorHandler` to true.
 
 ### `errorHandler`
-- Default: (Return promise rejection with error)
+
+* Default: (Return promise rejection with error)
 
 Function for custom global error handler.
 This example uses nuxt default error page.
@@ -260,7 +284,9 @@ axios: {
 ## Helpers
 
 ### Fetch Style requests
+
 Axios plugin also supports fetch style requests with `$` prefixed methods:
+
 ```js
 // Normal usage with axios
 let data = (await $axios.get('...')).data
@@ -270,15 +296,17 @@ let data = await $axios.$get('...')
 ```
 
 ### `setHeader(name, value, scopes='common')`
+
 Axios instance has a helper to easily set any header.
 
 Parameters:
-- **name**: Name of the header
-- **value**: Value of the header
-- **scopes**: Send only on specific type of requests. Defaults
-  - Type: *Array* or *String*
-  - Defaults to `common` meaning all types of requests
-  - Can be `get`, `post`, `delete`, ...
+
+* **name**: Name of the header
+* **value**: Value of the header
+* **scopes**: Send only on specific type of requests. Defaults
+  * Type: _Array_ or _String_
+  * Defaults to `common` meaning all types of requests
+  * Can be `get`, `post`, `delete`, ...
 
 ```js
 // Adds header: `Authorization: 123` to all requests
@@ -288,22 +316,26 @@ this.$axios.setHeader('Authorization', '123')
 this.$axios.setHeader('Authorization', '456')
 
 // Adds header: `Content-Type: application/x-www-form-urlencoded` to only post requests
-this.$axios.setHeader('Content-Type', 'application/x-www-form-urlencoded', ['post'])
+this.$axios.setHeader('Content-Type', 'application/x-www-form-urlencoded', [
+  'post'
+])
 
 // Removes default Content-Type header from `post` scope
 this.$axios.setHeader('Content-Type', false, ['post'])
 ```
 
 ### `setToken(token, type, scopes='common')`
+
 Axios instance has an additional helper to easily set global authentication header.
 
 Parameters:
-- **token**: Authorization token
-- **type**: Authorization token prefix(Usually `Bearer`).
-- **scopes**: Send only on specific type of requests. Defaults
-  - Type: *Array* or *String*
-  - Defaults to `common` meaning all types of requests
-  - Can be `get`, `post`, `delete`, ...
+
+* **token**: Authorization token
+* **type**: Authorization token prefix(Usually `Bearer`).
+* **scopes**: Send only on specific type of requests. Defaults
+  * Type: _Array_ or _String_
+  * Defaults to `common` meaning all types of requests
+  * Can be `get`, `post`, `delete`, ...
 
 ```js
 // Adds header: `Authorization: 123` to all requests
@@ -323,6 +355,7 @@ this.$axios.setToken(false)
 ```
 
 ## Dynamic API Backend
+
 Please notice that, `API_URL` is saved into bundle on build, CANNOT be changed
 on runtime! You may use [proxy](../proxy) module for dynamically route api requests to different backend on test/staging/production.
 
@@ -341,6 +374,7 @@ on runtime! You may use [proxy](../proxy) module for dynamically route api reque
 ```
 
 Start Nuxt
+
 ```
 [AXIOS] Base URL: http://localhost:3000/api | Browser: /api
 [HPM] Proxy created: /api  ->  http://www.mocky.io
@@ -348,6 +382,7 @@ Start Nuxt
 ```
 
 Now you can make requests to backend: (Works fine in both SSR and Browser)
+
 ```js
 async asyncData({ app }) {
   // Magically makes request to http://www.mocky.io/v2/59388bb4120000dc00a672e2
@@ -360,13 +395,15 @@ async asyncData({ app }) {
 ```
 
 Details
-- `'@nuxtjs/axios'`
-  - By default axios plugin sets base url to `http://[host]:[port]/api` which is `http://localhost:3000/api`
 
-- `'/api': 'http://www.mocky.io/v2'`
-  - This line creates a server middleware to pass requests from `/api` to `http://www.mocky.io/v2`
-  - We used `pathRewrite` to remove `/api` from starting of requests and change it to `/v2`
-  - For more information and advanced usage please refer to [proxy](https://github.com/nuxt-community/modules/blob/master/packages/proxy) docs.
+* `'@nuxtjs/axios'`
+
+  * By default axios plugin sets base url to `http://[host]:[port]/api` which is `http://localhost:3000/api`
+
+* `'/api': 'http://www.mocky.io/v2'`
+  * This line creates a server middleware to pass requests from `/api` to `http://www.mocky.io/v2`
+  * We used `pathRewrite` to remove `/api` from starting of requests and change it to `/v2`
+  * For more information and advanced usage please refer to [proxy](https://github.com/nuxt-community/modules/blob/master/packages/proxy) docs.
 
 ## License
 
