@@ -39,7 +39,7 @@
     "whatwg-url": "^6.4.0"
   },
   "devDependencies": {
-    "nuxt": "^1.0.0-rc11",
+    "nuxt": "^1.1.1",
     "codecov": "^3.0.0",
     "eslint": "^4.14.0",
     "eslint-config-standard": "^11.0.0-beta.0",

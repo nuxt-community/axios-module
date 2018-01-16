@@ -13,11 +13,13 @@ describe('axios module', () => {
   let addTemplate
 
   beforeAll(async () => {
-    config.modules.unshift(function () {
-      addTemplate = this.addTemplate = jest.fn(this.addTemplate)
-    })
-
     nuxt = new Nuxt(config)
+
+    // Spy addTemplate
+    addTemplate = nuxt.moduleContainer.addTemplate = jest.fn(
+      nuxt.moduleContainer.addTemplate
+    )
+
     await new Builder(nuxt).build()
     await nuxt.listen(process.env.PORT)
   })
@@ -27,10 +29,14 @@ describe('axios module', () => {
   })
 
   test('baseURL', () => {
-    let call = addTemplate.mock.calls.find(args => args[0].src.includes('plugin.template.js'))
-    expect(call).toBeDefined()
+    expect(addTemplate).toBeDefined()
+    let call = addTemplate.mock.calls.find(args =>
+      args[0].src.includes('plugin.template.js')
+    )
     let options = call[0].options
-    expect(options.baseURL.toString()).toBe(`http://localhost:${process.env.PORT}/test_api`)
+    expect(options.baseURL.toString()).toBe(
+      `http://localhost:${process.env.PORT}/test_api`
+    )
     expect(options.browserBaseURL.toString()).toBe('/test_api')
   })
 
@@ -56,10 +62,12 @@ describe('axios module', () => {
   })
 
   test('ssr', async () => {
-    const makeReq = (login) => axios.get(url('/ssr' + (login ? '?login' : '')))
-      .then(r => r.data)
-      .then(h => /session-[0-9]+/.exec(h))
-      .then(m => (m && m[0]) ? m[0] : null)
+    const makeReq = login =>
+      axios
+        .get(url('/ssr' + (login ? '?login' : '')))
+        .then(r => r.data)
+        .then(h => /session-[0-9]+/.exec(h))
+        .then(m => (m && m[0] ? m[0] : null))
 
     let a = await makeReq()
     let b = await makeReq(true)

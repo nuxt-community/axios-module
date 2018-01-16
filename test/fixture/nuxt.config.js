@@ -1,23 +1,17 @@
-const axiosModule = require('../..')
+const { resolve } = require('path')
 
 module.exports = {
+  rootDir: resolve(__dirname, '../..'),
   srcDir: __dirname,
   dev: false,
   render: {
     resourceHints: false
   },
-  modules: [
-    axiosModule
-  ],
-  serverMiddleware: [
-    '~/api'
-  ],
+  modules: ['@@'],
+  serverMiddleware: ['~/api.js'],
   axios: {
-    // Defaults
-    baseURL: `http://localhost:${process.env.PORT}/test_api`,
-    init (axios) {
-
-    },
+    baseURL: `http://localhost:${process.env.PORT || 3000}/test_api`,
+    init (axios) {},
     responseInterceptor: (response, { store }) => {
       /* eslint-disable no-console */
       console.log('YAY')
