@@ -39,7 +39,8 @@
   * [Store](#store-nuxtserverinit)
   * [Store Actions](#store-actions)
 * [Options](#options)
-  * [baseURL](#baseURL)
+  * [Prefix, Host and port](#prefix-host-and-port)
+  * [baseURL](#baseurl)
   * [browserBaseURL](#browserbaseurl)
   * [credentials](#credentials)
   * [debug](#debug)
@@ -159,7 +160,7 @@ Default value of `prefix` is `/`.
 
 * Default: `http://[HOST]:[PORT][PREFIX]`
 
-Base URL is required for requests in server-side & SSR and prepended to all axios requests.
+Base URL which is used and prepended to make requests in server side.
 
 Environment variable `API_URL` can be used to **override** `baseURL`.
 
@@ -167,7 +168,7 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 
 * Default: `baseURL` (or `prefix` when `options.proxyMode` is `true`)
 
-Base URL which is used in client side and prepended to all axios requests.
+Base URL which is used and prepended to make requests in client side.
 
 Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
 
