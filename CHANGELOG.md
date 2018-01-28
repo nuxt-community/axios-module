@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.0-alpha.0"></a>
+# [5.0.0-alpha.0](https://github.com/nuxt-community/axios-module/compare/v4.5.2...v5.0.0-alpha.0) (2018-01-28)
+
+
+### Code Refactoring
+
+* a better and more stable way to specify baseURL and browserBaseURL options ([533cf4e](https://github.com/nuxt-community/axios-module/commit/533cf4e))
+
+
+### Features
+
+* interceptor helpers ([fa3eb47](https://github.com/nuxt-community/axios-module/commit/fa3eb47))
+* rewrite plugin ([647b58f](https://github.com/nuxt-community/axios-module/commit/647b58f))
+
+
+### BREAKING CHANGES
+
+* prefix should be set to `/api` for backward compability. refer to new docs.
+
+
+
 <a name="4.5.2"></a>
 ## [4.5.2](https://github.com/nuxt-community/axios-module/compare/v4.5.1...v4.5.2) (2017-12-29)
 
