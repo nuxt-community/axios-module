@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.0-rc.1"></a>
+# [5.0.0-rc.1](https://github.com/nuxt-community/axios-module/compare/v5.0.0-rc.0...v5.0.0-rc.1) (2018-01-28)
+
+
+### Bug Fixes
+
+* **progress:** ensure $loading is valid ([cbdc586](https://github.com/nuxt-community/axios-module/commit/cbdc586))
+
+
+
 <a name="5.0.0-rc.0"></a>
 # [5.0.0-rc.0](https://github.com/nuxt-community/axios-module/compare/v5.0.0-alpha.1...v5.0.0-rc.0) (2018-01-28)
 
