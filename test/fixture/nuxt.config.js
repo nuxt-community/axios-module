@@ -14,5 +14,8 @@ module.exports = {
     proxyMode: true,
     credentials: true,
     debug: true
-  }
+  },
+  plugins: [
+    '~/plugins/axios'
+  ]
 }

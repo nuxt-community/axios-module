@@ -38,6 +38,12 @@
   * [Component](#component)
   * [Store](#store-nuxtserverinit)
   * [Store Actions](#store-actions)
+* [Extending Axios](#extending-axios)
+* [Helpers](#helpers)
+  * [Middleware](#middleware)
+  * [Fetch Style Requests](#fetch-style-requests)
+  * [Set Header](#setheadername-value-scopescommon)
+  * [Set Token](#settokentoken-type-scopescommon)
 * [Options](#options)
   * [Prefix, Host and Port](#prefix-host-and-port)
   * [baseURL](#baseurl)
@@ -47,11 +53,6 @@
   * [proxyHeaders](#proxyheaders)
   * [proxyHeadersIgnore](#proxyheadersignore)
   * [disableDefaultErrorHandler](#disabledefaulterrorhandler)
-* [Helpers](#helpers)
-  * [Fetch Style Requests](#fetch-style-requests)
-  * [Set Header](#setheadername-value-scopescommon)
-  * [Set Token](#settokentoken-type-scopescommon)
-  * [Dynamic API Backend](#dynamic-api-backend)
 
 ## Features
 
@@ -137,102 +138,56 @@ async nuxtServerInit ({ commit }, { app }) {
 }
 ```
 
-## Options
+## Extending Axios
 
-You can pass options using module options or `axios` section in `nuxt.config.js`
+If you need to customize axios by registering interceptors and changing global config, you have to create a nuxt plugin.
 
-### `prefix`, `host` and `port`
-
-This options are used for default values of `baseURL` and `browserBaseURL`.
-
-Can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables.
-
-Default value of `prefix` is `/`.
-
-### `baseURL`
-
-* Default: `http://[HOST]:[PORT][PREFIX]`
-
-Base URL which is used and prepended to make requests in server side.
-
-Environment variable `API_URL` can be used to **override** `baseURL`.
-
-### `browserBaseURL`
-
-* Default: `baseURL` (or `prefix` when `options.proxyMode` is `true`)
-
-Base URL which is used and prepended to make requests in client side.
-
-Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
-
-### `credentials`
-
-* Default: `false`
-
-Adds an interceptor to automatically set `withCredentials` config of axios when requesting to `baseUrl`
-which allows passing authentication headers to backend.
-
-### `debug`
-
-* Default: `false`
-
-Adds interceptors to log all responses and requests
-
-### `proxyHeaders`
-
-* Default: `true`
-
-In SSR context, sets client request header as axios default request headers.
-This is useful for making requests which need cookie based auth on server side.
-Also helps making consistent requests in both SSR and Client Side code.
-
-> **NOTE:** If directing requests at a url protected by CloudFlare's CDN you should set this to false to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
-
-### `proxyHeadersIgnore`
-
-* Default `['host', 'accept']`
-
-Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
-
-### `redirectError`
-
-* Default: `{}`
-
-This option is a map from specific error codes to page which they should be redirect.
-For example if you want redirecting all `401` errors to `/login` use:
+**nuxt.config.js**
 
 ```js
-axios: {
-  redirectError: {
-    401: '/login'
-  }
-}
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  plugins: [
+    '~/plugins/axios'
+  ]
 ```
 
-### `requestInterceptor`
-
-* Default: `null`
-
-Function for manipulating axios requests. Useful for setting custom headers,
-for example based on the store state. The second argument is the nuxt context.
+**plugins/axios.js**
 
 ```js
-requestInterceptor: (config, { store }) => {
-  if (store.state.token) {
-    config.headers.common['Authorization'] = store.state.token
-  }
-  return config
+export default function ({ $axios, redirect }) {
+  $axios.onRequest(config => {
+    console.log('Making request to ' + config.url)
+  })
 }
 ```
-
-### `disableDefaultErrorHandler`
-
-* Default: `false`
-
-If you want to disable the default error handler for some reason, you can do it so
-by setting the option `disableDefaultErrorHandler` to true.
 
 ## Helpers
+
+### Interceptors
+
+Axios plugin provides helpers to register axios interceptors easier and faster.
+
+- `onRequest(config)`
+- `onResponse(response)`
+- `onError(err)`
+- `onRequestError(err)`
+- `onResponseError(err)`
+
+This functions don't have to return anything by default.
+
+Example: (`plugins/axios.js`)
+
+```js
+export default function ({ $axios, redirect }) {
+  $axios.onError(error => {
+    if(error.code === 500) {
+      redirect('/sorry')
+    }
+  })
+}
+```
 
 ### Fetch Style requests
 
@@ -304,6 +259,64 @@ this.$axios.setToken('123', 'Bearer', ['post', 'delete'])
 // Removes default Authorization header from `common` scope (all requests)
 this.$axios.setToken(false)
 ```
+
+## Options
+
+You can pass options using module options or `axios` section in `nuxt.config.js`
+
+### `prefix`, `host` and `port`
+
+This options are used for default values of `baseURL` and `browserBaseURL`.
+
+Can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables.
+
+Default value of `prefix` is `/`.
+
+### `baseURL`
+
+* Default: `http://[HOST]:[PORT][PREFIX]`
+
+Base URL which is used and prepended to make requests in server side.
+
+Environment variable `API_URL` can be used to **override** `baseURL`.
+
+### `browserBaseURL`
+
+* Default: `baseURL` (or `prefix` when `options.proxyMode` is `true`)
+
+Base URL which is used and prepended to make requests in client side.
+
+Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
+
+### `credentials`
+
+* Default: `false`
+
+Adds an interceptor to automatically set `withCredentials` config of axios when requesting to `baseUrl`
+which allows passing authentication headers to backend.
+
+### `debug`
+
+* Default: `false`
+
+Adds interceptors to log request and responses.
+
+### `proxyHeaders`
+
+* Default: `true`
+
+In SSR context, sets client request header as axios default request headers.
+This is useful for making requests which need cookie based auth on server side.
+Also helps making consistent requests in both SSR and Client Side code.
+
+> **NOTE:** If directing requests at a url protected by CloudFlare's CDN you should set this to false to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
+
+### `proxyHeadersIgnore`
+
+* Default `['host', 'accept']`
+
+Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
+
 
 ## License
 
