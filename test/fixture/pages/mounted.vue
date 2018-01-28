@@ -13,7 +13,7 @@ export default {
   },
   async mounted () {
     // Request with full url becasue we are in JSDom env
-    this.res = await this.$axios.$get(`http://localhost:${process.env.PORT}/test_api/foo/bar`)
+    this.res = await this.$axios.$get('http://localhost:3000/test_api/foo/bar')
   }
 }
 </script>
