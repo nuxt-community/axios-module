@@ -68,7 +68,6 @@ If you are coming from an older release please be sure to read [Migration Guide]
   * [debug](#debug)
   * [proxyHeaders](#proxyheaders)
   * [proxyHeadersIgnore](#proxyheadersignore)
-  * [disableDefaultErrorHandler](#disabledefaulterrorhandler)
 
 ## Setup
 
