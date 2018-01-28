@@ -32,9 +32,18 @@
 
 If you are coming from an older release please be sure to read [Migration Guide](https://github.com/nuxt-community/axios-module/wiki/Migration-guide)
 
+## Features
+
+✓ Automatically set base URL for client & server side
+✓ Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
+✓ Throws _nuxt-friendly_ errors and optionally redirect on specific error codes
+✓ Automatically enables `withCredentials` when requesting to base URL
+✓ Proxy request headers in SSR (Useful for auth)
+✓ Fetch Style requests
+✓ Automatically integrate with Nuxt.js progress bar
+
 # Table of Contents
 
-* [Features](#features)
 * [Setup](#setup)
 * [Usage](#usage)
   * [Component](#component)
@@ -50,33 +59,25 @@ If you are coming from an older release please be sure to read [Migration Guide]
   * [Prefix, Host and Port](#prefix-host-and-port)
   * [baseURL](#baseurl)
   * [browserBaseURL](#browserbaseurl)
+  * [progress](#progress)
   * [credentials](#credentials)
   * [debug](#debug)
   * [proxyHeaders](#proxyheaders)
   * [proxyHeadersIgnore](#proxyheadersignore)
   * [disableDefaultErrorHandler](#disabledefaulterrorhandler)
 
-## Features
-
-* Automatically set base URL for client & server side
-* Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
-* Throws _nuxt-friendly_ errors and optionally redirect on specific error codes
-* Automatically enables `withCredentials` when requesting to base URL
-* Proxy request headers in SSR (Useful for auth)
-* Fetch Style requests
-
 ## Setup
 
 Install with yarn:
 
 ```bash
->_ yarn add @nuxtjs/axios
+yarn add @nuxtjs/axios
 ```
 
 Install with npm:
 
 ```bash
->_ npm install @nuxtjs/axios
+npm install @nuxtjs/axios
 ```
 
 **nuxt.config.js**
@@ -295,6 +296,12 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 Base URL which is used and prepended to make requests in client side.
 
 Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
+
+### `progress`
+
+* Default: `true`
+
+Integrate with Nuxt.js progress bar to show a loading bar while making requests. (Only on browser, when loading bar is available.)
 
 ### `credentials`
 
