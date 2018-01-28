@@ -30,6 +30,8 @@
 
 [📖 Release Notes](./CHANGELOG.md)
 
+If you are coming from an older release please be sure to read [Migration Guide](https://github.com/nuxt-community/axios-module/wiki/Migration-guide)
+
 # Table of Contents
 
 * [Features](#features)
@@ -40,7 +42,7 @@
   * [Store Actions](#store-actions)
 * [Extending Axios](#extending-axios)
 * [Helpers](#helpers)
-  * [Middleware](#middleware)
+  * [Interceptors](#interceptors)
   * [Fetch Style Requests](#fetch-style-requests)
   * [Set Header](#setheadername-value-scopescommon)
   * [Set Token](#settokentoken-type-scopescommon)
