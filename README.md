@@ -1,6 +1,6 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/5158436/30198986-d4c5d7f8-9485-11e7-9c3e-8b5f5f061f5f.png">
-</p>
+<h1 align="center">Axios</h1>
+
+<p align="center"> Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js. </p>
 
 <p align="center">
 <a href="https://david-dm.org/nuxt-community/axios-module">
@@ -24,13 +24,9 @@
 </a>
 </p>
 
-<h1 align="center">Axios</h1>
-
-<p align="center"> Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js. </p>
-
 [📖 Release Notes](./CHANGELOG.md)
 
-If you are coming from an older release please be sure to read [Migration Guide](https://github.com/nuxt-community/axios-module/wiki/Migration-guide)
+If you are coming from an older release please be sure to read [Migration Guide](https://github.com/nuxt-community/axios-module/wiki/Migration-guide).
 
 ## Features
 
@@ -45,6 +41,8 @@ If you are coming from an older release please be sure to read [Migration Guide]
 ✓ Fetch Style requests
 
 ✓ Automatically integrate with Nuxt.js progress bar
+
+✓ Easily integrate with [Proxy Module](https://github.com/nuxt-community/proxy-module)
 
 # Table of Contents
 
@@ -64,6 +62,7 @@ If you are coming from an older release please be sure to read [Migration Guide]
   * [baseURL](#baseurl)
   * [browserBaseURL](#browserbaseurl)
   * [progress](#progress)
+  * [proxy](#proxy)
   * [credentials](#credentials)
   * [debug](#debug)
   * [proxyHeaders](#proxyheaders)
@@ -151,12 +150,15 @@ If you need to customize axios by registering interceptors and changing global c
 **nuxt.config.js**
 
 ```js
+{
   modules: [
     '@nuxtjs/axios',
   ],
+
   plugins: [
     '~/plugins/axios'
   ]
+}
 ```
 
 **plugins/axios.js**
@@ -294,7 +296,7 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 
 ### `browserBaseURL`
 
-* Default: `baseURL` (or `prefix` when `options.proxyMode` is `true`)
+* Default: `baseURL` (or `prefix` when `options.proxy` is enabled)
 
 Base URL which is used and prepended to make requests in client side.
 
@@ -305,6 +307,38 @@ Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseU
 * Default: `true`
 
 Integrate with Nuxt.js progress bar to show a loading bar while making requests. (Only on browser, when loading bar is available.)
+
+### `proxy`
+
+* Default: `false`
+
+You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-community/proxy-module) and is much recommended to prevent CORS and deployment problems.
+
+**nuxt.config.js**
+
+```js
+{
+  modules: [
+    '@nuxtjs/axios'
+  ],
+
+  axios: {
+    proxy: true
+  },
+
+  proxy: {
+    '/api/': 'http://api.example.com',
+    '/api2/': 'http://api.another-website.com'
+  }
+}
+```
+
+**Note:** It is not required to manually register `@nuxtjs/proxy` module.
+
+**Note:** `/api/` will be added to all requests to the API end point. If you need to remove it use `pathRewrite`:
+```js
+{ '/api/': 'http://api.example.com', pathRewrite: { '^/api/', '' } }
+```
 
 ### `credentials`
 
@@ -334,7 +368,6 @@ Also helps making consistent requests in both SSR and Client Side code.
 * Default `['host', 'accept']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
-
 
 ## License
 

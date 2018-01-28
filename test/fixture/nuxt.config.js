@@ -11,7 +11,7 @@ module.exports = {
   serverMiddleware: ['~/api.js'],
   axios: {
     prefix: `/test_api`,
-    proxyMode: true,
+    proxy: true,
     credentials: true,
     debug: true
   },

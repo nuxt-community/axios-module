@@ -34,12 +34,12 @@
     ]
   },
   "dependencies": {
+    "@nuxtjs/proxy": "^1.1.4",
     "axios": "^0.17.1",
     "chalk": "^2.3.0",
     "debug": "^3.1.0"
   },
   "devDependencies": {
-    "nuxt": "^1.1.1",
     "codecov": "^3.0.0",
     "eslint": "^4.14.0",
     "eslint-config-standard": "^11.0.0-beta.0",
@@ -51,6 +51,7 @@
     "eslint-plugin-vue": "^2.1.0",
     "jest": "^22.0.4",
     "jsdom": "^11.5.1",
+    "nuxt": "^1.1.1",
     "standard-version": "^4.2.0"
   }
 }
