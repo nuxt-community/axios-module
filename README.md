@@ -35,11 +35,17 @@ If you are coming from an older release please be sure to read [Migration Guide]
 ## Features
 
 ✓ Automatically set base URL for client & server side
+
 ✓ Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
+
 ✓ Throws _nuxt-friendly_ errors and optionally redirect on specific error codes
+
 ✓ Automatically enables `withCredentials` when requesting to base URL
+
 ✓ Proxy request headers in SSR (Useful for auth)
+
 ✓ Fetch Style requests
+
 ✓ Automatically integrate with Nuxt.js progress bar
 
 # Table of Contents
