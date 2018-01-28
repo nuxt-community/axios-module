@@ -12,11 +12,7 @@ module.exports = {
   axios: {
     prefix: `/test_api`,
     proxyMode: true,
-    init (axios) {},
-    responseInterceptor: (response, { store }) => {
-      /* eslint-disable no-console */
-      console.log('YAY')
-      return response
-    }
+    credentials: true,
+    debug: true
   }
 }

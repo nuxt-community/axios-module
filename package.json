@@ -9,6 +9,7 @@
     "access": "public"
   },
   "scripts": {
+    "dev": "npm run nuxt test/fixture",
     "lint": "eslint lib src test",
     "test": "npm run lint && jest",
     "release": "standard-version && git push --follow-tags && npm publish",

@@ -39,19 +39,14 @@
   * [Store](#store-nuxtserverinit)
   * [Store Actions](#store-actions)
 * [Options](#options)
-  * [Prefix, Host and port](#prefix-host-and-port)
+  * [Prefix, Host and Port](#prefix-host-and-port)
   * [baseURL](#baseurl)
   * [browserBaseURL](#browserbaseurl)
   * [credentials](#credentials)
   * [debug](#debug)
   * [proxyHeaders](#proxyheaders)
   * [proxyHeadersIgnore](#proxyheadersignore)
-  * [redirectError](#redirecterror)
-  * [requestInterceptor](#requestinterceptor)
-  * [responseInterceptor](#responseinterceptor)
-  * [init](#init)
   * [disableDefaultErrorHandler](#disabledefaulterrorhandler)
-  * [errorHandler](#errorhandler)
 * [Helpers](#helpers)
   * [Fetch Style Requests](#fetch-style-requests)
   * [Set Header](#setheadername-value-scopescommon)
@@ -69,16 +64,16 @@
 
 ## Setup
 
-Install with npm:
-
-```bash
->_ npm install @nuxtjs/axios
-```
-
 Install with yarn:
 
 ```bash
 >_ yarn add @nuxtjs/axios
+```
+
+Install with npm:
+
+```bash
+>_ npm install @nuxtjs/axios
 ```
 
 **nuxt.config.js**
@@ -130,8 +125,6 @@ async nuxtServerInit ({ commit }, { app }) {
 
 ### Store actions
 
-(Needs Nuxt >= 1.0.0-RC8)
-
 ```js
 // In store
 {
@@ -152,7 +145,7 @@ You can pass options using module options or `axios` section in `nuxt.config.js`
 
 This options are used for default values of `baseURL` and `browserBaseURL`.
 
-Can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables too.
+Can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables.
 
 Default value of `prefix` is `/`.
 
@@ -174,7 +167,7 @@ Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseU
 
 ### `credentials`
 
-* Default: `true`
+* Default: `false`
 
 Adds an interceptor to automatically set `withCredentials` config of axios when requesting to `baseUrl`
 which allows passing authentication headers to backend.
@@ -232,55 +225,12 @@ requestInterceptor: (config, { store }) => {
 }
 ```
 
-### `responseInterceptor`
-
-* Default: `null`
-
-```js
-responseInterceptor: (response, ctx) => {
-  return response
-}
-```
-
-Function for manipulating axios responses.
-
-### `init`
-
-* Default: `null`
-
-Function `init(axios, ctx)` to do additional things with axios. Example:
-
-```js
-axios: {
-  init(axios, ctx) {
-    axios.defaults.xsrfHeaderName = 'X-CSRF-TOKEN'
-  }
-}
-```
-
 ### `disableDefaultErrorHandler`
 
 * Default: `false`
 
 If you want to disable the default error handler for some reason, you can do it so
 by setting the option `disableDefaultErrorHandler` to true.
-
-### `errorHandler`
-
-* Default: (Return promise rejection with error)
-
-Function for custom global error handler.
-This example uses nuxt default error page.
-
-If you define a custom error handler, the default error handler provided by this package will be overridden.
-
-```js
-axios: {
-  errorHandler (errorReason, { error }) {
-    error('Request Error: ' + errorReason)
-  }
-},
-```
 
 ## Helpers
 
@@ -355,59 +305,6 @@ this.$axios.setToken('123', 'Bearer', ['post', 'delete'])
 this.$axios.setToken(false)
 ```
 
-## Dynamic API Backend
-
-Please notice that, `API_URL` is saved into bundle on build, CANNOT be changed
-on runtime! You may use [proxy](../proxy) module for dynamically route api requests to different backend on test/staging/production.
-
-**Example: (`nuxt.config.js`)**
-
-```js
-{
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/proxy'
- ],
-  proxy: [
-    ['/api', { target: process.env.PROXY_API_URL || 'http://www.mocky.io', pathRewrite: { '^/api': '/v2' } }]
-  ]
-}
-```
-
-Start Nuxt
-
-```
-[AXIOS] Base URL: http://localhost:3000/api | Browser: /api
-[HPM] Proxy created: /api  ->  http://www.mocky.io
-[HPM] Proxy rewrite rule created: "^/api" ~> "/v2"
-```
-
-Now you can make requests to backend: (Works fine in both SSR and Browser)
-
-```js
-async asyncData({ app }) {
-  // Magically makes request to http://www.mocky.io/v2/59388bb4120000dc00a672e2
-  const nuxt = await app.$axios.$get('59388bb4120000dc00a672e2')
-
-  return {
-    nuxt // -> { nuxt: 'Works!' }
-  }
-}
-```
-
-Details
-
-* `'@nuxtjs/axios'`
-
-  * By default axios plugin sets base url to `http://[host]:[port]/api` which is `http://localhost:3000/api`
-
-* `'/api': 'http://www.mocky.io/v2'`
-  * This line creates a server middleware to pass requests from `/api` to `http://www.mocky.io/v2`
-  * We used `pathRewrite` to remove `/api` from starting of requests and change it to `/v2`
-  * For more information and advanced usage please refer to [proxy](https://github.com/nuxt-community/modules/blob/master/packages/proxy) docs.
-
 ## License
 
-[MIT License](./LICENSE)
-
-Copyright (c) 2017 Nuxt Community
+[MIT License](./LICENSE) - Copyright (c) 2017 Nuxt Community
