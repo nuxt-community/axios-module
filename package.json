@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/axios",
-  "version": "5.0.0-rc.1",
+  "version": "5.0.0-rc.2",
   "description": "Secure and easy axios integration with Nuxt.js",
   "license": "MIT",
   "main": "lib/module.js",
@@ -15,13 +15,23 @@
     "release": "standard-version && git push --follow-tags && npm publish",
     "prepare": "npm run test"
   },
-  "eslintIgnore": ["*.template.*"],
-  "files": ["lib", "src", "dist"],
+  "eslintIgnore": [
+    "*.template.*"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "dist"
+  ],
   "jest": {
     "testEnvironment": "node",
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
-    "collectCoverageFrom": ["lib", "test", "!test/fixture"]
+    "collectCoverageFrom": [
+      "lib",
+      "test",
+      "!test/fixture"
+    ]
   },
   "peerDependencies": {
     "@nuxtjs/proxy": "^1.1.4"
