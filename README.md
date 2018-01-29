@@ -170,7 +170,8 @@ export default function ({ $axios, redirect }) {
   })
 
   $axios.onError(error => {
-    if (error.code === 400) {
+    const code = parseInt(err.response && err.response.status)
+    if (code === 400) {
       redirect('/400')
     }
   })
@@ -339,7 +340,7 @@ You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-commu
 
 ```js
 proxy: {
-  '/api/': { target: 'http://api.example.com', pathRewrite: {'^/api/', ''} }
+  '/api/': { target: 'http://api.example.com', pathRewrite: {'^/api/': ''} }
 }
 ```
 
