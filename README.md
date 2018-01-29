@@ -333,13 +333,13 @@ You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-commu
 }
 ```
 
-**Note:** It is not required to manually register `@nuxtjs/proxy` module.
+**Note:** It is not required to manually register `@nuxtjs/proxy` module, but it does need to be in your dependencies.
 
 **Note:** `/api/` will be added to all requests to the API end point. If you need to remove it use `pathRewrite`:
 
 ```js
 proxy: {
-  '/api/': { target: 'http://api.example.com', pathRewrite: {'^/api/', ''} }
+  '/api/': { target: 'http://api.example.com', pathRewrite: {'^/api/': ''} }
 }
 ```
 
