@@ -324,7 +324,7 @@ You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-commu
   ],
 
   axios: {
-    proxy: true
+    proxy: true // Can be also an object with default options
   },
 
   proxy: {
