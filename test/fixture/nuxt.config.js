@@ -13,9 +13,10 @@ module.exports = {
     prefix: `/test_api`,
     proxy: true,
     credentials: true,
-    debug: true
+    debug: true,
+    retry: {
+      retries: 3
+    }
   },
-  plugins: [
-    '~/plugins/axios'
-  ]
+  plugins: ['~/plugins/axios']
 }
