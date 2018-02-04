@@ -63,6 +63,7 @@ If you are coming from an older release please be sure to read [Migration Guide]
   * [Prefix, Host and Port](#prefix-host-and-port)
   * [baseURL](#baseurl)
   * [browserBaseURL](#browserbaseurl)
+  * [https](#https)
   * [progress](#progress)
   * [proxy](#proxy)
   * [retry](#retry)
@@ -305,6 +306,12 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 Base URL which is used and prepended to make requests in client side.
 
 Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
+
+### `https`
+
+* Default: `false`
+
+If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be changed into `https://`.
 
 ### `progress`
 
