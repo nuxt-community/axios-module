@@ -33,9 +33,6 @@
       "!test/fixture"
     ]
   },
-  "peerDependencies": {
-    "@nuxtjs/proxy": "^1.1.4"
-  },
   "dependencies": {
     "@nuxtjs/proxy": "^1.1.4",
     "axios": "^0.17.1",
