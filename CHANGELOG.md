@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/nuxt-community/axios-module/compare/v5.0.0-rc.2...v5.0.0) (2018-02-04)
+
+
+### Bug Fixes
+
+* **progress:** finish on fail ([ea7b569](https://github.com/nuxt-community/axios-module/commit/ea7b569))
+
+
+### Features
+
+* https option ([#57](https://github.com/nuxt-community/axios-module/issues/57)) ([9ecb547](https://github.com/nuxt-community/axios-module/commit/9ecb547))
+* passing options via proxy option ([a923db3](https://github.com/nuxt-community/axios-module/commit/a923db3))
+* support retry with axios-retry ([7221cac](https://github.com/nuxt-community/axios-module/commit/7221cac)), closes [#77](https://github.com/nuxt-community/axios-module/issues/77)
+
+
+
 <a name="5.0.0-rc.2"></a>
 # [5.0.0-rc.2](https://github.com/nuxt-community/axios-module/compare/v5.0.0-rc.1...v5.0.0-rc.2) (2018-01-29)
 
