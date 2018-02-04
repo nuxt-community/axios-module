@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "codecov": "latest",
-    "eslint": "latest",
+    "eslint": "^4.17.0",
     "eslint-config-standard": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-jest": "latest",
@@ -50,8 +50,8 @@
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
     "jest": "latest",
-    "jsdom": "latest",
-    "nuxt": "latest",
+    "jsdom": "^11.6.2",
+    "nuxt": "^1.3.0",
     "standard-version": "latest"
   }
 }
