@@ -40,9 +40,11 @@ If you are coming from an older release please be sure to read [Migration Guide]
 
 ✓ Fetch Style requests
 
-✓ Automatically integrate with Nuxt.js progress bar
+✓ Integrated with Nuxt.js Progressbar while making requests
 
-✓ Easily integrate with [Proxy Module](https://github.com/nuxt-community/proxy-module)
+✓ Integrated with [Proxy Module](https://github.com/nuxt-community/proxy-module)
+
+✓ Auto retry requests with [axios-retry](https://github.com/softonic/axios-retry)
 
 # Table of Contents
 
@@ -63,6 +65,7 @@ If you are coming from an older release please be sure to read [Migration Guide]
   * [browserBaseURL](#browserbaseurl)
   * [progress](#progress)
   * [proxy](#proxy)
+  * [retry](#retry)
   * [credentials](#credentials)
   * [debug](#debug)
   * [proxyHeaders](#proxyheaders)
@@ -341,6 +344,20 @@ You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-commu
 ```js
 proxy: {
   '/api/': { target: 'http://api.example.com', pathRewrite: {'^/api/': ''} }
+}
+```
+
+### `retry`
+
+* Default: `false`
+
+ Automatically intercept failed requests and retries them whenever posible using [axios-retry](https://github.com/softonic/axios-retry).
+
+By default, number of retries will be **3 times**, if `retry` value is set to `true`. You can change it by passing an object like this:
+
+```js
+axios: {
+  retry: { retries: 3 }
 }
 ```
 
