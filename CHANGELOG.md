@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/nuxt-community/axios-module/compare/v5.0.0...v5.0.1) (2018-02-08)
+
+
+### Bug Fixes
+
+* don't mutate env.API_URL ([a8ea331](https://github.com/nuxt-community/axios-module/commit/a8ea331))
+
+
+
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/nuxt-community/axios-module/compare/v5.0.0-rc.2...v5.0.0) (2018-02-04)
 
