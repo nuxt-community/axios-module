@@ -6,4 +6,4 @@
 * [Helpers](helpers.md)
 * [Options](options.md)
 * [Migration Guide](migration.md)
-* [Changelog](CHANGELOG.md)
+* [Changelog](changelog.md)
