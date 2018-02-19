@@ -42,7 +42,7 @@
 
 ✓ Auto retry requests with [axios-retry](https://github.com/softonic/axios-retry)
 
-📖 [**Read Documentation**](https://pwa.nuxtjs.org)
+📖 [**Read Documentation**](https://axios.nuxtjs.org)
 
 ## License
 
