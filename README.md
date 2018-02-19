@@ -1,4 +1,4 @@
-# Axios
+# 📦 Axios Module
 
 > Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js.
 
@@ -24,7 +24,7 @@
 </a>
 </p>
 
-## Features
+## ✅ Features
 
 ✓ Automatically set base URL for client & server side
 
@@ -42,8 +42,8 @@
 
 ✓ Auto retry requests with [axios-retry](https://github.com/softonic/axios-retry)
 
-📖 [**Read Documentation**](https://axios.nuxtjs.org)
+## 📖 [**Read Documentation**](https://axios.nuxtjs.org)
 
-## License
+## 📑 License
 
 [MIT License](./LICENSE) - Nuxt Community
