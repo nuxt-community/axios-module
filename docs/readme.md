@@ -25,6 +25,6 @@
 * [Github](https://github.com/nuxt-community/axios-module)
 * [Release Notes](./CHANGELOG.md)
 * [Migration Guide](migration.md)
-* [Examples](https://github.com/nuxt-community/axios-module/tree/master/examples)
+* [Examples](https://axios.nuxtjs.org/usage.html)
 
 > 👉 To get started head to [Setup](setup.md) section.
