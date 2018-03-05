@@ -38,6 +38,12 @@ If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be chang
 
 Integrate with Nuxt.js progress bar to show a loading bar while making requests. (Only on browser, when loading bar is available.)
 
+You can also disable progress bar per request using `progress` config.
+
+```js
+this.$axios.$get('URL', { progress: false })
+```
+
 ### `proxy`
 
 * Default: `false`
