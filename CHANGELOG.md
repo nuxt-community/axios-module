@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.1.0"></a>
+# [5.1.0](https://github.com/nuxt-community/axios-module/compare/v5.0.1...v5.1.0) (2018-03-05)
+
+
+### Features
+
+* allow disable progress per request. closes [#112](https://github.com/nuxt-community/axios-module/issues/112). ([1530bb6](https://github.com/nuxt-community/axios-module/commit/1530bb6))
+* disable https for localhost url ([#93](https://github.com/nuxt-community/axios-module/issues/93)) ([dd67734](https://github.com/nuxt-community/axios-module/commit/dd67734))
+
+
+
 <a name="5.0.1"></a>
 ## [5.0.1](https://github.com/nuxt-community/axios-module/compare/v5.0.0...v5.0.1) (2018-02-08)
 
