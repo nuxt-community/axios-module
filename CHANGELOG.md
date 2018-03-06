@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.1.1"></a>
+## [5.1.1](https://github.com/nuxt-community/axios-module/compare/v5.1.0...v5.1.1) (2018-03-06)
+
+
+### Bug Fixes
+
+* **progress:** handle division by zero ([#117](https://github.com/nuxt-community/axios-module/issues/117)) ([040eaf7](https://github.com/nuxt-community/axios-module/commit/040eaf7)), closes [#166](https://github.com/nuxt-community/axios-module/issues/166)
+
+
+
 <a name="5.1.0"></a>
 # [5.1.0](https://github.com/nuxt-community/axios-module/compare/v5.0.1...v5.1.0) (2018-03-05)
 
