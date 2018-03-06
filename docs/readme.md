@@ -22,7 +22,7 @@
 
 ## Links
 
-* [Github](https://github.com/nuxt-community/axios-module)
+* [GitHub](https://github.com/nuxt-community/axios-module)
 * [Release Notes](./CHANGELOG.md)
 * [Migration Guide](migration.md)
 * [Examples](https://axios.nuxtjs.org/usage.html)
