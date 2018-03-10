@@ -16,7 +16,7 @@ npm install @nuxtjs/axios
 **nuxt.config.js**
 
 ```js
-{
+module.exports = {
   modules: [
     '@nuxtjs/axios',
   ],
