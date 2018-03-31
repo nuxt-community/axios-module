@@ -25,11 +25,11 @@
     string-width "^2.0.0"
     strip-ansi "^4.0.0"
 
-"@nuxtjs/proxy@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.2.1.tgz#384f0891b7b14901941d1c49fa1034e6c5ff19c0"
+"@nuxtjs/proxy@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.2.3.tgz#142e603b5d7b0412e0c35afa53bf9b4b26b70198"
   dependencies:
-    consola "^1.0.0"
+    consola "^1.1.1"
     http-proxy-middleware "^0.18.0"
 
 "@nuxtjs/youch@^4.2.3":
@@ -1643,6 +1643,14 @@ consola@^1.0.0:
   dependencies:
     figures "^2.0.0"
     ora "^2.0.0"
+    std-env "^1.1.0"
+
+consola@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-1.1.1.tgz#282566e34573d33f01e3c0aca0cd6d383f82925c"
+  dependencies:
+    figures "^2.0.0"
+    lodash "^4.17.5"
     std-env "^1.1.0"
 
 console-browserify@^1.1.0:

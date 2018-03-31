@@ -34,11 +34,10 @@
     ]
   },
   "dependencies": {
-    "@nuxtjs/proxy": "^1.2.1",
+    "@nuxtjs/proxy": "^1.2.3",
     "axios": "^0.18.0",
     "axios-retry": "^3.0.2",
-    "chalk": "^2.3.2",
-    "consola": "^1.0.0"
+    "consola": "^1.1.1"
   },
   "devDependencies": {
     "codecov": "latest",
