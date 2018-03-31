@@ -1,4 +1,4 @@
-const { Nuxt, Builder } = require('nuxt')
+const { Nuxt, Builder } = require('nuxt-edge')
 const axios = require('axios')
 const config = require('./fixture/nuxt.config')
 
