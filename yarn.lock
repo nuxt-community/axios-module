@@ -25,11 +25,11 @@
     string-width "^2.0.0"
     strip-ansi "^4.0.0"
 
-"@nuxtjs/proxy@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.2.3.tgz#142e603b5d7b0412e0c35afa53bf9b4b26b70198"
+"@nuxtjs/proxy@^1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.2.4.tgz#41aafac58854f14e28aed17238936bb6404e6071"
   dependencies:
-    consola "^1.1.1"
+    consola "^1.1.4"
     http-proxy-middleware "^0.18.0"
 
 "@nuxtjs/youch@^4.2.3":
@@ -1358,7 +1358,7 @@ chalk@1.1.3, chalk@^1.0.0, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.3.2:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.2.tgz#250dc96b07491bfd601e648d66ddf5f60c7a5c65"
   dependencies:
@@ -1441,10 +1441,6 @@ cli-cursor@^2.0.0, cli-cursor@^2.1.0:
   resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
   dependencies:
     restore-cursor "^2.0.0"
-
-cli-spinners@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-1.1.0.tgz#f1847b168844d917a671eb9d147e3df497c90d06"
 
 cli-width@^2.0.0:
   version "2.2.0"
@@ -1637,18 +1633,11 @@ connect@^3.6.5:
     parseurl "~1.3.2"
     utils-merge "1.0.1"
 
-consola@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-1.0.0.tgz#4d2a5535abc89078c73593c41e42e66eddd7d5f3"
+consola@^1.1.3, consola@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-1.1.4.tgz#278035fb0c7b10c93528a57c2685ede476e00c9b"
   dependencies:
-    figures "^2.0.0"
-    ora "^2.0.0"
-    std-env "^1.1.0"
-
-consola@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-1.1.1.tgz#282566e34573d33f01e3c0aca0cd6d383f82925c"
-  dependencies:
+    chalk "^2.3.2"
     figures "^2.0.0"
     lodash "^4.17.5"
     std-env "^1.1.0"
@@ -2136,12 +2125,6 @@ default-require-extensions@^1.0.0:
   resolved "https://registry.yarnpkg.com/default-require-extensions/-/default-require-extensions-1.0.0.tgz#f37ea15d3e13ffd9b437d33e1a75b5fb97874cb8"
   dependencies:
     strip-bom "^2.0.0"
-
-defaults@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/defaults/-/defaults-1.0.3.tgz#c656051e9817d9ff08ed881477f3fe4019f3ef7d"
-  dependencies:
-    clone "^1.0.2"
 
 define-properties@^1.1.2:
   version "1.1.2"
@@ -4483,7 +4466,7 @@ lodash@^4.13.1, lodash@^4.14.0, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, 
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
-log-symbols@^2.1.0, log-symbols@^2.2.0:
+log-symbols@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
   dependencies:
@@ -4977,9 +4960,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-edge@^2.0.0-25375287.923164e:
-  version "2.0.0-25375287.923164e"
-  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25375287.923164e.tgz#bb9941276c25cc5cfd6b06d55a6fe67b299c34fa"
+nuxt-edge@^2.0.0-25375479.ba18127:
+  version "2.0.0-25375479.ba18127"
+  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25375479.ba18127.tgz#2c018dbd2087c08e3845dad56bfd92d49b58bf32"
   dependencies:
     "@nuxtjs/friendly-errors-webpack-plugin" "^2.0.2"
     "@nuxtjs/youch" "^4.2.3"
@@ -4993,7 +4976,7 @@ nuxt-edge@^2.0.0-25375287.923164e:
     chokidar "^2.0.3"
     compression "^1.7.1"
     connect "^3.6.5"
-    consola "^1.0.0"
+    consola "^1.1.3"
     css-loader "^0.28.11"
     es6-promise "^4.2.4"
     esm "^3.0.14"
@@ -5007,13 +4990,11 @@ nuxt-edge@^2.0.0-25375287.923164e:
     html-webpack-plugin "^3.1.0"
     launch-editor-middleware "^2.2.1"
     lodash "^4.17.5"
-    log-update "^2.3.0"
     lru-cache "^4.1.2"
     memory-fs "^0.4.1"
     mini-css-extract-plugin "^0.4.0"
     minimist "^1.2.0"
     opencollective "^1.0.3"
-    ora "^2.0.0"
     postcss "^6.0.21"
     postcss-cssnext "^3.1.0"
     postcss-import "^11.1.0"
@@ -5043,7 +5024,7 @@ nuxt-edge@^2.0.0-25375287.923164e:
     webpack-dev-middleware "^3.1.0"
     webpack-hot-middleware "^2.21.2"
     webpack-node-externals "^1.6.0"
-    webpackbar "^2.2.1"
+    webpackbar "^2.3.2"
 
 nwmatcher@^1.4.3:
   version "1.4.4"
@@ -5160,17 +5141,6 @@ optionator@^0.8.1, optionator@^0.8.2:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
     wordwrap "~1.0.0"
-
-ora@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ora/-/ora-2.0.0.tgz#8ec3a37fa7bffb54a3a0c188a1f6798e7e1827cd"
-  dependencies:
-    chalk "^2.3.1"
-    cli-cursor "^2.1.0"
-    cli-spinners "^1.1.0"
-    log-symbols "^2.2.0"
-    strip-ansi "^4.0.0"
-    wcwidth "^1.0.1"
 
 os-browserify@^0.3.0:
   version "0.3.0"
@@ -7587,12 +7557,6 @@ watchpack@^1.5.0:
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
 
-wcwidth@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
-  dependencies:
-    defaults "^1.0.3"
-
 webidl-conversions@^4.0.1, webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
@@ -7679,12 +7643,12 @@ webpack@^4.4.1:
     watchpack "^1.5.0"
     webpack-sources "^1.0.1"
 
-webpackbar@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/webpackbar/-/webpackbar-2.2.1.tgz#99d709239303fa183f0fa3e0400eecc5dc904211"
+webpackbar@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/webpackbar/-/webpackbar-2.3.2.tgz#bdb1cfae1725a1341e583c9c8ef4e37a16bb8136"
   dependencies:
     chalk "^2.3.2"
-    consola "^1.0.0"
+    consola "^1.1.3"
     figures "^2.0.0"
     loader-utils "^1.1.0"
     lodash "^4.17.5"
