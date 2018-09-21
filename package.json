@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "nuxt test/fixture",
-    "lint": "eslint lib src test",
+    "lint": "eslint lib test",
     "test": "npm run lint && jest",
     "release": "standard-version && git push --follow-tags && npm publish",
     "prepare": "npm run test"
