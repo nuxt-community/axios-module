@@ -37,22 +37,22 @@
   "dependencies": {
     "@nuxtjs/proxy": "^1.2.4",
     "axios": "^0.18.0",
-    "axios-retry": "^3.0.2",
-    "consola": "^1.1.4"
+    "axios-retry": "^3.1.1",
+    "consola": "^1.4.3"
   },
   "devDependencies": {
-    "codecov": "latest",
-    "eslint": "^4.17.0",
-    "eslint-config-standard": "11.0.0",
-    "eslint-plugin-import": "^2.10.0",
-    "eslint-plugin-jest": "^21.15.0",
-    "eslint-plugin-node": "6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "latest",
-    "eslint-plugin-vue": "^4.4.0",
-    "jest": "^22.4.3",
-    "jsdom": "^11.6.2",
-    "nuxt-edge": "^2.0.0-25375479.ba18127",
-    "standard-version": "latest"
+    "codecov": "^3.1.0",
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.22.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "jest": "^23.6.0",
+    "jsdom": "^12.0.0",
+    "nuxt-edge": "^2.0.0-25624683.7a68e1d",
+    "standard-version": "^4.4.0"
   }
 }
