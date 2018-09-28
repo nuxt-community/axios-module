@@ -22,7 +22,8 @@
   "files": [
     "lib",
     "src",
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "jest": {
     "testEnvironment": "node",
