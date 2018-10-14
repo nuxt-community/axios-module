@@ -17,7 +17,7 @@ describe('axios module', () => {
     )
 
     await new Builder(nuxt).build()
-    await nuxt.listen(process.env.PORT)
+    await nuxt.listen(3000)
   }, 60000)
 
   afterAll(async () => {
