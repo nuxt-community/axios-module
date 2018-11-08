@@ -76,4 +76,17 @@ describe('axios module', () => {
     expect(d).not.toBeNull()
     expect(b).not.toBe(d)
   })
+
+  test('ssr no brotli', async () => {
+    const makeReq = login =>
+      axios
+        .get(url('/ssr' + (login ? '?login' : '')))
+        .then(r => r.data)
+        .then(h => /encoding-\$(.*)\$/.exec(h))
+        .then(m => (m && m[1] ? m[1] : null))
+
+    const result = await makeReq()
+
+    expect(result).toBe('gzip, deflate')
+  })
 })
