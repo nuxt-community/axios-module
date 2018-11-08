@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.3.6"></a>
+## [5.3.6](https://github.com/nuxt-community/axios-module/compare/v5.3.5...v5.3.6) (2018-11-08)
+
+
+### Bug Fixes
+
+* correctly ignore brotli encoding on server-side ([#180](https://github.com/nuxt-community/axios-module/issues/180)) ([4a52bfd](https://github.com/nuxt-community/axios-module/commit/4a52bfd))
+
+
+
 <a name="5.3.5"></a>
 ## [5.3.5](https://github.com/nuxt-community/axios-module/compare/v5.3.4...v5.3.5) (2018-11-07)
 
