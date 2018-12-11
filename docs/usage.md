@@ -5,8 +5,8 @@
 **`asyncData`**
 
 ```js
-async asyncData({ app }) {
-  const ip = await app.$axios.$get('http://icanhazip.com')
+async asyncData({ $axios }) {
+  const ip = await $axios.$get('http://icanhazip.com')
   return { ip }
 }
 ```
