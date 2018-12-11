@@ -25,8 +25,8 @@ methods: {
 ### Store `nuxtServerInit`
 
 ```js
-async nuxtServerInit ({ commit }, { app }) {
-  const ip = await app.$axios.$get('http://icanhazip.com')
+async nuxtServerInit ({ commit }, { $axios }) {
+  const ip = await $axios.$get('http://icanhazip.com')
   commit('SET_IP', ip)
 }
 ```
