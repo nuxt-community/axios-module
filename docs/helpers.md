@@ -17,7 +17,7 @@ Example: (`plugins/axios.js`)
 ```js
 export default function ({ $axios, redirect }) {
   $axios.onError(error => {
-    if(error.code === 500) {
+    if(error.response.status === 500) {
       redirect('/sorry')
     }
   })
