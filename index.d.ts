@@ -18,7 +18,7 @@ interface NuxtAxiosInstance extends AxiosInstance {
   onResponse<T = any>(callback: (response: AxiosResponse<T>) => void): void;
   onError(callback: (error: AxiosError) => void): void;
   onRequestError(callback: (error: AxiosError) => void): void;
-  onResponseErro(callback: (error: AxiosError) => void): void;
+  onResponseError(callback: (error: AxiosError) => void): void;
 }
 
 declare module 'vue/types/vue' {
