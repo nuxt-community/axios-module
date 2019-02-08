@@ -26,3 +26,9 @@ declare module 'vue/types/vue' {
     $axios: NuxtAxiosInstance
   }
 }
+
+declare module '@nuxt/vue-app' {
+  interface Context {
+    $axios: NuxtAxiosInstance
+  }
+}
