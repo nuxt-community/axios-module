@@ -23,14 +23,12 @@ jobs:
           paths:
             - "node_modules"
 
-      # Build
-      # - run:
-      #     name: Build
-      #     command: |
-      #       mkdir -p dist
-      #       yarn build
-
       # Test
       - run:
           name: Tests
-          command: yarn test && yarn codecov
+          command: yarn test
+
+      # Coverage
+      - run:
+          name: Coverage
+          command: yarn codecov
