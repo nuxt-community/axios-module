@@ -7,7 +7,9 @@ module.exports = {
   render: {
     resourceHints: false
   },
-  modules: ['@@'],
+  modules: [
+    { handler: require('../../') }
+  ],
   serverMiddleware: ['~/api.js'],
   axios: {
     prefix: `/test_api`,
