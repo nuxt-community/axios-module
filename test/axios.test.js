@@ -1,3 +1,5 @@
+jest.setTimeout(60000)
+
 const { Nuxt, Builder } = require('nuxt-edge')
 const axios = require('axios')
 const config = require('./fixture/nuxt.config')
@@ -18,7 +20,7 @@ describe('axios module', () => {
 
     await new Builder(nuxt).build()
     await nuxt.listen(3000)
-  }, 60000)
+  })
 
   afterAll(async () => {
     await nuxt.close()
@@ -26,10 +28,10 @@ describe('axios module', () => {
 
   test('baseURL', () => {
     expect(addTemplate).toBeDefined()
-    let call = addTemplate.mock.calls.find(args =>
-      args[0].src.includes('plugin.template.js')
+    const call = addTemplate.mock.calls.find(args =>
+      args[0].src.includes('plugin.js')
     )
-    let options = call[0].options
+    const options = call[0].options
     expect(options.baseURL.toString()).toBe(
       `http://localhost:3000/test_api`
     )
@@ -37,7 +39,7 @@ describe('axios module', () => {
   })
 
   test('asyncData', async () => {
-    let html = (await axios.get(url('/asyncData'))).data
+    const html = (await axios.get(url('/asyncData'))).data
     expect(html).toContain('foo/bar')
   })
 
@@ -65,10 +67,10 @@ describe('axios module', () => {
         .then(h => /session-[0-9]+/.exec(h))
         .then(m => (m && m[0] ? m[0] : null))
 
-    let a = await makeReq()
-    let b = await makeReq(true)
-    let c = await makeReq()
-    let d = await makeReq(true)
+    const a = await makeReq()
+    const b = await makeReq(true)
+    const c = await makeReq()
+    const d = await makeReq(true)
 
     expect(a).toBeNull()
     expect(b).not.toBeNull()
