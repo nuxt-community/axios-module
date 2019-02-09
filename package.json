@@ -4,7 +4,7 @@
   "description": "Secure and easy axios integration with Nuxt.js",
   "license": "MIT",
   "main": "lib/module.js",
-  "types": "index.d.ts",
+  "types": "types/index.d.ts",
   "repository": "https://github.com/nuxt-community/axios-module",
   "publishConfig": {
     "access": "public"
@@ -23,7 +23,7 @@
     "lib",
     "src",
     "dist",
-    "index.d.ts"
+    "types/*.d.ts"
   ],
   "jest": {
     "testEnvironment": "node",
