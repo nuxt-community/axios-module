@@ -21,6 +21,12 @@ interface NuxtAxiosInstance extends AxiosInstance {
   onResponseError(callback: (error: AxiosError) => void): void
 }
 
+declare module '@nuxt/vue-app' {
+  interface Context {
+    $axios: NuxtAxiosInstance
+  }
+}
+
 declare module 'vue/types/vue' {
   interface Vue {
     $axios: NuxtAxiosInstance
