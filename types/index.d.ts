@@ -1,4 +1,4 @@
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import Vue from 'vue'
 
 interface NuxtAxiosInstance extends AxiosInstance {
