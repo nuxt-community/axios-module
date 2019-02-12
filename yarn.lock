@@ -2421,6 +2421,17 @@ consola@^2.0.0-1, consola@^2.3.0, consola@^2.4.0:
     std-env "^2.2.1"
     string-width "^3.0.0"
 
+consola@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.4.1.tgz#ad7209c306a2b6fa955b776f88f87bf92f491aa8"
+  integrity sha512-j6bIzpmyRGY2TDZVkAi3DM95CgC8hWx1A7AiJdyn4X5gls1bbpXIMpn3p8QsfaNu+ycNLXP+2DwKb47FXjw1ww==
+  dependencies:
+    chalk "^2.4.2"
+    dayjs "^1.8.3"
+    figures "^2.0.0"
+    std-env "^2.2.1"
+    string-width "^3.0.0"
+
 console-browserify@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-browserify/-/console-browserify-1.1.0.tgz#f0241c45730a9fc6323b206dbf38edc741d0bb10"
@@ -7978,7 +7989,7 @@ request-promise-core@1.1.1:
   dependencies:
     lodash "^4.13.1"
 
-request-promise-native@^1.0.5, request-promise-native@latest:
+request-promise-native@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/request-promise-native/-/request-promise-native-1.0.5.tgz#5281770f68e0c9719e5163fd3fab482215f4fda5"
   integrity sha1-UoF3D2jgyXGeUWP9P6tIIhX0/aU=
@@ -7987,7 +7998,7 @@ request-promise-native@^1.0.5, request-promise-native@latest:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
-request@^2.87.0, request@latest:
+request@^2.87.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   integrity sha512-NAqBSrijGLZdM0WZNsInLJpkJokL72XYjUpnB0iwsRgxh7dB6COrHnTBNwN0E+lHDAJzu7kLAkDeY08z2/A0hg==
