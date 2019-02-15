@@ -1,16 +1,15 @@
 version: 2
 jobs:
   build:
-    working_directory: /usr/src/app
     docker:
-      - image: banian/node
+      - image: circleci/node
     steps:
       # Checkout repository
       - checkout
 
       # Restore cache
       - restore_cache:
-          key: yarn-{{ checksum "yarn.lock" }}
+          key: yarn-cache-{{ checksum "yarn.lock" }}
 
       # Install dependencies
       - run:
@@ -19,14 +18,19 @@ jobs:
 
       # Keep cache
       - save_cache:
-          key: yarn-{{ checksum "yarn.lock" }}
+          key: yarn-cache-{{ checksum "yarn.lock" }}
           paths:
             - "node_modules"
 
-      # Test
+      # Lint
+      - run:
+          name: Lint
+          command: yarn lint
+
+      # Tests
       - run:
           name: Tests
-          command: yarn test
+          command: yarn jest
 
       # Coverage
       - run:
