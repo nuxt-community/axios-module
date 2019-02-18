@@ -2,11 +2,27 @@ jest.setTimeout(60000)
 
 const { Nuxt, Builder } = require('nuxt-edge')
 const axios = require('axios')
+
 const config = require('./fixture/nuxt.config')
 
 let nuxt, addTemplate
 
 const url = path => `http://localhost:3000${path}`
+
+const setupNuxt = async (config) => {
+  nuxt = new Nuxt(config)
+
+  // Spy addTemplate
+  addTemplate = nuxt.moduleContainer.addTemplate = jest.fn(
+    nuxt.moduleContainer.addTemplate
+  )
+
+  const build = new Builder(nuxt)
+
+  await build.validatePages()
+  await build.generateRoutesAndFiles()
+  await nuxt.listen(3000)
+}
 
 const testSuite = () => {
   test('baseURL', () => {
@@ -99,15 +115,8 @@ describe('other options', () => {
       https: true,
       retry: false
     }
-    nuxt = new Nuxt(config)
 
-    // Spy addTemplate
-    addTemplate = nuxt.moduleContainer.addTemplate = jest.fn(
-      nuxt.moduleContainer.addTemplate
-    )
-
-    await new Builder(nuxt).build()
-    await nuxt.listen(3000)
+    await setupNuxt(config)
   })
 
   afterAll(async () => {
@@ -122,15 +131,8 @@ describe('browserBaseURL', () => {
     config.axios = {
       browserBaseURL: '/test_api'
     }
-    nuxt = new Nuxt(config)
 
-    // Spy addTemplate
-    addTemplate = nuxt.moduleContainer.addTemplate = jest.fn(
-      nuxt.moduleContainer.addTemplate
-    )
-
-    await new Builder(nuxt).build()
-    await nuxt.listen(3000)
+    await setupNuxt(config)
   })
 
   afterAll(async () => {
@@ -146,18 +148,11 @@ describe('browserBaseURL', () => {
   })
 })
 
-describe.only('empty config', () => {
+describe('empty config', () => {
   beforeAll(async () => {
     config.axios = {}
-    nuxt = new Nuxt(config)
 
-    // Spy addTemplate
-    addTemplate = nuxt.moduleContainer.addTemplate = jest.fn(
-      nuxt.moduleContainer.addTemplate
-    )
-
-    await new Builder(nuxt).build()
-    await nuxt.listen(3000)
+    await setupNuxt(config)
   })
 
   afterAll(async () => {
