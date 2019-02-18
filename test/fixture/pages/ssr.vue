@@ -10,17 +10,18 @@
   let reqCtr = 1
 
   export default {
-    async fetch ({app, route}) {
+    async fetch({app, route}) {
       let doLogin = route.query.login !== undefined
       if (doLogin) {
         app.$axios.setHeader('sessionId', reqCtr++)
       }
     },
     computed: {
-      axiosSessionId () {
+      axiosSessionId() {
         return this.$axios.defaults.headers.common.sessionId
       },
-      axiosEncoding () {
+
+      axiosEncoding() {
         return this.$axios.defaults.headers.common['Accept-Encoding']
       }
     }

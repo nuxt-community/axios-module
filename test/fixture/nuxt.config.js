@@ -2,8 +2,8 @@ const { resolve } = require('path')
 
 module.exports = {
   rootDir: resolve(__dirname, '../..'),
+  buildDir: resolve(__dirname, '.nuxt'),
   srcDir: __dirname,
-  dev: false,
   render: {
     resourceHints: false
   },
@@ -12,13 +12,11 @@ module.exports = {
   ],
   serverMiddleware: ['~/api.js'],
   axios: {
-    prefix: `/test_api`,
+    prefix: '/test_api',
     proxy: true,
     credentials: true,
     debug: true,
-    retry: {
-      retries: 3
-    }
+    retry: true
   },
   plugins: ['~/plugins/axios']
 }
