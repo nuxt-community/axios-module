@@ -7,7 +7,7 @@
 [![Dependencies][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
-> Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js.
+> Secure and Easy <a href="https://github.com/mzabriskie/axios">Axios</a> integration with Nuxt.js
 
 ## ✅ Features
 
@@ -28,6 +28,12 @@
 ✓ Auto retry requests with [axios-retry](https://github.com/softonic/axios-retry)
 
 📖 [**Read Documentation**](https://axios.nuxtjs.org)
+
+## Development
+
+1. Clone this repository
+2. Install dependencies using `yarn install` or `npm install`
+3. Start development server using `npm run dev`
 
 ## 📑 License
 
