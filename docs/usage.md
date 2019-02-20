@@ -22,16 +22,7 @@ methods: {
 }
 ```
 
-### Store `nuxtServerInit`
-
-```js
-async nuxtServerInit ({ commit }, { $axios }) {
-  const ip = await $axios.$get('http://icanhazip.com')
-  commit('SET_IP', ip)
-}
-```
-
-### Store actions
+### Store actions (including `nuxtServerInit`)
 
 ```js
 // In store

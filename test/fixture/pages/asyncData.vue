@@ -1,12 +1,12 @@
 <template>
-<div>
+  <div>
     Response: {{ res }}
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-  async asyncData ({ app }) {
+  async asyncData({ app }) {
     let res = await app.$axios.$get('foo/bar')
     return {
       res

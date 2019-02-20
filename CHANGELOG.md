@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="5.3.6"></a>
+## [5.3.6](https://github.com/nuxt-community/axios-module/compare/v5.3.5...v5.3.6) (2018-11-08)
+
+
+### Bug Fixes
+
+* correctly ignore brotli encoding on server-side ([#180](https://github.com/nuxt-community/axios-module/issues/180)) ([4a52bfd](https://github.com/nuxt-community/axios-module/commit/4a52bfd))
+
+
+
+<a name="5.3.5"></a>
+## [5.3.5](https://github.com/nuxt-community/axios-module/compare/v5.3.4...v5.3.5) (2018-11-07)
+
+
+### Bug Fixes
+
+* **defaults:** ignore `cf-ray` and `cf-connecting-ip` headers on server side ([#20](https://github.com/nuxt-community/axios-module/issues/20)) ([#175](https://github.com/nuxt-community/axios-module/issues/175)) ([3ae5416](https://github.com/nuxt-community/axios-module/commit/3ae5416))
+* **defaults:** set proper Accept-Encoding for server side ([#176](https://github.com/nuxt-community/axios-module/issues/176)) ([c84fb56](https://github.com/nuxt-community/axios-module/commit/c84fb56))
+
+
+
+<a name="5.3.4"></a>
+## [5.3.4](https://github.com/nuxt-community/axios-module/compare/v5.3.3...v5.3.4) (2018-10-30)
+
+
+
+<a name="5.3.3"></a>
+## [5.3.3](https://github.com/nuxt-community/axios-module/compare/v5.3.2...v5.3.3) (2018-09-28)
+
+
+### Bug Fixes
+
+* **package:** add missing types from index.d.ts ([3a06503](https://github.com/nuxt-community/axios-module/commit/3a06503))
+
+
+
 <a name="5.3.2"></a>
 ## [5.3.2](https://github.com/nuxt-community/axios-module/compare/v5.3.1...v5.3.2) (2018-09-21)
 
