@@ -18,6 +18,8 @@ Base URL which is used and prepended to make requests in server side.
 
 Environment variable `API_URL` can be used to **override** `baseURL`.
 
+**Note:** `baseURL` and `proxy` doesn't work together, you need to use `prefix` instead.
+
 ### `browserBaseURL`
 
 * Default: `baseURL` (or `prefix` when `options.proxy` is enabled)
