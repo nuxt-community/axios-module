@@ -2422,10 +2422,10 @@ consola@^2.4.1:
     std-env "^2.2.1"
     string-width "^3.0.0"
 
-consola@^2.5.3:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.5.3.tgz#f31386d0e7a460a5b7a698a640c5679268db0961"
-  integrity sha512-kLQDZW5TfTds9F/QGt7X0YlEyVDYXdrjkcqPVD+GuZZSJbW1KgEP3b59A1d9S7Tv3Q8kQyu/r6wOeAODjKVvVQ==
+consola@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.5.4.tgz#127627375ca45a1d507223dee770aba17cb991f7"
+  integrity sha512-4XX27fEcMgE0RDI9E4Dl0jYZm5IBFfpb4HlDMj0mgeULjj/hKXEjaDZEzQho0A8O6Cb3kiVnz2Tr9YfmGo2DNw==
 
 console-browserify@^1.1.0:
   version "1.1.0"
