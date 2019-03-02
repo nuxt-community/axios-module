@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [5.4.0](https://github.com/nuxt-community/axios-module/compare/v5.3.6...v5.4.0) (2019-03-02)
+
+
+### Bug Fixes
+
+* **types:** `onResponseError` typo ([#203](https://github.com/nuxt-community/axios-module/issues/203)) ([5fc1441](https://github.com/nuxt-community/axios-module/commit/5fc1441))
+* **types:** add AxiosError interface ([efb7191](https://github.com/nuxt-community/axios-module/commit/efb7191))
+* **types:** move types in types folder ([deb2834](https://github.com/nuxt-community/axios-module/commit/deb2834))
+
+
+### Features
+
+* **types:** add Context interface ([7f8952a](https://github.com/nuxt-community/axios-module/commit/7f8952a))
+* **types:** add types for helper functions ([#193](https://github.com/nuxt-community/axios-module/issues/193)) ([79909cc](https://github.com/nuxt-community/axios-module/commit/79909cc))
+
+
+
 <a name="5.3.6"></a>
 ## [5.3.6](https://github.com/nuxt-community/axios-module/compare/v5.3.5...v5.3.6) (2018-11-08)
 
