@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.4.1](https://github.com/nuxt-community/axios-module/compare/v5.4.0...v5.4.1) (2019-03-05)
+
+
+### Bug Fixes
+
+* **types:** correct Vuex Store instance ([#227](https://github.com/nuxt-community/axios-module/issues/227)) ([1ed6e2f](https://github.com/nuxt-community/axios-module/commit/1ed6e2f))
+
+
+
 # [5.4.0](https://github.com/nuxt-community/axios-module/compare/v5.3.6...v5.4.0) (2019-03-02)
 
 
