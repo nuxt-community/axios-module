@@ -1,5 +1,6 @@
 import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import Vue from 'vue'
+import './vuex'
 
 interface NuxtAxiosInstance extends AxiosInstance {
   $request<T = any>(config: AxiosRequestConfig): Promise<T>
