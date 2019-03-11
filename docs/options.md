@@ -99,7 +99,7 @@ axios: {
 
 * Default: `false`
 
-Adds an interceptor to automatically set `withCredentials` config of axios when requesting to `baseUrl`
+Adds an interceptor to automatically set `withCredentials` config of axios when requesting to `baseURL`
 which allows passing authentication headers to backend.
 
 ### `debug`
