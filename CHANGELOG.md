@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [5.5.0](https://github.com/nuxt-community/axios-module/compare/v5.4.2...v5.5.0) (2019-05-22)
+
+
+### Bug Fixes
+
+* lowercase `accept-encoding` header (nuxt/http[#43](https://github.com/nuxt-community/axios-module/issues/43)) ([c17fec2](https://github.com/nuxt-community/axios-module/commit/c17fec2))
+
+
+### Features
+
+* convert header names to lowercase (nuxt/http[#45](https://github.com/nuxt-community/axios-module/issues/45)) ([2e514a4](https://github.com/nuxt-community/axios-module/commit/2e514a4))
+* use `server` of nuxt.config.js to set default baseURL ([#245](https://github.com/nuxt-community/axios-module/issues/245)) ([e1120a9](https://github.com/nuxt-community/axios-module/commit/e1120a9))
+
+
+
 ## [5.4.1](https://github.com/nuxt-community/axios-module/compare/v5.4.0...v5.4.1) (2019-03-05)
 
 
