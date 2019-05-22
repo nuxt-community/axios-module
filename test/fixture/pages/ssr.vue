@@ -10,20 +10,20 @@
 let reqCtr = 1
 
 export default {
-    computed: {
-      axiosSessionId() {
-        return this.$axios.defaults.headers.common.sessionId
-      },
-
-      axiosEncoding() {
-        return this.$axios.defaults.headers.common['accept-encoding']
-      }
+  computed: {
+    axiosSessionId() {
+      return this.$axios.defaults.headers.common.sessionId
     },
-    async fetch({app, route}) {
-      let doLogin = route.query.login !== undefined
-      if (doLogin) {
-        app.$axios.setHeader('sessionId', reqCtr++)
-      }
+
+    axiosEncoding() {
+      return this.$axios.defaults.headers.common['accept-encoding']
     }
+  },
+  fetch({ app, route }) {
+    const doLogin = route.query.login !== undefined
+    if (doLogin) {
+      app.$axios.setHeader('sessionId', reqCtr++)
+    }
+  }
 }
 </script>
