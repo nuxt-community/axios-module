@@ -12,7 +12,7 @@ let reqCtr = 1
 export default {
   computed: {
     axiosSessionId() {
-      return this.$axios.defaults.headers.common.sessionId
+      return this.$axios.defaults.headers.common.sessionid
     },
 
     axiosEncoding() {
