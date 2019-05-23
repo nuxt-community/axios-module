@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.5.1](https://github.com/nuxt-community/axios-module/compare/v5.5.0...v5.5.1) (2019-05-23)
+
+
+### Bug Fixes
+
+* don't toLowerCase headers for `setHeader` and `setToken` ([#250](https://github.com/nuxt-community/axios-module/issues/250)) ([93469f0](https://github.com/nuxt-community/axios-module/commit/93469f0))
+
+
+
 # [5.5.0](https://github.com/nuxt-community/axios-module/compare/v5.4.2...v5.5.0) (2019-05-22)
 
 
