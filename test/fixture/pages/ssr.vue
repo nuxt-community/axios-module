@@ -12,7 +12,7 @@ let reqCtr = 1
 export default {
   computed: {
     axiosSessionId() {
-      return this.$axios.defaults.headers.common.sessionid
+      return this.$axios.defaults.headers.common.SessionId
     },
 
     axiosEncoding() {
@@ -22,7 +22,7 @@ export default {
   fetch({ app, route }) {
     const doLogin = route.query.login !== undefined
     if (doLogin) {
-      app.$axios.setHeader('sessionId', reqCtr++)
+      app.$axios.setHeader('SessionId', reqCtr++)
     }
   }
 }
