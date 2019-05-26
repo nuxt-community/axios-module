@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.5.2](https://github.com/nuxt-community/axios-module/compare/v5.5.1...v5.5.2) (2019-05-26)
+
+
+### Bug Fixes
+
+* vuex typescript type ([#253](https://github.com/nuxt-community/axios-module/issues/253)) ([9205fdf](https://github.com/nuxt-community/axios-module/commit/9205fdf))
+
+
+
 ## [5.5.1](https://github.com/nuxt-community/axios-module/compare/v5.5.0...v5.5.1) (2019-05-23)
 
 
