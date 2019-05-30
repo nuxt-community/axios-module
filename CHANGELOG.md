@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [5.5.3](https://github.com/nuxt-community/axios-module/compare/v5.5.2...v5.5.3) (2019-05-30)
+
+
+### Bug Fixes
+
+* bump axios to ^0.19.0 ([ee8f999](https://github.com/nuxt-community/axios-module/commit/ee8f999))
+
+
 
 ## [5.5.2](https://github.com/nuxt-community/axios-module/compare/v5.5.1...v5.5.2) (2019-05-26)
 
