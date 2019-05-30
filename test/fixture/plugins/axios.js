@@ -1,4 +1,4 @@
-export default function ({ $axios, redirect }) {
+export default function ({ $axios }) {
   $axios.onRequest((config) => {
     // eslint-disable-next-line no-console
     console.log('SPY: ' + config.url)

@@ -120,6 +120,6 @@ Also helps making consistent requests in both SSR and Client Side code.
 
 ### `proxyHeadersIgnore`
 
-* Default `['host', 'accept']`
+* Default `['host', 'accept', 'cf-ray', 'cf-connecting-ip']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
