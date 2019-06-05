@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.5.4](https://github.com/nuxt-community/axios-module/compare/v5.5.3...v5.5.4) (2019-06-05)
+
+
+### Bug Fixes
+
+* ignore content-length header ([41ff27a](https://github.com/nuxt-community/axios-module/commit/41ff27a))
+
+
+
 ### [5.5.3](https://github.com/nuxt-community/axios-module/compare/v5.5.2...v5.5.3) (2019-05-30)
 
 
