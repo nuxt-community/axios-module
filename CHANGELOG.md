@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.6.0](https://github.com/nuxt-community/axios-module/compare/v5.5.4...v5.6.0) (2019-08-20)
+
+
+### Features
+
+* **types:** provide nuxt 2.9 compatible types ([#277](https://github.com/nuxt-community/axios-module/issues/277)) ([7aee77b](https://github.com/nuxt-community/axios-module/commit/7aee77b))
+* https detection ([#260](https://github.com/nuxt-community/axios-module/issues/260)) ([953ab8c](https://github.com/nuxt-community/axios-module/commit/953ab8c))
+
+
+
 ### [5.5.4](https://github.com/nuxt-community/axios-module/compare/v5.5.3...v5.5.4) (2019-06-05)
 
 
