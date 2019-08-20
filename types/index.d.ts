@@ -26,10 +26,16 @@ declare module '@nuxt/vue-app' {
   interface Context {
     $axios: NuxtAxiosInstance
   }
+  interface NuxtAppOptions {
+    $axios: NuxtAxiosInstance
+  }
 }
-       
-// since nuxt 2.7.1 there is "NuxtAppOptions" for app context - see https://github.com/nuxt/nuxt.js/pull/5701
-declare module '@nuxt/vue-app' {
+
+// Nuxt 2.9+
+declare module '@nuxt/types' {
+  interface Context {
+    $axios: NuxtAxiosInstance
+  }
   interface NuxtAppOptions {
     $axios: NuxtAxiosInstance
   }
