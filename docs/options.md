@@ -20,6 +20,8 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 
 **Note:** `baseURL` and `proxy` doesn't work together, you need to use `prefix` instead.
 
+**Note:** Environment variable `DISABLE_BASE_URL` can be used to disable `host` and `port` in baseURL. If this variable is set to a true value, `baseURL` will be `[PREFIX]`.
+
 ### `browserBaseURL`
 
 * Default: `baseURL` (or `prefix` when `options.proxy` is enabled)
