@@ -1,32 +1,55 @@
 ## Options
 
-You can pass options using module options or `axios` section in `nuxt.config.js`
+You can pass different options using module inline options:
+
+```
+  ['@nuxtjs/axios', { proxy: true }]
+```
+
+or `axios` section in `nuxt.config.js`:
+
+**nuxt.config.js**
+```
+{
+  modules: [
+    '@nuxtjs/axios'
+  ],
+
+  axios: {
+    proxy: true
+  },
+}
+```
 
 ### `prefix`, `host` and `port`
 
-This options are used for default values of `baseURL` and `browserBaseURL`.
+These options are used for the default values of `baseURL` and `browserBaseURL`.
 
-Can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables.
+They can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables.
 
 Default value of `prefix` is `/`.
+
 
 ### `baseURL`
 
 * Default: `http://[HOST]:[PORT][PREFIX]`
 
-Base URL which is used and prepended to make requests in server side.
+Defines the base URL which is used and prepended to make requests server side requests.
 
 Environment variable `API_URL` can be used to **override** `baseURL`.
 
-**Note:** `baseURL` and `proxy` doesn't work together, you need to use `prefix` instead.
+**WARNING:** `baseURL` and `proxy` cannot be used at the same time, so when the `proxy` option is in use, you need to define `prefix` instead of `baseURL`.
+
 
 ### `browserBaseURL`
 
-* Default: `baseURL` (or `prefix` when `options.proxy` is enabled)
+* Default: `baseURL` 
+**WARNING:** when the `proxy` option is enabled the default for browserBaseURL becomes `prefix` instead of `baseURL`
 
-Base URL which is used and prepended to make requests in client side.
+Defines the base URL which is used and prepended to make client side requests.
 
-Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
+The environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
+
 
 ### `https`
 
@@ -34,13 +57,15 @@ Environment variable `API_URL_BROWSER` can be used to **override** `browserBaseU
 
 If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be changed into `https://`.
 
+
+
 ### `progress`
 
 * Default: `true`
 
-Integrate with Nuxt.js progress bar to show a loading bar while making requests. (Only on browser, when loading bar is available.)
+This option shows a loading bar while making requests integrating Nuxt.js progress bar (see "loading" options in config.nuxt.js). This is active only in the browser, and when loading bar is enabled and available.
 
-You can also disable progress bar per request using `progress` config.
+You can also disable the progress bar in specific requests using the `progress` option in an inline request configuration:
 
 ```js
 this.$axios.$get('URL', { progress: false })
@@ -50,7 +75,7 @@ this.$axios.$get('URL', { progress: false })
 
 * Default: `false`
 
-You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-community/proxy-module) and is much recommended to prevent CORS and deployment problems.
+You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-community/proxy-module). This is highly recommended to prevent CORS and production/deployment problems.
 
 **nuxt.config.js**
 
@@ -73,7 +98,7 @@ You can easily integrate Axios with [Proxy Module](https://github.com/nuxt-commu
 
 **Note:** It is not required to manually register `@nuxtjs/proxy` module, but it does need to be in your dependencies.
 
-**Note:** `/api/` will be added to all requests to the API end point. If you need to remove it use `pathRewrite`:
+**Note:** In the proxy module, `/api/` will be added to all requests to the API end point. If you need to remove it use the  `pathRewrite` option:
 
 ```js
 proxy: {
@@ -87,7 +112,7 @@ proxy: {
 
  Automatically intercept failed requests and retries them whenever posible using [axios-retry](https://github.com/softonic/axios-retry).
 
-By default, number of retries will be **3 times**, if `retry` value is set to `true`. You can change it by passing an object like this:
+By default, number of retries will be **3 times**, if `retry` value is set to `true`. You can change it by passing the option with an inline retries sub-option like this:
 
 ```js
 axios: {
@@ -99,27 +124,27 @@ axios: {
 
 * Default: `false`
 
-Adds an interceptor to automatically set `withCredentials` config of axios when requesting to `baseURL`
-which allows passing authentication headers to backend.
+Adds an interceptor that automatically sets `withCredentials` axios configuration when issuing a request to `baseURL`
+that needs to pass authentication headers to the backend.
 
 ### `debug`
 
 * Default: `false`
 
-Adds interceptors to log request and responses.
+Adds interceptors that logs axios request and responses.
 
 ### `proxyHeaders`
 
 * Default: `true`
 
-In SSR context, sets client request header as axios default request headers.
+In SSR context, this options sets client requests headers as default headers for the axios requests.
 This is useful for making requests which need cookie based auth on server side.
-Also helps making consistent requests in both SSR and Client Side code.
+This also helps making consistent requests in both SSR and Client Side code.
 
-> **NOTE:** If directing requests at a url protected by CloudFlare's CDN you should set this to false to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
+> **NOTE:** If you are directing requests to an url that is protected by CloudFlare's CDN you should set this to `false` in order to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
 
 ### `proxyHeadersIgnore`
 
 * Default `['host', 'accept', 'cf-ray', 'cf-connecting-ip', 'content-length']`
 
-Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
+This is useful and efficient only when `proxyHeaders` is set to true. Removes unwanted requests headers to the API backend in SSR.
