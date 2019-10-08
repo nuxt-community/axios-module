@@ -123,3 +123,9 @@ Also helps making consistent requests in both SSR and Client Side code.
 * Default `['host', 'accept', 'cf-ray', 'cf-connecting-ip', 'content-length']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
+
+### `fullResponse`
+
+* Default: `false`
+
+Returns the full response body when the request is successful instead of just the data.
