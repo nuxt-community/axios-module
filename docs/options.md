@@ -142,4 +142,4 @@ Only efficient when `proxyHeaders` is set to true. Removes unwanted request head
 }
 ```
 
-You can customize the headers. Your setting will be merged with the default setting.
+You can customize (default) headers. Your setting will be merged with the default setting.
