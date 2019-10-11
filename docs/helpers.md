@@ -36,6 +36,23 @@ let data = (await $axios.get('...')).data
 let data = await $axios.$get('...')
 ```
 
+### `setBaseURL(baseURL, browserBaseURL = null)`
+
+Axios instance has a helper to easily set baseURL or browserBaseURL.
+
+Parameters:
+
+* **baseURL**: Base URL which is used and prepended to make requests in server side.
+* **browserBaseURL**: Base URL which is used and prepended to make requests in client side.
+
+```js
+// Set baseURL
+this.$axios.setBaseURL('http://api.example.com')
+
+// Set baseURL and browserBaseURL
+this.$axios.setBaseURL('http://api.example.com', 'http://api.example.com/browser')
+```
+
 ### `setHeader(name, value, scopes='common')`
 
 Axios instance has a helper to easily set any header.
