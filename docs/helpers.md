@@ -38,7 +38,9 @@ let data = await $axios.$get('...')
 
 ### `setBaseURL(baseURL, browserBaseURL = null)`
 
-Axios instance has a helper to easily set baseURL or browserBaseURL.
+Axios instance has an additional helper to easily change baseURL or browserBaseURL.
+
+Use this when you need a dynamic runtime url. Otherwise use config and env variables (or server it can be even runtime).
 
 Parameters:
 
