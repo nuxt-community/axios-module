@@ -32,3 +32,29 @@ export default function ({ $axios, redirect }) {
   })
 }
 ```
+
+
+Or, say, re-adding Axios functionality which was left out.
+
+```js
+import Axios from "axios";
+
+const { CancelToken, isCancel } = Axios;
+
+export default function ({ $axios, redirect }) {
+
+  $axios.CancelToken = CancelToken;
+  $axios.isCancel = isCancel;
+
+  $axios.onRequest(config => {
+    console.log('Making request to ' + config.url)
+  })
+
+  $axios.onError(error => {
+    const code = parseInt(error.response && error.response.status)
+    if (code === 400) {
+      redirect('/400')
+    }
+  })
+}
+```
