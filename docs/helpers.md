@@ -42,6 +42,8 @@ Axios instance has an additional helper to easily change baseURL.
 
 Use this when you need a dynamic runtime url. Otherwise use config and environment variables.
 
+**NOTE:** When calling `setBaseURL`, it globally set's baseURL for session (one SSR request or browser tab) so it is adviced to only call it in application entrypoint with a plugin not in components. Subeffects can cause breaking other requests!
+
 Parameters:
 
 * **baseURL**: Base URL which is used and prepended to make requests in server side.
