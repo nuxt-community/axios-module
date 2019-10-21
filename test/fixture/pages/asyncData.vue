@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  async asyncData({ app }) {
+  async asyncData ({ app }) {
     const res = await app.$axios.$get('foo/bar')
     return {
       res

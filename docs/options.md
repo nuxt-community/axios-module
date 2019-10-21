@@ -123,3 +123,24 @@ Also helps making consistent requests in both SSR and Client Side code.
 * Default `['host', 'accept', 'cf-ray', 'cf-connecting-ip', 'content-length']`
 
 Only efficient when `proxyHeaders` is set to true. Removes unwanted request headers to the API backend in SSR.
+
+### `headers`
+
+Headers added to all requests. If provided, will be merged with the defaults.
+
+```js
+{
+    common: {
+      'Accept': 'application/json, text/plain, */*'
+    },
+    delete: {},
+    get: {},
+    head: {},
+    post: {},
+    put: {},
+    patch: {}
+}
+```
+
+- **NOTE:** Do NOT include any credentials or tokens here. One can easily access them.
+- **NOTE:** This headers are effective to ALL requests. Please take care and consider providing special headers on each call that needs this unless you are pretty sure you always need to add headers.
