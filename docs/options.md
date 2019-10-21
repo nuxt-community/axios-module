@@ -126,7 +126,7 @@ Only efficient when `proxyHeaders` is set to true. Removes unwanted request head
 
 ### `headers`
 
-* Default:
+Headers added to all requests. If provided, will be merged with the defaults.
 
 ```js
 {
@@ -142,4 +142,5 @@ Only efficient when `proxyHeaders` is set to true. Removes unwanted request head
 }
 ```
 
-You can customize (default) headers. Your setting will be merged with the default setting.
+- **NOTE:** Do NOT include any credentials or tokens here. One can easily access them.
+- **NOTE:** This headers are effective to ALL requests. Please take care and consider providing special headers on each call that needs this unless you are pretty sure you always need to add headers.
