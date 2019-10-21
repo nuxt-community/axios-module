@@ -36,6 +36,31 @@ let data = (await $axios.get('...')).data
 let data = await $axios.$get('...')
 ```
 
+### `setBaseURL(baseURL)`
+
+Axios instance has an additional helper to easily change baseURL.
+
+Use this when you need a dynamic runtime url. Otherwise use config and environment variables.
+
+Parameters:
+
+* **baseURL**: Base URL which is used and prepended to make requests in server side.
+
+```js
+// Set baseURL (both client and server)
+this.$axios.setBaseURL('http://api.example.com')
+
+// Change URL only for client
+if (process.client) {
+  this.$axios.setBaseURL('http://api.example.com')
+}
+
+// Change URL only for server
+if (process.server) {
+  this.$axios.setBaseURL('http://api.example.com')
+}
+```
+
 ### `setHeader(name, value, scopes='common')`
 
 Axios instance has a helper to easily set any header.
