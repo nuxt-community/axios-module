@@ -43,7 +43,7 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 
 ### `browserBaseURL`
 
-* Default: `baseURL` 
+* Default: `baseURL`
 **WARNING:** when the `proxy` option is enabled the default for browserBaseURL becomes `prefix` instead of `baseURL`
 
 Defines the base URL which is used and prepended to make client side requests.
@@ -148,3 +148,24 @@ This also helps making consistent requests in both SSR and Client Side code.
 * Default `['host', 'accept', 'cf-ray', 'cf-connecting-ip', 'content-length']`
 
 This is useful and efficient only when `proxyHeaders` is set to true. Removes unwanted requests headers to the API backend in SSR.
+
+### `headers`
+
+Headers added to all requests. If provided, will be merged with the defaults.
+
+```js
+{
+    common: {
+      'Accept': 'application/json, text/plain, */*'
+    },
+    delete: {},
+    get: {},
+    head: {},
+    post: {},
+    put: {},
+    patch: {}
+}
+```
+
+- **NOTE:** Do NOT include any credentials or tokens here. One can easily access them.
+- **NOTE:** This headers are effective to ALL requests. Please take care and consider providing special headers on each call that needs this unless you are pretty sure you always need to add headers.

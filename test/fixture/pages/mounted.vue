@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       res: ''
     }
   },
 
-  async mounted() {
+  async mounted () {
     // Request with full url becasue we are in JSDom env
     this.res = await this.$axios.$get('http://localhost:3000/test_api/foo/bar')
   }
