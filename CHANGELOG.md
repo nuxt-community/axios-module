@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.7.0](https://github.com/nuxt-community/axios-module/compare/v5.6.0...v5.7.0) (2019-10-22)
+
+
+### Features
+
+* add function helper `setBaseURL` ([#296](https://github.com/nuxt-community/axios-module/issues/296)) ([1028bbc](https://github.com/nuxt-community/axios-module/commit/1028bbcaf2d1a29a33949f05aeb9d519c30b246e))
+* allow adding custom headers with nuxt config ([#294](https://github.com/nuxt-community/axios-module/issues/294)) ([3e38906](https://github.com/nuxt-community/axios-module/commit/3e3890616a5ac3eb34b07ec476313bb648aca59a))
+
+
+### Bug Fixes
+
+* **headers:** don't proxy `content-md5` and `content-type` ([#300](https://github.com/nuxt-community/axios-module/issues/300)) ([f959c58](https://github.com/nuxt-community/axios-module/commit/f959c585254029ac8d623d1472b883022ab115e2))
+* **progress:** handle canceled requests ([#301](https://github.com/nuxt-community/axios-module/issues/301)) ([5096060](https://github.com/nuxt-community/axios-module/commit/50960609d913d059758658aa88434bd28faa0c47))
+
 ## [5.6.0](https://github.com/nuxt-community/axios-module/compare/v5.5.4...v5.6.0) (2019-08-20)
 
 
