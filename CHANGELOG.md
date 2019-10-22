@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.7.1](https://github.com/nuxt-community/axios-module/compare/v5.7.0...v5.7.1) (2019-10-22)
+
+
+### Bug Fixes
+
+* use `Axios` for  `isCancel` (fixes [#301](https://github.com/nuxt-community/axios-module/issues/301)) ([82dfccc](https://github.com/nuxt-community/axios-module/commit/82dfccce409e918a91e498af1340408dc0892bf5))
+
 ## [5.7.0](https://github.com/nuxt-community/axios-module/compare/v5.6.0...v5.7.0) (2019-10-22)
 
 
