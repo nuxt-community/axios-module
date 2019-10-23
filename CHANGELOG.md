@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.8.0](https://github.com/nuxt-community/axios-module/compare/v5.7.1...v5.8.0) (2019-10-23)
+
+
+### Features
+
+* add `CancelToken` and `isCancel` to axios instance ([#292](https://github.com/nuxt-community/axios-module/issues/292)) ([b9335b1](https://github.com/nuxt-community/axios-module/commit/b9335b1c55b3af34e2d6e5897fedb8372a620ce4))
+
 ### [5.7.1](https://github.com/nuxt-community/axios-module/compare/v5.7.0...v5.7.1) (2019-10-22)
 
 
