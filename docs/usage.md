@@ -45,50 +45,43 @@ You can cancel a request using a _cancel token_.
 You can create a cancel token using the `CancelToken.source` factory as shown below:
 
 ```js
-const { CancelToken } = this.$axios;
-const source = this.$axios.CancelToken.source();
+const source = this.$axios.CancelToken.source()
 
-this.$axios
-  .$get('/user/12345', {
-    cancelToken: source.token,
+this.$axios.$get('/user/12345', {
+  cancelToken: source.token
+}).catch(error => {
+  if (this.$axios.isCancel(error)) {
+    console.log('Request canceled', error)
+  } else {
+    // handle error
+  }
+})
+
+this.$axios.$post('/user/12345', {
+    name: 'new name'
+  }, {
+    cancelToken: source.token
   })
-  .catch(error => {
-    if (this.$axios.isCancel(error)) {
-      console.log('Request canceled', error);
-    } else {
-      // handle error
-    }
-  });
-
-this.$axios.$post(
-  '/user/12345',
-  {
-    name: 'new name',
-  },
-  {
-    cancelToken: source.token,
-  },
-);
 
 // cancel the request (the message parameter is optional)
-source.cancel('Operation canceled by the user.');
+source.cancel('Operation canceled by the user.')
 ```
 
 You can also create a cancel token by passing an executor function to the `CancelToken` constructor:
 
 ```js
-const { CancelToken } = this.$axios;
-let cancel;
+const { CancelToken } = this.$axios
+let cancel
 
 this.$axios.$get('/user/12345', {
   cancelToken: new CancelToken(c => {
     // An executor function receives a cancel function as a parameter
-    cancel = c;
+    cancel = c
   }),
-});
+})
 
 // cancel the request
-cancel();
+cancel()
 ```
 
 > Note: you can cancel several requests with the same cancel token.
