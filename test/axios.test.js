@@ -54,6 +54,15 @@ const testSuite = () => {
     })
   })
 
+  test('createCopy', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/mounted'))
+    window.onNuxtReady(() => {
+      const $axios = window.$nuxt.$axios
+      const newInstance = $axios.create()
+      expect(newInstance.defaults.xsrfHeaderName).toBe('X-CSRF-TOKEN')
+    })
+  })
+
   test('ssr', async () => {
     const makeReq = login => axios
       .get(url('/ssr' + (login ? '?login' : '')))

@@ -32,3 +32,26 @@ export default function ({ $axios, redirect }) {
   })
 }
 ```
+
+### Create new axios instance based on defaults
+
+If you need to create your own axios instance which based on $axios defaults, you can use `create` method.
+
+```js
+export default function ({ $axios, redirect }, inject) {
+  // Create a custom axios instance
+  const api = $axios.create({
+    headers: {
+      common: {
+        Accept: 'text/plain, */*'
+      }
+    }
+  })
+
+  // Set baseURL to something different
+  api.setBaseURL('https://my_api.com')
+  
+  // Inject to context as $api
+  inject('api', api)
+}
+```
