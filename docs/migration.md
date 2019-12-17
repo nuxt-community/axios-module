@@ -27,4 +27,4 @@ For using old defaults:
 
 You can now easily use a plugin to extend axios and add your custom logic there. 
 
-Please see [Extending Axios](https://github.com/nuxt-community/axios-module#extending-axios) section in docs.
+Please see [Extending Axios](https://axios.nuxtjs.org/extend) section in docs.
