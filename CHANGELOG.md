@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.9.0](https://github.com/nuxt-community/axios-module/compare/v5.6.0...v5.9.0) (2019-12-17)
+
+
+### Features
+
+* add `CancelToken` and `isCancel` to axios instance ([#292](https://github.com/nuxt-community/axios-module/issues/292)) ([474910b](https://github.com/nuxt-community/axios-module/commit/474910bd875f2d1f6bf0e39e511db87b08673cdc))
+* add function helper `setBaseURL` ([#296](https://github.com/nuxt-community/axios-module/issues/296)) ([c429d55](https://github.com/nuxt-community/axios-module/commit/c429d555202620343bc79b70bad3aa61958fb368))
+* allow adding custom headers with nuxt config ([#294](https://github.com/nuxt-community/axios-module/issues/294)) ([af1e86d](https://github.com/nuxt-community/axios-module/commit/af1e86d80065951a2ea47cdb291d159bf174f73a))
+* allow creating new instances ([#306](https://github.com/nuxt-community/axios-module/issues/306)) ([2ca95e5](https://github.com/nuxt-community/axios-module/commit/2ca95e58235f10b22317a7c3d53d539d8006f528))
+
+
+### Bug Fixes
+
+* **docs:** should be response.code instead of code ([#197](https://github.com/nuxt-community/axios-module/issues/197)) ([d07102e](https://github.com/nuxt-community/axios-module/commit/d07102e51f9089988ba2b0184dd442ad4fc9d46a))
+* **headers:** don't proxy `content-md5` and `content-type` ([#300](https://github.com/nuxt-community/axios-module/issues/300)) ([46c49e2](https://github.com/nuxt-community/axios-module/commit/46c49e253cb23ffc1cf92ad02a1ab1fc24034906))
+* **progress:** handle canceled requests ([#301](https://github.com/nuxt-community/axios-module/issues/301)) ([2903fd5](https://github.com/nuxt-community/axios-module/commit/2903fd579fe5deed693b26660a687089a589ebdf))
+* **types:** correct Vuex Store instance ([#227](https://github.com/nuxt-community/axios-module/issues/227)) ([e5747eb](https://github.com/nuxt-community/axios-module/commit/e5747ebb275be56cb4496771911419038952bf4b))
+* use `Axios` for  `isCancel` (fixes [#301](https://github.com/nuxt-community/axios-module/issues/301)) ([4f71479](https://github.com/nuxt-community/axios-module/commit/4f714791b564b91b915c107299bb3ffecc3a482b))
+
 ## [5.8.0](https://github.com/nuxt-community/axios-module/compare/v5.7.1...v5.8.0) (2019-10-23)
 
 
