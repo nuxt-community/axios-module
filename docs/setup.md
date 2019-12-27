@@ -47,3 +47,13 @@ Add the types to your "types" array in tsconfig.json after the `@nuxt/vue-app` e
 > **Why?**
 >
 > Because of the way nuxt works the `$axios` property on the context has to be merged into the nuxt `Context` interface via [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). Adding `@nuxtjs/axios` to your types will import the types from the package and make typescript aware of the additions to the `Context` interface.
+
+### IE11 support
+
+If you need IE11 support, you will need to transpile `defu`, a dependency of `@nuxtjs/axios`. Add the following to your `nuxt.config.js`:
+
+```js
+  build: {
+    transpile: [/^defu/]
+  },
+```
