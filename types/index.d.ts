@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosError, AxiosStatic, AxiosRequestConfig, AxiosResponse } from 'axios'
 import Vue from 'vue'
 import './vuex'
 
