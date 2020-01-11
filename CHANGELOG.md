@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.9.3](https://github.com/nuxt-community/axios-module/compare/v5.9.2...v5.9.3) (2020-01-11)
+
+
+### Bug Fixes
+
+* **types:** extend from `AxiosStatic` ([#319](https://github.com/nuxt-community/axios-module/issues/319)) ([9223a57](https://github.com/nuxt-community/axios-module/commit/9223a57c7ac65b2c414858360126d23bf60f9c82))
+
 ### [5.9.2](https://github.com/nuxt-community/axios-module/compare/v5.9.1...v5.9.2) (2020-01-02)
 
 ### [5.9.1](https://github.com/nuxt-community/axios-module/compare/v5.9.0...v5.9.1) (2020-01-02)
