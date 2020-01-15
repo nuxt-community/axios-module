@@ -36,6 +36,26 @@ methods: {
 }
 ```
 
+### HTTP Methods
+
+**`POST`**
+```js
+methods: {
+  async postSomething() {
+    const response = await this.$axios.$post('http://icanhazip.com', { dataToPost: 'I love nuxt' })
+  }
+}
+```
+
+**`GET`**
+```js
+methods: {
+  async getSomething() {
+    const ip = await this.$axios.$get('http://icanhazip.com')
+  }
+}
+```
+
 ### Cancel token
 
 You can cancel a request using a _cancel token_.
