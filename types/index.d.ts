@@ -1,8 +1,8 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosError, AxiosRequestConfig, AxiosResponse, AxiosStatic } from 'axios'
 import Vue from 'vue'
 import './vuex'
 
-interface NuxtAxiosInstance extends AxiosInstance {
+interface NuxtAxiosInstance extends AxiosStatic {
   $request<T = any>(config: AxiosRequestConfig): Promise<T>
   $get<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>
   $delete<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>
