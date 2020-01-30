@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.9.4](https://github.com/nuxt-community/axios-module/compare/v5.9.3...v5.9.4) (2020-01-30)
+
+
+### Bug Fixes
+
+* **types:** add `setBaseURL` ([#329](https://github.com/nuxt-community/axios-module/issues/329)) ([9d00d6a](https://github.com/nuxt-community/axios-module/commit/9d00d6a9b5e21396d3b195f824dd2cfe99ca9012))
+
 ### [5.9.3](https://github.com/nuxt-community/axios-module/compare/v5.9.2...v5.9.3) (2020-01-11)
 
 
