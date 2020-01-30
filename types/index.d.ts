@@ -12,6 +12,7 @@ interface NuxtAxiosInstance extends AxiosStatic {
   $put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
   $patch<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
 
+  setBaseURL(baseURL: string): void
   setHeader(name: string, value?: string | false, scopes?: string | string[]): void
   setToken(token: string | false, type?: string, scopes?: string | string[]): void
 
