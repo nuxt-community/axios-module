@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.9.6](https://github.com/nuxt-community/axios-module/compare/v5.9.5...v5.9.6) (2020-03-27)
+
+
+### Bug Fixes
+
+* **module:** always set protocol to `https` when `https: true` is set ([#344](https://github.com/nuxt-community/axios-module/issues/344)) ([6f82570](https://github.com/nuxt-community/axios-module/commit/6f82570b163c4d4635321601f05d0c4641a00f19))
+
 ### [5.9.5](https://github.com/nuxt-community/axios-module/compare/v5.9.3...v5.9.5) (2020-02-02)
 
 
