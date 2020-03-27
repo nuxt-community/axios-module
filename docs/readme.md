@@ -1,4 +1,4 @@
-# 📦 Axios Module
+# Introduction
 
 > Secure and Easy [Axios](https://github.com/axios/axios) integration with Nuxt.js.
 

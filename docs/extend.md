@@ -1,4 +1,4 @@
-## Extending Axios
+# Extending Axios
 
 If you need to customize axios by registering interceptors and changing global config, you have to create a nuxt plugin.
 
@@ -50,7 +50,7 @@ export default function ({ $axios, redirect }, inject) {
 
   // Set baseURL to something different
   api.setBaseURL('https://my_api.com')
-  
+
   // Inject to context as $api
   inject('api', api)
 }

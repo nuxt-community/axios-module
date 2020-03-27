@@ -1,4 +1,4 @@
-## Options
+# Options
 
 You can pass different options using module inline options:
 
@@ -21,7 +21,7 @@ or `axios` section in `nuxt.config.js`:
 }
 ```
 
-### `prefix`, `host` and `port`
+## `prefix`, `host` and `port`
 
 These options are used for the default values of `baseURL` and `browserBaseURL`.
 
@@ -30,7 +30,7 @@ They can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` 
 Default value of `prefix` is `/`.
 
 
-### `baseURL`
+## `baseURL`
 
 * Default: `http://[HOST]:[PORT][PREFIX]`
 
@@ -41,7 +41,7 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 **WARNING:** `baseURL` and `proxy` cannot be used at the same time, so when the `proxy` option is in use, you need to define `prefix` instead of `baseURL`.
 
 
-### `browserBaseURL`
+## `browserBaseURL`
 
 * Default: `baseURL`
 **WARNING:** when the `proxy` option is enabled the default for browserBaseURL becomes `prefix` instead of `baseURL`
@@ -51,7 +51,7 @@ Defines the base URL which is used and prepended to make client side requests.
 The environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
 
 
-### `https`
+## `https`
 
 * Default: `false`
 
@@ -59,7 +59,7 @@ If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be chang
 
 
 
-### `progress`
+## `progress`
 
 * Default: `true`
 
@@ -71,7 +71,7 @@ You can also disable the progress bar in specific requests using the `progress` 
 this.$axios.$get('URL', { progress: false })
 ```
 
-### `proxy`
+## `proxy`
 
 * Default: `false`
 
@@ -106,7 +106,7 @@ proxy: {
 }
 ```
 
-### `retry`
+## `retry`
 
 * Default: `false`
 
@@ -120,20 +120,20 @@ axios: {
 }
 ```
 
-### `credentials`
+## `credentials`
 
 * Default: `false`
 
 Adds an interceptor that automatically sets `withCredentials` axios configuration when issuing a request to `baseURL`
 that needs to pass authentication headers to the backend.
 
-### `debug`
+## `debug`
 
 * Default: `false`
 
 Adds interceptors that logs axios request and responses.
 
-### `proxyHeaders`
+## `proxyHeaders`
 
 * Default: `true`
 
@@ -143,13 +143,13 @@ This also helps making consistent requests in both SSR and Client Side code.
 
 > **NOTE:** If you are directing requests to an url that is protected by CloudFlare's CDN you should set this to `false` in order to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
 
-### `proxyHeadersIgnore`
+## `proxyHeadersIgnore`
 
 * Default `['host', 'accept', 'cf-ray', 'cf-connecting-ip', 'content-length']`
 
 This is useful and efficient only when `proxyHeaders` is set to true. Removes unwanted requests headers to the API backend in SSR.
 
-### `headers`
+## `headers`
 
 Headers added to all requests. If provided, will be merged with the defaults.
 

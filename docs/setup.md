@@ -1,5 +1,7 @@
 
-## Setup
+# Setup
+
+## Install
 
 Install with yarn:
 
@@ -28,7 +30,7 @@ module.exports = {
 ```
 
 
-### Typescript setup
+## Typescript
 
 Add the types to your "types" array in tsconfig.json after the `@nuxt/vue-app` entry
 

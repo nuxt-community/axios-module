@@ -1,6 +1,6 @@
-## Usage
+# Usage
 
-### Component
+## Component
 
 **`asyncData`**
 
@@ -22,7 +22,7 @@ methods: {
 }
 ```
 
-### Store actions (including `nuxtServerInit`)
+## Store Actions
 
 ```js
 // In store
@@ -36,7 +36,19 @@ methods: {
 }
 ```
 
-### Cancel token
+## `$` Shortcuts
+
+Axios plugin also supports shortcuts with `$` prefixed methods to directly get data:
+
+```js
+// Normal usage with axios
+let data = (await $axios.get('...')).data
+
+// Fetch Style
+let data = await $axios.$get('...')
+```
+
+## Cancel token
 
 You can cancel a request using a _cancel token_.
 

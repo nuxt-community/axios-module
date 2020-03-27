@@ -1,4 +1,6 @@
-## From 4.x to 5.x
+# Migration guides
+
+### From 4.x to 5.x
 
 **BaseURL options and handling have been completely rewritten.**
 
@@ -16,7 +18,7 @@ For using old defaults:
 {
   axios: {
     prefix: '/api',
-    credentials: true    
+    credentials: true
   }
 }
 ```
@@ -25,6 +27,6 @@ For using old defaults:
 
 **All lifecycle functions removed**
 
-You can now easily use a plugin to extend axios and add your custom logic there. 
+You can now easily use a plugin to extend axios and add your custom logic there.
 
 Please see [Extending Axios](https://axios.nuxtjs.org/extend) section in docs.
