@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.9.7](https://github.com/nuxt-community/axios-module/compare/v5.9.6...v5.9.7) (2020-03-30)
+
+
+### Bug Fixes
+
+* **plugin:** don't convert falsy urls to string ([#347](https://github.com/nuxt-community/axios-module/issues/347)) ([b8a510e](https://github.com/nuxt-community/axios-module/commit/b8a510ee989fabf10d93d99a7ae1e17c0fc3eca0))
+
 ### [5.9.6](https://github.com/nuxt-community/axios-module/compare/v5.9.5...v5.9.6) (2020-03-27)
 
 
