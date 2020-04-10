@@ -30,9 +30,9 @@ module.exports = {
 ```
 
 
-## Typescript
+## TypeScript
 
-Add the types to your "types" array in tsconfig.json after the `@nuxt/vue-app` entry
+Add the types to your "types" array in tsconfig.json after the `@nuxt/types` (Nuxt 2.9.0+) or `@nuxt/vue-app` entry
 
 **tsconfig.json**
 
@@ -40,7 +40,7 @@ Add the types to your "types" array in tsconfig.json after the `@nuxt/vue-app` e
 {
   "compilerOptions": {
     "types": [
-      "@nuxt/vue-app",
+      "@nuxt/types",
       "@nuxtjs/axios"
     ]
   }
