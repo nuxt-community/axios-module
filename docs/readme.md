@@ -2,6 +2,17 @@
 
 > Secure and Easy [Axios](https://github.com/axios/axios) integration with Nuxt.js.
 
+<div>
+  <a href="https://vueschool.io/lessons/the-axios-module?friend=nuxt" target="_blank" class="Promote">
+    <img src="/async-data-with-nuxtjs-2x.png" alt="AsyncData Nuxt course by Vue School"/>
+    <div class="Promote__Content">
+      <h4 class="Promote__Content__Title">Learn how to use the Axios module with a short video lesson</h4>
+      <p class="Promote__Content__Description">Get up to speed quickly with Vue School's free video lesson.</p>
+      <p class="Promote__Content__Signature">Video courses made by VueSchool to support Nuxt.js developpement.</p>
+    </div>
+  </a>
+</div>
+
 ## Features
 
 ✓ Automatically set base URL for client & server side

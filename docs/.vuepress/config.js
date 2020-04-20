@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Axios Module',
   description: 'Axios Module for Nuxt',
+  head: [['link', { rel: 'stylesheet', href: '/styles.css' }]],
   themeConfig: {
     repo: 'nuxt-community/axios-module',
     docsDir: 'docs',
