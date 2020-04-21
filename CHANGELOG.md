@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.10.0](https://github.com/nuxt-community/axios-module/compare/v5.9.7...v5.10.0) (2020-04-21)
+
+
+### Features
+
+* **plugin:** enable server brotli if supported (closes [#276](https://github.com/nuxt-community/axios-module/issues/276)) ([074f98c](https://github.com/nuxt-community/axios-module/commit/074f98cbdf409473357b2cd24cd6cb13fe75f149))
+
+
+### Bug Fixes
+
+* **module:** browserBaseURL as empty string (fixes [#303](https://github.com/nuxt-community/axios-module/issues/303)) ([18afe5c](https://github.com/nuxt-community/axios-module/commit/18afe5c1a9aac6380bdd5ffb337a0968a6d504aa))
+* **plugin:** preserve default headers (fixes [#323](https://github.com/nuxt-community/axios-module/issues/323)) ([6c5605d](https://github.com/nuxt-community/axios-module/commit/6c5605df0b77e9e4df32ad1eaecb2eac60eb1c1d))
+* **plugin:** use `globalName` instead of  `$nuxt` (fixes [#345](https://github.com/nuxt-community/axios-module/issues/345)) ([fd1f8ec](https://github.com/nuxt-community/axios-module/commit/fd1f8ec17160f6e88610e3dfa2153423b3140592))
+
 ### [5.9.7](https://github.com/nuxt-community/axios-module/compare/v5.9.6...v5.9.7) (2020-03-30)
 
 
