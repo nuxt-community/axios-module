@@ -3,6 +3,10 @@ module.exports = {
   description: 'Axios Module for Nuxt',
   head: [['link', { rel: 'stylesheet', href: '/styles.css' }]],
   themeConfig: {
+    algolia: {
+      apiKey: 'b41badfa89f1ce270dfeaf0fdfbfbaea',
+      indexName: 'nuxtjs_axios'
+    },
     repo: 'nuxt-community/axios-module',
     docsDir: 'docs',
     editLinks: true,
