@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.10.3](https://github.com/nuxt-community/axios-module/compare/v5.10.2...v5.10.3) (2020-04-30)
+
+
+### Bug Fixes
+
+* globalName fallback for nuxt < 2.2.0 ([12da6c8](https://github.com/nuxt-community/axios-module/commit/12da6c8e2feb8cf4f7e918fbbe4693400152c1ff))
+
 ### [5.10.2](https://github.com/nuxt-community/axios-module/compare/v5.10.1...v5.10.2) (2020-04-27)
 
 
