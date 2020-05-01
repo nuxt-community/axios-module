@@ -23,6 +23,28 @@ interface NuxtAxiosInstance extends AxiosStatic {
   onResponseError(callback: (error: AxiosError) => void): void
 }
 
+interface AxiosOptions {
+  baseURL?: string,
+  browserBaseURL?: string,
+  credentials?: boolean,
+  debug?: boolean,
+  progress?: boolean,
+  proxyHeaders?: boolean,
+  proxyHeadersIgnore?: string[],
+  proxy?: boolean,
+  retry?: boolean,
+  https?: boolean,
+  headers?: {
+    common?: Record<string, string>,
+    delete?: Record<string, string>,
+    get?: Record<string, string>,
+    head?: Record<string, string>,
+    post?: Record<string, string>,
+    put?: Record<string, string>,
+    patch?: Record<string, string>,
+  },
+}
+
 declare module '@nuxt/vue-app' {
   interface Context {
     $axios: NuxtAxiosInstance
@@ -37,8 +59,13 @@ declare module '@nuxt/types' {
   interface Context {
     $axios: NuxtAxiosInstance
   }
+
   interface NuxtAppOptions {
     $axios: NuxtAxiosInstance
+  }
+
+  interface Configuration {
+    axios?: AxiosOptions
   }
 }
 
