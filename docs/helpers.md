@@ -26,7 +26,7 @@ export default function ({ $axios, redirect }) {
 
 ## `setBaseURL`
 
-- Signuture: `setBaseURL(baseURL)`
+- Signature: `setBaseURL(baseURL)`
 
 Axios instance has an additional helper to easily change baseURL.
 
@@ -55,7 +55,7 @@ if (process.server) {
 
 ## `setHeader`
 
-- Signuture: `setHeader(name, value, scopes='common')`
+- Signature: `setHeader(name, value, scopes='common')`
 
 Axios instance has a helper to easily set any header.
 
@@ -86,7 +86,7 @@ this.$axios.setHeader('Content-Type', false, ['post'])
 
 ## `setToken`
 
-- Signuture: `setToken(token, type, scopes='common')`
+- Signature: `setToken(token, type, scopes='common')`
 
 Axios instance has an additional helper to easily set global authentication header.
 
