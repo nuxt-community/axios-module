@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.11.0](https://github.com/nuxt-community/axios-module/compare/v5.10.3...v5.11.0) (2020-06-05)
+
+
+### Features
+
+* experimental runtimeConfig support ([07ca13c](https://github.com/nuxt-community/axios-module/commit/07ca13c58194c8c48a61896a07505a936c26eb93))
+
+
+### Bug Fixes
+
+* **plugin:** always get global `$nuxt` while loading ([#364](https://github.com/nuxt-community/axios-module/issues/364)) ([e848b9d](https://github.com/nuxt-community/axios-module/commit/e848b9d0b0a1804388eb51d328ab6054d89aa979))
+
 ### [5.10.3](https://github.com/nuxt-community/axios-module/compare/v5.10.2...v5.10.3) (2020-04-30)
 
 
