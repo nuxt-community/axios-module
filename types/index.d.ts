@@ -1,4 +1,5 @@
 import { AxiosError, AxiosRequestConfig, AxiosResponse, AxiosStatic } from 'axios'
+import { IAxiosRetryConfig } from 'axios-retry'
 import Vue from 'vue'
 import './vuex'
 
@@ -32,7 +33,7 @@ interface AxiosOptions {
   proxyHeaders?: boolean,
   proxyHeadersIgnore?: string[],
   proxy?: boolean,
-  retry?: boolean,
+  retry?: boolean | IAxiosRetryConfig,
   https?: boolean,
   headers?: {
     common?: Record<string, string>,
