@@ -29,10 +29,13 @@ interface AxiosOptions {
   browserBaseURL?: string,
   credentials?: boolean,
   debug?: boolean,
+  host?: string,     
+  prefix?: string,
   progress?: boolean,
   proxyHeaders?: boolean,
   proxyHeadersIgnore?: string[],
   proxy?: boolean,
+  port?: string | number,
   retry?: boolean | IAxiosRetryConfig,
   https?: boolean,
   headers?: {
