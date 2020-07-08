@@ -21,11 +21,40 @@ or `axios` section in `nuxt.config.js`:
 }
 ```
 
+### Environment Variables
+
+The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandatory in case of using environment variables in production, otherwise, the values will be hard coded during build and won't change.
+
+**nuxt.config.js**
+```
+{
+  modules: [
+    '@nuxtjs/axios'
+  ],
+
+  axios: {
+    baseURL: 'http://localhost:4000', // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL_BROWSER
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
+  },
+}
+```
+
 ## `prefix`, `host` and `port`
 
 These options are used for the default values of `baseURL` and `browserBaseURL`.
 
-They can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables.
+They can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) [environment variables](#environment-variables).
 
 Default value of `prefix` is `/`.
 
@@ -36,7 +65,7 @@ Default value of `prefix` is `/`.
 
 Defines the base URL which is used and prepended to make requests server side requests.
 
-Environment variable `API_URL` can be used to **override** `baseURL`.
+[Environment variable](#environment-variables) `API_URL` can be used to **override** `baseURL`.
 
 **WARNING:** `baseURL` and `proxy` cannot be used at the same time, so when the `proxy` option is in use, you need to define `prefix` instead of `baseURL`.
 
@@ -48,7 +77,7 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 
 Defines the base URL which is used and prepended to make client side requests.
 
-The environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
+The [environment variable](#environment-variables) `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
 
 
 ## `https`
