@@ -31,8 +31,9 @@ Supported options:
 - `browserBaseURL`
 
 **nuxt.config.js**
-```
-{
+
+```js
+export default {
   modules: [
     '@nuxtjs/axios'
   ],
