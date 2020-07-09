@@ -25,6 +25,11 @@ or `axios` section in `nuxt.config.js`:
 
 The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandatory in case of using environment variables in production, otherwise, the values will be hard coded during build and won't change.
 
+Supported options:
+
+- `baseURL`
+- `browserBaseURL`
+
 **nuxt.config.js**
 ```
 {
@@ -38,7 +43,7 @@ The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandator
 
   publicRuntimeConfig: {
     axios: {
-      baseURL: process.env.BASE_URL_BROWSER
+      browserBaseURL: process.env.BROWSER_BASE_URL
     }
   },
 
