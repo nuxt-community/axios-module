@@ -21,6 +21,41 @@ or `axios` section in `nuxt.config.js`:
 }
 ```
 
+### Runtime Config
+
+The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandatory in case of using environment variables in production, otherwise, the values will be hard coded during build and won't change.
+
+Supported options:
+
+- `baseURL`
+- `browserBaseURL`
+
+**nuxt.config.js**
+
+```js
+export default {
+  modules: [
+    '@nuxtjs/axios'
+  ],
+
+  axios: {
+    baseURL: 'http://localhost:4000', // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
+  },
+}
+```
+
 ## `prefix`, `host` and `port`
 
 These options are used for the default values of `baseURL` and `browserBaseURL`.
