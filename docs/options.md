@@ -21,7 +21,7 @@ or `axios` section in `nuxt.config.js`:
 }
 ```
 
-### Environment Variables
+### Runtime Config
 
 The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandatory in case of using environment variables in production, otherwise, the values will be hard coded during build and won't change.
 
