@@ -54,7 +54,7 @@ The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandator
 
 These options are used for the default values of `baseURL` and `browserBaseURL`.
 
-They can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) [environment variables](#environment-variables).
+They can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` (or `PORT`) environment variables.
 
 Default value of `prefix` is `/`.
 
