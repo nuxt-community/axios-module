@@ -65,7 +65,7 @@ Default value of `prefix` is `/`.
 
 Defines the base URL which is used and prepended to make requests server side requests.
 
-[Environment variable](#environment-variables) `API_URL` can be used to **override** `baseURL`.
+Environment variable `API_URL` can be used to **override** `baseURL`.
 
 **WARNING:** `baseURL` and `proxy` cannot be used at the same time, so when the `proxy` option is in use, you need to define `prefix` instead of `baseURL`.
 
@@ -77,7 +77,7 @@ Defines the base URL which is used and prepended to make requests server side re
 
 Defines the base URL which is used and prepended to make client side requests.
 
-The [environment variable](#environment-variables) `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
+The environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
 
 
 ## `https`
