@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.12.0](https://github.com/nuxt-community/axios-module/compare/v5.11.0...v5.12.0) (2020-07-10)
+
+
+### Features
+
+* **plugin:** support runtimeConfig ([#387](https://github.com/nuxt-community/axios-module/issues/387)) ([351ea5e](https://github.com/nuxt-community/axios-module/commit/351ea5ee459eea53b9124de75ebfa7674d7ccd40))
+
+
+### Bug Fixes
+
+* **types:** add axios-retry type def for more options ([#378](https://github.com/nuxt-community/axios-module/issues/378)) ([40a0c58](https://github.com/nuxt-community/axios-module/commit/40a0c5885819406fec88b212f0219539fbc0d229))
+* **types:** add prefix, port, host options to axios types ([#381](https://github.com/nuxt-community/axios-module/issues/381)) ([301805b](https://github.com/nuxt-community/axios-module/commit/301805b5eade85ff30f80e9f34341d586a056d8b))
+
 ## [5.11.0](https://github.com/nuxt-community/axios-module/compare/v5.10.3...v5.11.0) (2020-06-05)
 
 
