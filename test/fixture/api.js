@@ -7,7 +7,7 @@ function sleep (ms) {
 module.exports = {
   path: '/test_api',
   async handler (req, res) {
-    const query = new URL(req.url, "http://localhost:3000").query
+    const query = new URL(req.url, 'http://localhost:3000').query
     if (query && query.delay) {
       await sleep(query.delay)
     }
