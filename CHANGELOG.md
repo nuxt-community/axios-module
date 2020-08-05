@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.12.1](https://github.com/nuxt-community/axios-module/compare/v5.12.0...v5.12.1) (2020-08-05)
+
+
+### Bug Fixes
+
+* **plugin:** hide progress-bar on cancelled requests ([#398](https://github.com/nuxt-community/axios-module/issues/398)) ([2061721](https://github.com/nuxt-community/axios-module/commit/206172133e8cf3e8dc4f28efe34da695f2cb64f4))
+
 ## [5.12.0](https://github.com/nuxt-community/axios-module/compare/v5.11.0...v5.12.0) (2020-07-10)
 
 
