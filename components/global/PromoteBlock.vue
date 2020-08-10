@@ -27,6 +27,7 @@ export default {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: .25rem;
+  text-decoration: none !important;
 }
 
 .Promote:hover {
@@ -39,6 +40,7 @@ export default {
   height: auto;
   border-radius: .25rem;
   margin-bottom: .75rem;
+  margin-top: 0;
 }
 
 .Promote .Promote__Content {
@@ -79,7 +81,6 @@ export default {
     padding-left: 1rem;
   }
 
-
   .Promote .Promote__Content__Title {
     margin: 0;
   }
@@ -89,5 +90,17 @@ export default {
     margin-bottom: 0;
   }
 
+}
+.dark-mode .Promote {
+  background: #2d3041;
+}
+.dark-mode .Promote .Promote__Content__Description {
+  color: #fff;
+}
+.dark-mode .Promote .Promote__Content__Signature {
+  color: #ebebeb;
+}
+.dark-mode .Promote:hover {
+  background: #43485a;
 }
 </style>
