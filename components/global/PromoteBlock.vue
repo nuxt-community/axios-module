@@ -31,7 +31,7 @@ export default {
 }
 
 .Promote:hover {
-  background-color: #e2e8f0 !important;
+  background-color: #e2e8f0;
   text-decoration: none !important;
 }
 
