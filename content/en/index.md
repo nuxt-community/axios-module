@@ -15,6 +15,10 @@ features:
   - Auto retry requests with [axios-retry](https://github.com/softonic/axios-retry)
 ---
 
+## Features
+
+<list :items="features"></list>
+
 > Secure and Easy [Axios](https://github.com/axios/axios) integration with Nuxt.js.
 
 ## Links
