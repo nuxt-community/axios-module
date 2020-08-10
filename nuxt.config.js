@@ -12,7 +12,8 @@ export default theme({
     defaultLocale: 'en'
   },
   content: {
-    liveEdit: false
+    liveEdit: false,
+    dir: 'docs'
   },
   components: true
 })

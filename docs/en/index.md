@@ -11,8 +11,8 @@ features:
   - Proxy request headers in SSR (Useful for auth)
   - Fetch Style requests
   - Integrated with Nuxt.js Progressbar while making requests
-  - Integrated with [Proxy Module](https://github.com/nuxt-community/proxy-module)
-  - Auto retry requests with [axios-retry](https://github.com/softonic/axios-retry)
+  - Integrated with Proxy Module
+  - Auto retry requests with axios-retry
 ---
 
 ## Features
@@ -24,8 +24,8 @@ features:
 ## Links
 
 * [GitHub](https://github.com/nuxt-community/axios-module)
-* [Release Notes](./CHANGELOG.md)
-* [Migration Guide](migration.md)
+* [Release Notes](/releases)
+* [Migration Guide](migration)
 * [Examples](https://axios.nuxtjs.org/usage.html)
 
 > 👉 To get started head to [Setup](/setup) section.
