@@ -38,4 +38,5 @@ menuTitle: 'Intro'
 
 ## Online courses
 
-<PromoteBlock />
+<promote-block>
+</promote-block>

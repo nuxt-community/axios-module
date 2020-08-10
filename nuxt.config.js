@@ -10,5 +10,9 @@ export default theme({
       name: 'English'
     }],
     defaultLocale: 'en'
-  }
+  },
+  content: {
+    liveEdit: false
+  },
+  components: true
 })
