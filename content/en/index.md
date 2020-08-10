@@ -15,7 +15,6 @@ features:
   - Auto retry requests with [axios-retry](https://github.com/softonic/axios-retry)
 ---
 
-
 > Secure and Easy [Axios](https://github.com/axios/axios) integration with Nuxt.js.
 
 ## Links
@@ -25,7 +24,7 @@ features:
 * [Migration Guide](migration.md)
 * [Examples](https://axios.nuxtjs.org/usage.html)
 
-> 👉 To get started head to [Setup](setup.md) section.
+> 👉 To get started head to [Setup](/setup) section.
 
 ## Online courses
 
