@@ -1,4 +1,10 @@
-# Migration guides
+---
+title: 'Migration guides'
+description: ''
+position: 6
+category: 'Migration'
+---
+
 
 ### From 4.x to 5.x
 

@@ -1,4 +1,10 @@
-# Extending Axios
+---
+title: 'Extending Axios'
+description: ''
+position: 2
+category: 'Extending Axios'
+---
+
 
 If you need to customize axios by registering interceptors and changing global config, you have to create a nuxt plugin.
 

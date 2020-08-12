@@ -1,3 +1,23 @@
+<template>
+  <div>
+    <a href="https://vueschool.io/lessons/the-axios-module?friend=nuxt" target="_blank" class="Promote">
+      <img src="/async-data-with-nuxtjs-2x.png" alt="AsyncData Nuxt course by Vue School">
+      <div class="Promote__Content">
+        <h4 class="Promote__Content__Title">Learn how to use the Axios module with a short video lesson</h4>
+        <p class="Promote__Content__Description">Get up to speed quickly with Vue School's free video lesson.</p>
+        <p class="Promote__Content__Signature">Video courses made by VueSchool to support Nuxt.js developpement.</p>
+      </div>
+    </a>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'PromoteBlock'
+}
+</script>
+
+<style>
 .Promote {
   background-color: #edf2f7;
   color: #2f495e;
@@ -7,11 +27,11 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: .25rem;
+  text-decoration: none !important;
 }
 
-
 .Promote:hover {
-  background-color: #e2e8f0 !important;
+  background-color: #e2e8f0;
   text-decoration: none !important;
 }
 
@@ -20,6 +40,7 @@
   height: auto;
   border-radius: .25rem;
   margin-bottom: .75rem;
+  margin-top: 0;
 }
 
 .Promote .Promote__Content {
@@ -60,7 +81,6 @@
     padding-left: 1rem;
   }
 
-
   .Promote .Promote__Content__Title {
     margin: 0;
   }
@@ -71,4 +91,16 @@
   }
 
 }
-
+.dark-mode .Promote {
+  background: #2d3041;
+}
+.dark-mode .Promote .Promote__Content__Description {
+  color: #fff;
+}
+.dark-mode .Promote .Promote__Content__Signature {
+  color: #ebebeb;
+}
+.dark-mode .Promote:hover {
+  background: #43485a;
+}
+</style>

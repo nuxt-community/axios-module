@@ -1,5 +1,10 @@
+---
+title: 'Setup'
+description: ''
+position: 2
+category: 'Getting started'
+---
 
-# Setup
 
 ## Install
 
