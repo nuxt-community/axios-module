@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.12.2](https://github.com/nuxt-community/axios-module/compare/v5.12.1...v5.12.2) (2020-08-25)
+
+
+### Bug Fixes
+
+* fix netlify.toml ([3a2e427](https://github.com/nuxt-community/axios-module/commit/3a2e427a3e85e8180cfdbf48b435cd9600917d88))
+* **types:** extend Axios.AxiosRequestConfig with "progress" option ([#408](https://github.com/nuxt-community/axios-module/issues/408)) ([ea4ea7e](https://github.com/nuxt-community/axios-module/commit/ea4ea7e323e053d6ae025210534c675e468a273c))
+
 ### [5.12.1](https://github.com/nuxt-community/axios-module/compare/v5.12.0...v5.12.1) (2020-08-05)
 
 
