@@ -5,18 +5,22 @@ position: 4
 category: 'Getting started'
 ---
 
-
 You can pass different options using module inline options:
 
-```
-  ['@nuxtjs/axios', { proxy: true }]
+```js
+export default {
+  modules: [
+    ['@nuxtjs/axios', { proxy: true }]
+  ]
+}
 ```
 
 or `axios` section in `nuxt.config.js`:
 
 **nuxt.config.js**
-```
-{
+
+```js
+export default {
   modules: [
     '@nuxtjs/axios'
   ],
@@ -70,7 +74,6 @@ They can be customized with `API_PREFIX`, `API_HOST` (or `HOST`) and `API_PORT` 
 
 Default value of `prefix` is `/`.
 
-
 ## `baseURL`
 
 * Default: `http://[HOST]:[PORT][PREFIX]`
@@ -81,7 +84,6 @@ Environment variable `API_URL` can be used to **override** `baseURL`.
 
 **WARNING:** `baseURL` and `proxy` cannot be used at the same time, so when the `proxy` option is in use, you need to define `prefix` instead of `baseURL`.
 
-
 ## `browserBaseURL`
 
 * Default: `baseURL`
@@ -91,14 +93,11 @@ Defines the base URL which is used and prepended to make client side requests.
 
 The environment variable `API_URL_BROWSER` can be used to **override** `browserBaseURL`.
 
-
 ## `https`
 
 * Default: `false`
 
 If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be changed into `https://`.
-
-
 
 ## `progress`
 
