@@ -29,7 +29,7 @@ interface AxiosOptions {
   browserBaseURL?: string,
   credentials?: boolean,
   debug?: boolean,
-  host?: string,     
+  host?: string,
   prefix?: string,
   progress?: boolean,
   proxyHeaders?: boolean,
@@ -47,6 +47,12 @@ interface AxiosOptions {
     put?: Record<string, string>,
     patch?: Record<string, string>,
   },
+}
+
+declare module 'axios' {
+    interface AxiosRequestConfig {
+        progress?: boolean;
+    }
 }
 
 declare module '@nuxt/vue-app' {
