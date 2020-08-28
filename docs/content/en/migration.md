@@ -1,7 +1,7 @@
 ---
 title: 'Migration guides'
 description: ''
-position: 6
+position: 7
 category: 'Migration'
 ---
 
