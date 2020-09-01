@@ -104,7 +104,7 @@ If set to `true`, `http://` in both `baseURL` and `browserBaseURL` will be chang
 
 * Default: `true`
 
-This option shows a loading bar while making requests integrating Nuxt.js progress bar (see "loading" options in config.nuxt.js). This is active only in the browser, and when loading bar is enabled and available.
+This option shows a loading bar while making requests integrating Nuxt.js progress bar (see "loading" options in nuxt.config.js). This is active only in the browser, and when loading bar is enabled and available.
 
 You can also disable the progress bar in specific requests using the `progress` option in an inline request configuration:
 
