@@ -1,7 +1,7 @@
 ---
 title: 'Extending Axios'
 description: ''
-position: 2
+position: 5
 category: 'Extending Axios'
 ---
 
