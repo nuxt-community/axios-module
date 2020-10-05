@@ -1,4 +1,5 @@
 import { AxiosError, AxiosRequestConfig, AxiosResponse, AxiosStatic } from 'axios'
+import { IAxiosRetryConfig } from 'axios-retry'
 import Vue from 'vue'
 import './vuex'
 
@@ -12,6 +13,7 @@ interface NuxtAxiosInstance extends AxiosStatic {
   $put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
   $patch<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
 
+  setBaseURL(baseURL: string): void
   setHeader(name: string, value?: string | false, scopes?: string | string[]): void
   setToken(token: string | false, type?: string, scopes?: string | string[]): void
 
@@ -20,6 +22,37 @@ interface NuxtAxiosInstance extends AxiosStatic {
   onError(callback: (error: AxiosError) => void): void
   onRequestError(callback: (error: AxiosError) => void): void
   onResponseError(callback: (error: AxiosError) => void): void
+}
+
+interface AxiosOptions {
+  baseURL?: string,
+  browserBaseURL?: string,
+  credentials?: boolean,
+  debug?: boolean,
+  host?: string,
+  prefix?: string,
+  progress?: boolean,
+  proxyHeaders?: boolean,
+  proxyHeadersIgnore?: string[],
+  proxy?: boolean,
+  port?: string | number,
+  retry?: boolean | IAxiosRetryConfig,
+  https?: boolean,
+  headers?: {
+    common?: Record<string, string>,
+    delete?: Record<string, string>,
+    get?: Record<string, string>,
+    head?: Record<string, string>,
+    post?: Record<string, string>,
+    put?: Record<string, string>,
+    patch?: Record<string, string>,
+  },
+}
+
+declare module 'axios' {
+    interface AxiosRequestConfig {
+        progress?: boolean;
+    }
 }
 
 declare module '@nuxt/vue-app' {
@@ -36,8 +69,13 @@ declare module '@nuxt/types' {
   interface Context {
     $axios: NuxtAxiosInstance
   }
+
   interface NuxtAppOptions {
     $axios: NuxtAxiosInstance
+  }
+
+  interface Configuration {
+    axios?: AxiosOptions
   }
 }
 

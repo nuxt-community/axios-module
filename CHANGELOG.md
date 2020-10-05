@@ -2,6 +2,96 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.12.1](https://github.com/nuxt-community/axios-module/compare/v5.12.0...v5.12.1) (2020-08-05)
+
+
+### Bug Fixes
+
+* **plugin:** hide progress-bar on cancelled requests ([#398](https://github.com/nuxt-community/axios-module/issues/398)) ([2061721](https://github.com/nuxt-community/axios-module/commit/206172133e8cf3e8dc4f28efe34da695f2cb64f4))
+
+## [5.12.0](https://github.com/nuxt-community/axios-module/compare/v5.11.0...v5.12.0) (2020-07-10)
+
+
+### Features
+
+* **plugin:** support runtimeConfig ([#387](https://github.com/nuxt-community/axios-module/issues/387)) ([351ea5e](https://github.com/nuxt-community/axios-module/commit/351ea5ee459eea53b9124de75ebfa7674d7ccd40))
+
+
+### Bug Fixes
+
+* **types:** add axios-retry type def for more options ([#378](https://github.com/nuxt-community/axios-module/issues/378)) ([40a0c58](https://github.com/nuxt-community/axios-module/commit/40a0c5885819406fec88b212f0219539fbc0d229))
+* **types:** add prefix, port, host options to axios types ([#381](https://github.com/nuxt-community/axios-module/issues/381)) ([301805b](https://github.com/nuxt-community/axios-module/commit/301805b5eade85ff30f80e9f34341d586a056d8b))
+
+## [5.11.0](https://github.com/nuxt-community/axios-module/compare/v5.10.3...v5.11.0) (2020-06-05)
+
+
+### Features
+
+* experimental runtimeConfig support ([07ca13c](https://github.com/nuxt-community/axios-module/commit/07ca13c58194c8c48a61896a07505a936c26eb93))
+
+
+### Bug Fixes
+
+* **plugin:** always get global `$nuxt` while loading ([#364](https://github.com/nuxt-community/axios-module/issues/364)) ([e848b9d](https://github.com/nuxt-community/axios-module/commit/e848b9d0b0a1804388eb51d328ab6054d89aa979))
+
+### [5.10.3](https://github.com/nuxt-community/axios-module/compare/v5.10.2...v5.10.3) (2020-04-30)
+
+
+### Bug Fixes
+
+* globalName fallback for nuxt < 2.2.0 ([12da6c8](https://github.com/nuxt-community/axios-module/commit/12da6c8e2feb8cf4f7e918fbbe4693400152c1ff))
+
+### [5.10.2](https://github.com/nuxt-community/axios-module/compare/v5.10.1...v5.10.2) (2020-04-27)
+
+
+### Bug Fixes
+
+* **plugin:** add missing $ prefix to globalName ([#356](https://github.com/nuxt-community/axios-module/issues/356)) ([47788bd](https://github.com/nuxt-community/axios-module/commit/47788bdd0384807c9d63aa3caa7f2031f44d4c96))
+
+### [5.10.1](https://github.com/nuxt-community/axios-module/compare/v5.10.0...v5.10.1) (2020-04-22)
+
+## [5.10.0](https://github.com/nuxt-community/axios-module/compare/v5.9.7...v5.10.0) (2020-04-21)
+
+
+### Features
+
+* **plugin:** enable server brotli if supported (closes [#276](https://github.com/nuxt-community/axios-module/issues/276)) ([074f98c](https://github.com/nuxt-community/axios-module/commit/074f98cbdf409473357b2cd24cd6cb13fe75f149))
+
+
+### Bug Fixes
+
+* **module:** browserBaseURL as empty string (fixes [#303](https://github.com/nuxt-community/axios-module/issues/303)) ([18afe5c](https://github.com/nuxt-community/axios-module/commit/18afe5c1a9aac6380bdd5ffb337a0968a6d504aa))
+* **plugin:** preserve default headers (fixes [#323](https://github.com/nuxt-community/axios-module/issues/323)) ([6c5605d](https://github.com/nuxt-community/axios-module/commit/6c5605df0b77e9e4df32ad1eaecb2eac60eb1c1d))
+* **plugin:** use `globalName` instead of  `$nuxt` (fixes [#345](https://github.com/nuxt-community/axios-module/issues/345)) ([fd1f8ec](https://github.com/nuxt-community/axios-module/commit/fd1f8ec17160f6e88610e3dfa2153423b3140592))
+
+### [5.9.7](https://github.com/nuxt-community/axios-module/compare/v5.9.6...v5.9.7) (2020-03-30)
+
+
+### Bug Fixes
+
+* **plugin:** don't convert falsy urls to string ([#347](https://github.com/nuxt-community/axios-module/issues/347)) ([b8a510e](https://github.com/nuxt-community/axios-module/commit/b8a510ee989fabf10d93d99a7ae1e17c0fc3eca0))
+
+### [5.9.6](https://github.com/nuxt-community/axios-module/compare/v5.9.5...v5.9.6) (2020-03-27)
+
+
+### Bug Fixes
+
+* **module:** always set protocol to `https` when `https: true` is set ([#344](https://github.com/nuxt-community/axios-module/issues/344)) ([6f82570](https://github.com/nuxt-community/axios-module/commit/6f82570b163c4d4635321601f05d0c4641a00f19))
+
+### [5.9.5](https://github.com/nuxt-community/axios-module/compare/v5.9.3...v5.9.5) (2020-02-02)
+
+
+### Bug Fixes
+
+* **types:** add `setBaseURL` ([#329](https://github.com/nuxt-community/axios-module/issues/329)) ([9d00d6a](https://github.com/nuxt-community/axios-module/commit/9d00d6a9b5e21396d3b195f824dd2cfe99ca9012))
+
+### [5.9.4](https://github.com/nuxt-community/axios-module/compare/v5.9.3...v5.9.4) (2020-01-30)
+
+
+### Bug Fixes
+
+* **types:** add `setBaseURL` ([#329](https://github.com/nuxt-community/axios-module/issues/329)) ([9d00d6a](https://github.com/nuxt-community/axios-module/commit/9d00d6a9b5e21396d3b195f824dd2cfe99ca9012))
+
 ### [5.9.3](https://github.com/nuxt-community/axios-module/compare/v5.9.2...v5.9.3) (2020-01-11)
 
 

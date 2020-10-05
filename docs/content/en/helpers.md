@@ -1,6 +1,12 @@
-## Helpers
+---
+title: 'Helpers'
+description: ''
+position: 3
+category: 'Helpers'
+---
 
-### Interceptors
+
+## Interceptors
 
 Axios plugin provides helpers to register axios interceptors easier and faster.
 
@@ -24,19 +30,9 @@ export default function ({ $axios, redirect }) {
 }
 ```
 
-### Fetch Style requests
+## `setBaseURL`
 
-Axios plugin also supports fetch style requests with `$` prefixed methods:
-
-```js
-// Normal usage with axios
-let data = (await $axios.get('...')).data
-
-// Fetch Style
-let data = await $axios.$get('...')
-```
-
-### `setBaseURL(baseURL)`
+- Signature: `setBaseURL(baseURL)`
 
 Axios instance has an additional helper to easily change baseURL.
 
@@ -63,7 +59,9 @@ if (process.server) {
 }
 ```
 
-### `setHeader(name, value, scopes='common')`
+## `setHeader`
+
+- Signature: `setHeader(name, value, scopes='common')`
 
 Axios instance has a helper to easily set any header.
 
@@ -92,7 +90,9 @@ this.$axios.setHeader('Content-Type', 'application/x-www-form-urlencoded', [
 this.$axios.setHeader('Content-Type', false, ['post'])
 ```
 
-### `setToken(token, type, scopes='common')`
+## `setToken`
+
+- Signature: `setToken(token, type, scopes='common')`
 
 Axios instance has an additional helper to easily set global authentication header.
 

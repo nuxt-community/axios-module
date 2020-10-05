@@ -9,6 +9,8 @@ let nuxt, addTemplate
 
 const url = path => `http://localhost:3000${path}`
 
+jest.mock('esm', () => module => id => module.require(id))
+
 const setupNuxt = async (config) => {
   nuxt = new Nuxt(config)
 
@@ -29,7 +31,8 @@ const testSuite = () => {
     expect(addTemplate).toBeDefined()
     const call = addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
     const options = call[0].options
-    expect(options.baseURL.toString()).toBe('http://localhost:3000/test_api')
+    const proto = options.https ? 'https' : 'http'
+    expect(options.baseURL.toString()).toBe(`${proto}://localhost:3000/test_api`)
     expect(options.browserBaseURL.toString()).toBe('/test_api')
   })
 

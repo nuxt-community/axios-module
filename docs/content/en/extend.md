@@ -1,4 +1,10 @@
-## Extending Axios
+---
+title: 'Extending Axios'
+description: ''
+position: 2
+category: 'Extending Axios'
+---
+
 
 If you need to customize axios by registering interceptors and changing global config, you have to create a nuxt plugin.
 
@@ -38,7 +44,7 @@ export default function ({ $axios, redirect }) {
 If you need to create your own axios instance which based on $axios defaults, you can use `create` method.
 
 ```js
-export default function ({ $axios, redirect }, inject) {
+export default function ({ $axios }, inject) {
   // Create a custom axios instance
   const api = $axios.create({
     headers: {
@@ -50,7 +56,7 @@ export default function ({ $axios, redirect }, inject) {
 
   // Set baseURL to something different
   api.setBaseURL('https://my_api.com')
-  
+
   // Inject to context as $api
   inject('api', api)
 }
