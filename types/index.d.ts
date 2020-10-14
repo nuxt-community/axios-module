@@ -1,4 +1,4 @@
-import { AxiosError, AxiosRequestConfig, AxiosResponse, AxiosStatic } from 'axios'
+import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosStatic } from 'axios'
 import { IAxiosRetryConfig } from 'axios-retry'
 import Vue from 'vue'
 import './vuex'
@@ -83,4 +83,12 @@ declare module 'vue/types/vue' {
   interface Vue {
     $axios: NuxtAxiosInstance
   }
+}
+
+declare global {
+    namespace NodeJS {
+        interface Process {
+            axios: AxiosInstance;
+        }
+    }
 }
