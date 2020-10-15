@@ -88,7 +88,7 @@ declare module 'vue/types/vue' {
 declare global {
     namespace NodeJS {
         interface Process {
-            axios: AxiosInstance;
+            axios: NuxtAxiosInstance;
         }
     }
 }
