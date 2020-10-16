@@ -1,10 +1,9 @@
 ---
 title: 'Migration guides'
-description: 'Migrate with confidence from one version to another with our migrations guides.'
+description: 'Migrate with confidence from one major version to another with our migrations guides.'
 position: 7
 category: 'Migration'
 ---
-
 
 ### From 4.x to 5.x
 
