@@ -1,10 +1,11 @@
 ---
 title: 'Helpers'
-description: ''
+description: 'Discover the helpers to supercharge your Axios instance'
 position: 6
-category: 'Helpers'
+category: 'API'
 ---
 
+Discover the helpers to supercharge your axios instance.
 
 ## Interceptors
 
@@ -29,6 +30,12 @@ export default function ({ $axios, redirect }) {
   })
 }
 ```
+
+<alert type="info">
+
+Learn more about [extending axios](/extend)
+
+</alert>
 
 ## `setBaseURL`
 

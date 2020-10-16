@@ -1,30 +1,23 @@
 ---
-title: 'Extending Axios'
-description: ''
+title: 'Extending axios'
+description: 'Learn how to extend the axios module for Nuxt'
 position: 5
-category: 'Extending Axios'
+category: 'API'
 ---
 
+## Adding interceptors
 
 If you need to customize axios by registering interceptors and changing global config, you have to create a nuxt plugin.
 
-**nuxt.config.js**
-
-```js
-{
-  modules: [
-    '@nuxtjs/axios',
-  ],
-
+```js{}[nuxt.config.js]
+export default {
   plugins: [
     '~/plugins/axios'
   ]
 }
 ```
 
-**plugins/axios.js**
-
-```js
+```js{}[plugins/axios.js]
 export default function ({ $axios, redirect }) {
   $axios.onRequest(config => {
     console.log('Making request to ' + config.url)
@@ -39,11 +32,18 @@ export default function ({ $axios, redirect }) {
 }
 ```
 
-### Create new axios instance based on defaults
+<alert type="info">
 
-If you need to create your own axios instance which based on $axios defaults, you can use `create` method.
+Learn more about [$axios's helpers](/helpers).
 
-```js
+
+</alert>
+
+## New axios instance
+
+If you need to create your own axios instance which based on `$axios` defaults, you can use the `create` method.
+
+```js{}[plugins/api.js]
 export default function ({ $axios }, inject) {
   // Create a custom axios instance
   const api = $axios.create({
@@ -61,3 +61,5 @@ export default function ({ $axios }, inject) {
   inject('api', api)
 }
 ```
+
+Learn about [$axios's helpers](/helpers).

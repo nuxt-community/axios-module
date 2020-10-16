@@ -1,4 +1,10 @@
 {
   "title": "Axios Module",
-  "github": "nuxt-community/axios-module"
+  "url": "https://axios.nuxtjs.org",
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  },
+  "github": "nuxt-community/axios-module",
+  "twitter": "@nuxt_js"
 }
