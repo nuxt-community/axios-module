@@ -26,14 +26,21 @@ Secure and easy [Axios](https://github.com/axios/axios) integration for [Nuxt](h
 
 <p class="flex items-center">Enjoy light and dark mode:&nbsp;<app-color-switcher class="inline-flex ml-2"></app-color-switcher></p>
 
+## Logo
+
+Axios does not have an official module yet, we decided to use the actual proposal submitted here: https://github.com/axios/axios/issues/2130
+
 ## Links
 
 * [GitHub](https://github.com/nuxt-community/axios-module)
 * [Release Notes](/releases)
-* [Migration Guide](migration)
-* [Examples](https://axios.nuxtjs.org/usage.html)
+* [Migration Guide](/migration)
 
-> 👉 To get started head to [Setup](/setup) section.
+<alert type="info">
+
+To get started head to [Setup](/setup) section.
+
+</alert>
 
 ## Online courses
 
