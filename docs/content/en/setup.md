@@ -8,40 +8,62 @@ category: 'Getting started'
 
 ## Install
 
-Install with yarn:
+Add `@nuxtjs/axios` dependency to your project:
 
-```bash
-yarn add @nuxtjs/axios
+<code-group>
+  <code-block label="Yarn" active>
+
+  ```bash
+  yarn add @nuxtjs/axios
+  ```
+
+  </code-block>
+  <code-block label="NPM">
+
+  ```bash
+  npm install @nuxtjs/axios
+  ```
+
+  </code-block>
+</code-group>
+
+Then at it to the `modules` section in your `nuxt.config.js`:
+
+```js{}[nuxt.config.js]
+export default {
+  modules: ['@nuxtjs/axios']
+}
 ```
 
-Install with npm:
+<alert type="success">
 
-```bash
-npm install @nuxtjs/axios
-```
+That's it! You can now use [$axios](/usage) in your Nuxt app ✨
 
-**nuxt.config.js**
+</alert>
 
-```js
-module.exports = {
+## Configure
+
+Add an `axios` object to your `nuxt.config.js` to configure global options which will be applied to all requests:
+
+```js{}[nuxt.config.js]
+export default {
   modules: [
     '@nuxtjs/axios',
   ],
 
   axios: {
-    // proxyHeaders: false
+    // proxy: true
   }
 }
 ```
 
+Learn more about [axios's options](/options).
 
 ## TypeScript
 
-Add the types to your "types" array in tsconfig.json after the `@nuxt/types` (Nuxt 2.9.0+) or `@nuxt/vue-app` entry
+Add the types to your "types" array in `tsconfig.json` after the `@nuxt/types` (Nuxt 2.9.0+) or `@nuxt/vue-app` entry
 
-**tsconfig.json**
-
-```json
+```json{}[tsconfig.json]
 {
   "compilerOptions": {
     "types": [

@@ -1,18 +1,18 @@
 import theme from '@nuxt/content-theme-docs'
 
 export default theme({
-  loading: { color: '#00CD81' },
-  i18n: {
-    locales: () => [{
-      code: 'en',
-      iso: 'en-US',
-      file: 'en-US.js',
-      name: 'English'
-    }],
-    defaultLocale: 'en'
+  docs: {
+    primaryColor: '#AA7AB5'
   },
-  content: {
-    liveEdit: false
+  buildModules: ['nuxt-ackee'],
+  ackee: {
+    server: 'https://ackee.nuxtjs.com',
+    domainId: 'a1a834f9-be7a-45ca-a18e-4ab559cd8452',
+    detailed: true
   },
-  components: true
+  pwa: {
+    manifest: {
+      name: 'Nuxt Axios'
+    }
+  }
 })

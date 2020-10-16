@@ -1,6 +1,6 @@
 ---
 title: 'Migration guides'
-description: ''
+description: 'Migrate with confidence from one version to another with our migrations guides.'
 position: 7
 category: 'Migration'
 ---

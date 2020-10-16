@@ -1,37 +1,21 @@
 ---
 title: 'Options'
-description: ''
+description: 'Discover the available options to configure Axios in Nuxt'
 position: 4
 category: 'Getting started'
 ---
 
-You can pass different options using module inline options:
+You can pass different options using the `axios` property in your `nuxt.config.js`:
 
-```js
+```js{}[nuxt.config.js]
 export default {
-  modules: [
-    ['@nuxtjs/axios', { proxy: true }]
-  ]
-}
-```
-
-or `axios` section in `nuxt.config.js`:
-
-**nuxt.config.js**
-
-```js
-export default {
-  modules: [
-    '@nuxtjs/axios'
-  ],
-
   axios: {
-    proxy: true
-  },
+    // Axios options here
+  }
 }
 ```
 
-### Runtime Config
+## Runtime Config
 
 The use of [runtime config](https://nuxtjs.org/guide/runtime-config) is mandatory in case of using environment variables in production, otherwise, the values will be hard coded during build and won't change.
 

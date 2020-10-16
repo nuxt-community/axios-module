@@ -1,25 +1,30 @@
 ---
 title: 'Introduction'
-description: ''
+description: 'The Axios module for Nuxt'
 position: 1
-category: 'Getting started'
-menuTitle: 'Intro'
+category: ''
+menuTitle: 'Introduction'
 features:
   - Automatically set base URL for client & server side
-  - Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
+  - Exposes `setToken` function to `$axios` for authentication tokens
   - Automatically enables `withCredentials` when requesting to base URL
   - Proxy request headers in SSR (Useful for auth)
   - Fetch Style requests
-  - Integrated with Nuxt.js Progressbar while making requests
+  - Integrated with Nuxt progress bar
   - Integrated with Proxy Module
   - Auto retry requests with axios-retry
 ---
+
+<img src="/preview.png" class="light-img" width="1280" height="640" alt="Nuxt Axios"/>
+<img src="/preview-dark.png" class="dark-img" width="1280" height="640" alt="Nuxt Axios"/>
+
+Secure and easy [Axios](https://github.com/axios/axios) integration for [Nuxt](https://nuxtjs.org).
 
 ## Features
 
 <list :items="features"></list>
 
-> Secure and Easy [Axios](https://github.com/axios/axios) integration with Nuxt.js.
+<p class="flex items-center">Enjoy light and dark mode:&nbsp;<app-color-switcher class="inline-flex ml-2"></app-color-switcher></p>
 
 ## Links
 
@@ -32,5 +37,4 @@ features:
 
 ## Online courses
 
-<promote-block>
-</promote-block>
+<promote-block></promote-block>
