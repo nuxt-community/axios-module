@@ -16,9 +16,9 @@
 ## Features
 
 - Automatically set base URL for client & server side
-- Exposes `setToken` function to `$axios` for authentication tokens
+- Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
 - Automatically enables `withCredentials` when requesting to base URL
-- Proxy request headers in SSR (Useful for auth)
+- Proxy request headers in SSR
 - Fetch Style requests
 - Integrated with Nuxt progress bar
 - Integrated with Proxy Module
@@ -52,5 +52,5 @@ Copyright (c) Nuxt Community
 [codecov-src]: https://flat.badgen.net/codecov/c/github/nuxt-community/axios-module
 [codecov-href]: https://codecov.io/gh/nuxt-community/axios-module
 
-[license-src]: https://img.shields.io/npm/l/@nuxtjs/google-analytics.svg
-[license-href]: https://npmjs.com/package/@nuxtjs/google-analytics
+[license-src]: https://img.shields.io/npm/l/@nuxtjs/axios.svg
+[license-href]: https://npmjs.com/package/@nuxtjs/axios

@@ -6,9 +6,9 @@ category: ''
 menuTitle: 'Introduction'
 features:
   - Automatically set base URL for client & server side
-  - Exposes `setToken` function to `$axios` for authentication tokens
+  - Exposes `setToken` function to `$axios` so we can easily and globally set authentication tokens
   - Automatically enables `withCredentials` when requesting to base URL
-  - Proxy request headers in SSR (Useful for auth)
+  - Proxy request headers in SSR
   - Fetch Style requests
   - Integrated with Nuxt progress bar
   - Integrated with Proxy Module
