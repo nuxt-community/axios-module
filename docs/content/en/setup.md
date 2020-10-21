@@ -27,7 +27,7 @@ Add `@nuxtjs/axios` dependency to your project:
   </code-block>
 </code-group>
 
-Then at it to the `modules` section in your `nuxt.config.js`:
+Then add it to the `modules` section in your `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -75,4 +75,4 @@ Add the types to your "types" array in `tsconfig.json` after the `@nuxt/types` (
 ```
 > **Why?**
 >
-> Because of the way nuxt works the `$axios` property on the context has to be merged into the nuxt `Context` interface via [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). Adding `@nuxtjs/axios` to your types will import the types from the package and make typescript aware of the additions to the `Context` interface.
+> Because of the way Nuxt works the `$axios` property on the context has to be merged into the Nuxt `Context` interface via [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html). Adding `@nuxtjs/axios` to your types will import the types from the package and make typescript aware of the additions to the `Context` interface.
