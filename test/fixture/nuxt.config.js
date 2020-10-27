@@ -10,7 +10,10 @@ module.exports = {
   modules: [
     { handler: require('../../') }
   ],
-  serverMiddleware: ['~/api.js'],
+  serverMiddleware: [
+    require(resolve(__dirname, 'api.js')).test_api,
+    require(resolve(__dirname, 'api.js')).check_req_axios
+  ],
   axios: {
     prefix: '/test_api',
     proxy: true,

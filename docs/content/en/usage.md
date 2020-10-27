@@ -44,7 +44,7 @@ methods: {
 
 ## Server Middleware
 
-Server middleware does not have access to `Context` and thus to the axios instance that is attached to it. To help with that, an extra instance is created by this module and exposed as `process.axios`. That instance is extended in a similar way as the axios instance in `Context` with the exception that the `proxyHeaders` option is ignored.
+Server middleware does not have access to `Context` and thus to the axios instance that is attached to it. To help with that, an extra instance is created by this module and accessible from server middleware through `req.$axios`. That instance is extended in a similar way as the axios instance in `Context` with the exception that the `proxyHeaders` option is ignored.
 
 ## `$` Shortcuts
 

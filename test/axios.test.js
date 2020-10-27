@@ -96,6 +96,17 @@ const testSuite = () => {
 
     expect(result).toBe('gzip, deflate')
   })
+
+  test('server middleware', async () => {
+    const makeReq = () => axios
+      .get(url('/check_req_axios'))
+      .then(r => r.data)
+
+    const result = await makeReq()
+
+    expect(result.hasAxios).toBe(true)
+    expect(result.axiosExtended).toBe(true)
+  })
 }
 
 describe('module', () => {
