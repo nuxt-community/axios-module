@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosStatic } from 'axios'
+import { AxiosError, AxiosRequestConfig, AxiosResponse, AxiosStatic } from 'axios'
 import { IAxiosRetryConfig } from 'axios-retry'
 import Vue from 'vue'
 import './vuex'
