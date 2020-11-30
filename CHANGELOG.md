@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.12.3](https://github.com/nuxt-community/axios-module/compare/v5.12.2...v5.12.3) (2020-11-30)
+
+
+### Bug Fixes
+
+* `$loading().set(Infinity)` issue ([#424](https://github.com/nuxt-community/axios-module/issues/424)) ([7b32262](https://github.com/nuxt-community/axios-module/commit/7b322620f1349e393338fbd7388b92b0e9275fba))
+
 ### [5.12.2](https://github.com/nuxt-community/axios-module/compare/v5.12.1...v5.12.2) (2020-08-25)
 
 
