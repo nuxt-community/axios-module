@@ -48,7 +48,7 @@ Axios plugin also supports shortcuts with `$` prefixed methods to directly get d
 
 ```js
 // Normal usage with axios
-let data = (await $axios.get('...')).data
+let data = (await $axios.$get('...')).data
 
 // Fetch Style
 let data = await $axios.$get('...')
