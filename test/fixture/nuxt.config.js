@@ -10,9 +10,12 @@ module.exports = {
   modules: [
     { handler: require('../../') }
   ],
-  serverMiddleware: ['~/api.js'],
+  serverMiddleware: {
+    '/api/test': '~/api/test',
+    '/api/cookie': '~/api/cookie'
+  },
   axios: {
-    prefix: '/test_api',
+    prefix: '/api',
     proxy: true,
     credentials: true,
     debug: true,
