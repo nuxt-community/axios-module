@@ -17,7 +17,7 @@ Axios plugin provides helpers to register axios interceptors easier and faster.
 - `onRequestError(err)`
 - `onResponseError(err)`
 
-These functions don't have to return anything by default. 
+These functions don't have to return anything by default.
 
 Example: (`plugins/axios.js`)
 
