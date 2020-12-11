@@ -17,7 +17,7 @@ Axios plugin provides helpers to register axios interceptors easier and faster.
 - `onRequestError(err)`
 - `onResponseError(err)`
 
-These functions don't have to return anything by default.
+These functions don't have to return anything by default. 
 
 Example: (`plugins/axios.js`)
 
@@ -27,6 +27,22 @@ export default function ({ $axios, redirect }) {
     if(error.response.status === 500) {
       redirect('/sorry')
     }
+  })
+}
+```
+
+When intercepting an error, you can return a resolved promise to prevent the error from propagating. 
+
+Example: (`plugins/axios.js`)
+
+```js
+export default function ({ $axios, error: nuxtError }) {
+  $axios.onError(error => {
+    nuxtError({
+      statusCode: error.response.status,
+      message: error.message,
+    });
+    return Promise.resolve(false);
   })
 }
 ```
