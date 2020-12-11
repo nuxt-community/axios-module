@@ -31,6 +31,22 @@ export default function ({ $axios, redirect }) {
 }
 ```
 
+When intercepting an error, you can return a resolved promise to prevent the error from propagating. 
+
+Example: (`plugins/axios.js`)
+
+```js
+export default function ({ $axios, error: nuxtError }) {
+  $axios.onError(error => {
+    nuxtError({
+      statusCode: error.response.status,
+      message: error.message,
+    });
+    return Promise.resolve(false);
+  })
+}
+```
+
 <alert type="info">
 
 Learn more about [extending axios](/extend)
