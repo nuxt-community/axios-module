@@ -62,7 +62,7 @@ Default value of `prefix` is `/`.
 
 * Default: `http://[HOST]:[PORT][PREFIX]`
 
-Defines the base URL which is used and prepended to make requests server side requests.
+Defines the base URL which is used and prepended to make server side requests.
 
 Environment variable `API_URL` can be used to **override** `baseURL`.
 
