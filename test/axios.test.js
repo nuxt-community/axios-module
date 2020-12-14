@@ -32,8 +32,8 @@ const testSuite = () => {
     const call = addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
     const options = call[0].options
     const proto = options.https ? 'https' : 'http'
-    expect(options.baseURL.toString()).toBe(`${proto}://localhost:3000/test_api`)
-    expect(options.browserBaseURL.toString()).toBe('/test_api')
+    expect(options.baseURL.toString()).toBe(`${proto}://localhost:3000/api`)
+    expect(options.browserBaseURL.toString()).toBe('/api')
   })
 
   test('asyncData', async () => {
@@ -121,7 +121,7 @@ describe('module', () => {
 describe('other options', () => {
   beforeAll(async () => {
     config.axios = {
-      prefix: '/test_api',
+      prefix: '/api',
       proxy: {},
       credentials: true,
       https: true,
@@ -141,7 +141,7 @@ describe('other options', () => {
 describe('browserBaseURL', () => {
   beforeAll(async () => {
     config.axios = {
-      browserBaseURL: '/test_api'
+      browserBaseURL: '/api'
     }
 
     await setupNuxt(config)
@@ -156,7 +156,7 @@ describe('browserBaseURL', () => {
     const call = addTemplate.mock.calls.find(args => args[0].src.includes('plugin.js'))
     const options = call[0].options
     expect(options.baseURL.toString()).toBe('http://localhost:3000/')
-    expect(options.browserBaseURL.toString()).toBe('/test_api')
+    expect(options.browserBaseURL.toString()).toBe('/api')
   })
 })
 
