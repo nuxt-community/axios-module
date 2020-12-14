@@ -8,7 +8,9 @@
 <script>
 export default {
   async asyncData ({ app }) {
-    const reqCookie = (await app.$axios.$get('/cookie')) + ''
+    const reqCookie = (await app.$axios.$get('/cookie', {
+      headers: { Accept: 'application/json' }
+    })) + ''
     return {
       reqCookie
     }
