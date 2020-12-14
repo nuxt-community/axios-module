@@ -20,16 +20,16 @@ export default {
   },
   computed: {
     axiosSessionId () {
-      return this.$axios.defaults.headers.common.SessionId
+      return this.$axios.defaults.defaultHeaders.SessionId
     },
     axiosEncoding () {
-      return this.$axios.defaults.headers.common['accept-encoding']
+      return this.$axios.defaults.defaultHeaders['accept-encoding']
     },
     newInstanceSessionId () {
-      return this.newInstance.defaults.headers.common.SessionId
+      return this.newInstance.defaults.defaultHeaders.SessionId
     },
     newInstanceHeaders () {
-      return this.newInstance.defaults.headers
+      return this.newInstance.defaults.defaultHeaders
     }
   },
   created () {
