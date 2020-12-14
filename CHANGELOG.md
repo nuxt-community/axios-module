@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.12.4](https://github.com/nuxt-community/axios-module/compare/v5.12.3...v5.12.4) (2020-12-14)
+
+
+### Bug Fixes
+
+* preserve default headers with custom headers ([#452](https://github.com/nuxt-community/axios-module/issues/452)) ([55f994f](https://github.com/nuxt-community/axios-module/commit/55f994f1627798f36174a14edd28fe7a5e4e70e7))
+
 ### [5.12.3](https://github.com/nuxt-community/axios-module/compare/v5.12.2...v5.12.3) (2020-11-30)
 
 
