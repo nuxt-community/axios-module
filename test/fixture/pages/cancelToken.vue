@@ -14,7 +14,7 @@ export default {
       const source = this.$axios.CancelToken.source()
       this.$axios
         .$post(
-          'http://localhost:3000/api/test/foo/bar?delay=1000',
+          'http://localhost:3000/api/echo/foo/bar?delay=1000',
           { data: 'test' },
           {
             cancelToken: source.token

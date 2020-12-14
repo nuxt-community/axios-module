@@ -11,7 +11,7 @@ module.exports = {
     { handler: require('../../') }
   ],
   serverMiddleware: {
-    '/api/test': '~/api/test',
+    '/api/echo': '~/api/echo',
     '/api/cookie': '~/api/cookie'
   },
   axios: {
