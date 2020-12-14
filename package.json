@@ -20,7 +20,7 @@
     "test": "yarn lint && jest"
   },
   "dependencies": {
-    "@nuxtjs/proxy": "^2.0.1",
+    "@nuxtjs/proxy": "^2.1.0",
     "axios": "^0.21.0",
     "axios-retry": "^3.1.9",
     "consola": "^2.15.0",
