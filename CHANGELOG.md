@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.12.5](https://github.com/nuxt-community/axios-module/compare/v5.12.4...v5.12.5) (2021-01-04)
+
+
+### Bug Fixes
+
+* add `x-forwarded-host` to `proxyHeaderIgnore` defaults ([#462](https://github.com/nuxt-community/axios-module/issues/462)) ([433548b](https://github.com/nuxt-community/axios-module/commit/433548b1ca0e3ad22b9237add9093501fb2f7bfb)), closes [#456](https://github.com/nuxt-community/axios-module/issues/456)
+
 ### [5.12.4](https://github.com/nuxt-community/axios-module/compare/v5.12.3...v5.12.4) (2020-12-14)
 
 
