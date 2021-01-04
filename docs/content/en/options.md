@@ -166,13 +166,13 @@ In SSR context, this options sets client requests headers as default headers for
 This is useful for making requests which need cookie based auth on server side.
 This also helps making consistent requests in both SSR and Client Side code.
 
-> **NOTE:** If you are directing requests to an url that is protected by CloudFlare's CDN you should set this to `false` in order to prevent CloudFlare from mistakenly detecting a reverse proxy loop and returning a 403 error.
-
 ## `proxyHeadersIgnore`
 
-* Default `['host', 'accept', 'cf-ray', 'cf-connecting-ip', 'content-length']`
+* Default `['accept', 'host', 'x-forwarded-host', 'cf-ray', 'cf-connecting-ip', 'content-length', 'content-md5', 'content-type']`
 
-This is useful and efficient only when `proxyHeaders` is set to true. Removes unwanted requests headers to the API backend in SSR.
+This is useful and effective only when `proxyHeaders` is set to true. It removes unwanted requests headers to the API backend in SSR.
+
+Ignoring the headers `x-forwarded-host`, `cf-ray`, and `cf-connecting-ip` is necessary to avoid confusing reverse proxies (including CloudFlare) and avoid causing proxy loops.
 
 ## `headers`
 
