@@ -9,8 +9,6 @@ let nuxt, addTemplate
 
 const url = path => `http://localhost:3000${path}`
 
-jest.mock('esm', () => module => id => module.require(id))
-
 const setupNuxt = async (config) => {
   nuxt = new Nuxt(config)
 
