@@ -168,11 +168,11 @@ This also helps making consistent requests in both SSR and Client Side code.
 
 ## `proxyHeadersIgnore`
 
-* Default `['accept', 'host', 'x-forwarded-host', 'cf-ray', 'cf-connecting-ip', 'content-length', 'content-md5', 'content-type']`
+* Default `['accept', 'host', 'x-forwarded-host', 'x-forwarded-port', 'x-forwarded-proto', 'cf-ray', 'cf-connecting-ip', 'content-length', 'content-md5', 'content-type']`
 
 This is useful and effective only when `proxyHeaders` is set to true. It removes unwanted requests headers to the API backend in SSR.
 
-Ignoring the headers `x-forwarded-host`, `cf-ray`, and `cf-connecting-ip` is necessary to avoid confusing reverse proxies (including CloudFlare) and avoid causing proxy loops.
+Ignoring headers like `x-forwarded-host` is necessary to avoid confusing reverse proxies (like Nginx and CloudFlare) and avoid causing proxy loops.
 
 ## `headers`
 
