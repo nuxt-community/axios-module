@@ -24,8 +24,6 @@ Secure and easy [Axios](https://github.com/axios/axios) integration for [Nuxt](h
 
 <list :items="features"></list>
 
-<p class="flex items-center">Enjoy light and dark mode:&nbsp;<app-color-switcher class="inline-flex ml-2"></app-color-switcher></p>
-
 ## Logo
 
 Axios does not have an official logo yet, we decided to use the actual proposal submitted here: https://github.com/axios/axios/issues/2130
