@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.13.0](https://github.com/nuxt-community/axios-module/compare/v5.12.5...v5.13.0) (2021-02-01)
+
+
+### Features
+
+* support baseUrl and browserBaseUrl to handle casing typos ([8904847](https://github.com/nuxt-community/axios-module/commit/890484755c1897da8dd80c155fba2328c05f58f8))
+
+
+### Bug Fixes
+
+* add `x-forwarded-port` and `x-forwarded-proto` to `proxyHeaderIgnore` defaults ([#465](https://github.com/nuxt-community/axios-module/issues/465)) ([a1a1894](https://github.com/nuxt-community/axios-module/commit/a1a189486d63356433c939529d6e631f3fc9f923))
+
 ### [5.12.5](https://github.com/nuxt-community/axios-module/compare/v5.12.4...v5.12.5) (2021-01-04)
 
 
