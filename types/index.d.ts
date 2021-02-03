@@ -22,6 +22,8 @@ interface NuxtAxiosInstance extends AxiosStatic {
   onError(callback: (error: AxiosError) => void): void
   onRequestError(callback: (error: AxiosError) => void): void
   onResponseError(callback: (error: AxiosError) => void): void
+
+  create(options?: AxiosRequestConfig): NuxtAxiosInstance
 }
 
 interface AxiosOptions {
