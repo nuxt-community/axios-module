@@ -23,7 +23,7 @@
     "@nuxtjs/proxy": "^2.1.0",
     "axios": "^0.21.1",
     "axios-retry": "^3.1.9",
-    "consola": "^2.15.0",
+    "consola": "^2.15.3",
     "defu": "^3.2.2"
   },
   "devDependencies": {
