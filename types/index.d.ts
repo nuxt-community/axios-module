@@ -17,11 +17,11 @@ interface NuxtAxiosInstance extends AxiosStatic {
   setHeader(name: string, value?: string | false, scopes?: string | string[]): void
   setToken(token: string | false, type?: string, scopes?: string | string[]): void
 
-  onRequest(callback: (config: AxiosRequestConfig) => void): void
-  onResponse<T = any>(callback: (response: AxiosResponse<T>) => void): void
-  onError(callback: (error: AxiosError) => void): void
-  onRequestError(callback: (error: AxiosError) => void): void
-  onResponseError(callback: (error: AxiosError) => void): void
+  onRequest(callback: (config: AxiosRequestConfig) => void | AxiosRequestConfig | Promise<AxiosRequestConfig>): void
+  onResponse<T = any>(callback: (response: AxiosResponse<T>) => void | AxiosResponse<T> | Promise<AxiosResponse<T>> ): void
+  onError(callback: (error: AxiosError) => any): void
+  onRequestError(callback: (error: AxiosError) => any): void 
+  onResponseError(callback: (error: AxiosError) => any): void
 
   create(options?: AxiosRequestConfig): NuxtAxiosInstance
 }
