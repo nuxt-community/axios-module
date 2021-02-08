@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.13.1](https://github.com/nuxt-community/axios-module/compare/v5.13.0...v5.13.1) (2021-02-08)
+
+
+### Bug Fixes
+
+* **types:** add missing type for `create()` ([#475](https://github.com/nuxt-community/axios-module/issues/475)) ([62f17ca](https://github.com/nuxt-community/axios-module/commit/62f17ca2ba005a74762f67b004ebcc7b612425ac))
+* **types:** update interceptors type ([#476](https://github.com/nuxt-community/axios-module/issues/476)) ([ecfab9a](https://github.com/nuxt-community/axios-module/commit/ecfab9a7cf655737af46dd02ba013c5600b81e82))
+
 ## [5.13.0](https://github.com/nuxt-community/axios-module/compare/v5.12.5...v5.13.0) (2021-02-01)
 
 
