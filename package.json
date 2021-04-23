@@ -24,7 +24,7 @@
     "axios": "^0.21.1",
     "axios-retry": "^3.1.9",
     "consola": "^2.15.3",
-    "defu": "^3.2.2"
+    "defu": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "latest",
