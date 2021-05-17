@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.13.2](https://github.com/nuxt-community/axios-module/compare/v5.13.1...v5.13.2) (2021-05-17)
+
 ### [5.13.1](https://github.com/nuxt-community/axios-module/compare/v5.13.0...v5.13.1) (2021-02-08)
 
 
