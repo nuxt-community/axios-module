@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.13.3](https://github.com/nuxt-community/axios-module/compare/v5.13.2...v5.13.3) (2021-05-17)
+
+
+### Bug Fixes
+
+* transpile defu ([cf1a03f](https://github.com/nuxt-community/axios-module/commit/cf1a03f99a2591bd60160292864b7e16f86eb5cf)), closes [unjs/defu#28](https://github.com/unjs/defu/issues/28)
+
 ### [5.13.2](https://github.com/nuxt-community/axios-module/compare/v5.13.1...v5.13.2) (2021-05-17)
 
 ### [5.13.1](https://github.com/nuxt-community/axios-module/compare/v5.13.0...v5.13.1) (2021-02-08)
