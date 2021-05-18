@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.13.4](https://github.com/nuxt-community/axios-module/compare/v5.13.3...v5.13.4) (2021-05-18)
+
+
+### Bug Fixes
+
+* `build.transpile` guard for nuxt@1.x (fixes [#498](https://github.com/nuxt-community/axios-module/issues/498)) ([66d56ab](https://github.com/nuxt-community/axios-module/commit/66d56ab8adbb50b470bc298d27bcd1a6820ab958))
+
 ### [5.13.3](https://github.com/nuxt-community/axios-module/compare/v5.13.2...v5.13.3) (2021-05-17)
 
 
