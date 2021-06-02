@@ -192,5 +192,5 @@ Headers added to all requests. If provided, will be merged with the defaults.
 }
 ```
 
-- **NOTE:** Do NOT include any credentials or tokens here. One can easily access them.
-- **NOTE:** This headers are effective to ALL requests. Please take care and consider providing special headers on each call that needs this unless you are pretty sure you always need to add headers.
+- **NOTE:** Do NOT include any credentials or tokens here. They can be easily accessed.
+- **NOTE:** These headers take effect on ALL requests. Wherever possible, consider providing headers on specific requests instead.
