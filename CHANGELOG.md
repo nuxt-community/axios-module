@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.13.6](https://github.com/nuxt-community/axios-module/compare/v5.13.5...v5.13.6) (2021-06-02)
+
+
+### Bug Fixes
+
+* setHeader function returns after the first scope element ([#507](https://github.com/nuxt-community/axios-module/issues/507)) ([cb5e29d](https://github.com/nuxt-community/axios-module/commit/cb5e29dc61a22c6b45b90c245552f1fa2cb5719b))
+
 ### [5.13.5](https://github.com/nuxt-community/axios-module/compare/v5.13.4...v5.13.5) (2021-05-26)
 
 
