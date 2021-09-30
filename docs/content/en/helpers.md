@@ -1,8 +1,8 @@
 ---
-title: 'Helpers'
-description: 'Discover the helpers to supercharge your Axios instance'
+title: "Helpers"
+description: "Discover the helpers to supercharge your Axios instance"
 position: 6
-category: 'API'
+category: "API"
 ---
 
 Discover the helpers to supercharge your axios instance.
@@ -23,27 +23,27 @@ Example: (`plugins/axios.js`)
 
 ```js
 export default function ({ $axios, redirect }) {
-  $axios.onError(error => {
-    if(error.response.status === 500) {
-      redirect('/sorry')
+  $axios.onError((error) => {
+    if (error.response.status === 500) {
+      redirect("/sorry");
     }
-  })
+  });
 }
 ```
 
-When intercepting an error, you can return a resolved promise to prevent the error from propagating. 
+When intercepting an error, you can return a resolved promise to prevent the error from propagating.
 
 Example: (`plugins/axios.js`)
 
 ```js
 export default function ({ $axios, error: nuxtError }) {
-  $axios.onError(error => {
+  $axios.onError((error) => {
     nuxtError({
       statusCode: error.response.status,
       message: error.message,
     });
     return Promise.resolve(false);
-  })
+  });
 }
 ```
 
@@ -65,20 +65,20 @@ Use this when you need a dynamic runtime url. Otherwise use config and environme
 
 Parameters:
 
-* **baseURL**: Base URL which is used and prepended to make requests in server side.
+- **baseURL**: Base URL which is used and prepended to make requests in server side.
 
 ```js
 // Set baseURL (both client and server)
-this.$axios.setBaseURL('http://api.example.com')
+this.$axios.setBaseURL("http://api.example.com");
 
 // Change URL only for client
 if (process.client) {
-  this.$axios.setBaseURL('http://api.example.com')
+  this.$axios.setBaseURL("http://api.example.com");
 }
 
 // Change URL only for server
 if (process.server) {
-  this.$axios.setBaseURL('http://api.example.com')
+  this.$axios.setBaseURL("http://api.example.com");
 }
 ```
 
@@ -90,27 +90,27 @@ Axios instance has a helper to easily set any header.
 
 Parameters:
 
-* **name**: Name of the header
-* **value**: Value of the header
-* **scopes**: Send only on specific type of requests. Defaults
-  * Type: _Array_ or _String_
-  * Defaults to `common` meaning all types of requests
-  * Can be `get`, `post`, `delete`, ...
+- **name**: Name of the header
+- **value**: Value of the header
+- **scopes**: Send only on specific type of requests. Defaults
+  - Type: _Array_ or _String_
+  - Defaults to `common` meaning all types of requests
+  - Can be `get`, `post`, `delete`, ...
 
 ```js
 // Adds header: `Authorization: 123` to all requests
-this.$axios.setHeader('Authorization', '123')
+this.$axios.setHeader("Authorization", "123");
 
 // Overrides `Authorization` header with new value
-this.$axios.setHeader('Authorization', '456')
+this.$axios.setHeader("Authorization", "456");
 
 // Adds header: `Content-Type: application/x-www-form-urlencoded` to only post requests
-this.$axios.setHeader('Content-Type', 'application/x-www-form-urlencoded', [
-  'post'
-])
+this.$axios.setHeader("Content-Type", "application/x-www-form-urlencoded", [
+  "post",
+]);
 
 // Removes default Content-Type header from `post` scope
-this.$axios.setHeader('Content-Type', false, ['post'])
+this.$axios.setHeader("Content-Type", false, ["post"]);
 ```
 
 ## `setToken`
@@ -121,26 +121,54 @@ Axios instance has an additional helper to easily set global authentication head
 
 Parameters:
 
-* **token**: Authorization token
-* **type**: Authorization token prefix(Usually `Bearer`).
-* **scopes**: Send only on specific type of requests. Defaults
-  * Type: _Array_ or _String_
-  * Defaults to `common` meaning all types of requests
-  * Can be `get`, `post`, `delete`, ...
+- **token**: Authorization token
+- **type**: Authorization token prefix(Usually `Bearer`).
+- **scopes**: Send only on specific type of requests. Defaults
+  - Type: _Array_ or _String_
+  - Defaults to `common` meaning all types of requests
+  - Can be `get`, `post`, `delete`, ...
 
 ```js
 // Adds header: `Authorization: 123` to all requests
-this.$axios.setToken('123')
+this.$axios.setToken("123");
 
 // Overrides `Authorization` header with new value
-this.$axios.setToken('456')
+this.$axios.setToken("456");
 
 // Adds header: `Authorization: Bearer 123` to all requests
-this.$axios.setToken('123', 'Bearer')
+this.$axios.setToken("123", "Bearer");
 
 // Adds header: `Authorization: Bearer 123` to only post and delete requests
-this.$axios.setToken('123', 'Bearer', ['post', 'delete'])
+this.$axios.setToken("123", "Bearer", ["post", "delete"]);
 
 // Removes default Authorization header from `common` scope (all requests)
-this.$axios.setToken(false)
+this.$axios.setToken(false);
+```
+
+## `getToken`
+
+- Signature: `getToken()`
+
+Axios module also has an helper to easily fetch your token that you set previously.
+
+```js
+// Let's assume you have set a Bearer 123 token
+this.$axios.setToken("123", "Bearer");
+
+// You can fetch it with this helper
+this.$axios.getToken();
+```
+
+## `deleteToken()`
+
+- Signature: `deleteToken()`
+
+Axios plugin has a helper to quickly remove the token that you have set.
+
+```js
+// Let's assume you have set a Bearer 123 token
+this.$axios.setToken("123", "Bearer");
+
+// You can remove it with this helper
+this.$axios.deleteToken();
 ```
