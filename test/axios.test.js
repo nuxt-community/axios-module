@@ -64,6 +64,27 @@ const testSuite = () => {
     })
   })
 
+  test('getToken', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/mounted'))
+    window.onNuxtReady(() => {
+      const $axios = window.$nuxt.$axios
+      const newInstance = $axios.create()
+      newInstance.setToken('Token', 'Bearer')
+      expect($axios.getToken()).toBe('Bearer Token')
+    })
+  })
+
+  test('deleteToken', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/mounted'))
+    window.onNuxtReady(() => {
+      const $axios = window.$nuxt.$axios
+      const newInstance = $axios.create()
+      newInstance.setToken('Token', 'Bearer')
+      newInstance.deleteToken()
+      expect($axios.getToken()).toBe(null)
+    })
+  })
+
   test('ssr', async () => {
     const makeReq = login => axios
       .get(url('/ssr' + (login ? '?login' : '')))
