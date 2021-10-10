@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
-    "haxios": "^1.0.14",
+    "haxios": "^1.0.16",
     "consola": "^2.15.3",
     "defu": "^5.0.0",
     "null-loader": "^4.0.1"
