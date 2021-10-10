@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
-    "haxios": "^1.0.13",
+    "haxios": "^1.0.14",
     "consola": "^2.15.3",
     "defu": "^5.0.0",
     "null-loader": "^4.0.1"
@@ -33,7 +33,7 @@
     "babel-eslint": "latest",
     "babel-jest": "latest",
     "codecov": "latest",
-    "eslint": "latest",
+    "eslint": "^7",
     "jest": "latest",
     "nuxt-edge": "latest",
     "standard-version": "latest",
