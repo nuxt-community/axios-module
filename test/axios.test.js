@@ -1,7 +1,7 @@
 jest.setTimeout(60000)
 
 const { Nuxt, Builder } = require('nuxt-edge')
-const axios = require('axios')
+const axios = require('haxios').default
 
 const config = require('./fixture/nuxt.config')
 

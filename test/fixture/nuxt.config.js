@@ -15,6 +15,7 @@ module.exports = {
     '/api/cookie': '~/api/cookie'
   },
   axios: {
+    polyfillFetch: true,
     prefix: '/api',
     proxy: true,
     credentials: true,
