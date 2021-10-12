@@ -1,28 +1,64 @@
-import { AxiosError, AxiosRequestConfig, AxiosResponse, AxiosStatic, AxiosConfig } from 'haxios'
+import { AxiosError, HAxiosRequestConfig, AxiosRequestConfig, AxiosResponse, AxiosStatic, AxiosConfig } from 'haxios'
 import Vue from 'vue'
 import './vuex'
 
 interface NuxtAxiosInstance extends AxiosStatic {
-  $request<T = any>(config: AxiosRequestConfig): Promise<T>
-  $get<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>
-  $delete<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>
-  $head<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>
-  $options<T = any>(url: string, config?: AxiosRequestConfig): Promise<T>
-  $post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
-  $put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
-  $patch<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>
+  $request<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
+  $get<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
+  $delete<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
+  $head<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
+  $options<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(url: string, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
+  $post<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(url: string, data?: INPUT, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
+  $put<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(url: string, data?: any, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
+  $patch<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(url: string, data?: any, config?: CONFIG): Promise<AxiosResponse<RETURN, INPUT, CONFIG>['data']>
 
   setBaseURL(baseURL: string): void
   setHeader(name: string, value?: string | false, scopes?: string | string[]): void
   setToken(token: string | false, type?: string, scopes?: string | string[]): void
 
-  onRequest(callback: (config: AxiosRequestConfig) => void | AxiosRequestConfig | Promise<AxiosRequestConfig>): void
-  onResponse<T = any>(callback: (response: AxiosResponse<T>) => void | AxiosResponse<T> | Promise<AxiosResponse<T>> ): void
+  onRequest(callback: (config: HAxiosRequestConfig) => void | HAxiosRequestConfig | Promise<HAxiosRequestConfig>): void
+  onResponse<
+    RETURN = any,
+    INPUT = any,
+    CONFIG extends HAxiosRequestConfig<INPUT> = HAxiosRequestConfig<INPUT>
+    >(callback: (response: AxiosResponse<RETURN, INPUT, CONFIG>) => void | AxiosResponse<RETURN, INPUT, CONFIG> | Promise<AxiosResponse<RETURN, INPUT, CONFIG>> ): void
   onError(callback: (error: AxiosError) => any): void
   onRequestError(callback: (error: AxiosError) => any): void
   onResponseError(callback: (error: AxiosError) => any): void
 
-  create(options?: AxiosRequestConfig): NuxtAxiosInstance
+  create(options?: HAxiosRequestConfig): NuxtAxiosInstance
 }
 
 interface AxiosOptions {
@@ -51,9 +87,9 @@ interface AxiosOptions {
 }
 
 declare module 'haxios' {
-    interface AxiosRequestConfig {
-        progress?: boolean;
-    }
+  interface AxiosRequestConfig {
+    progress?: boolean;
+  }
 }
 
 declare module '@nuxt/vue-app' {
