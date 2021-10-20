@@ -21,8 +21,8 @@
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
-    "axios": "^0.21.1",
-    "axios-retry": "^3.1.9",
+    "axios": "^0.23.0",
+    "axios-retry": "^3.2.3",
     "consola": "^2.15.3",
     "defu": "^5.0.0"
   },
