@@ -15,6 +15,12 @@ features:
   - Auto retry requests with axios-retry
 ---
 
+<alert type="warning">
+
+Axios module supports Nuxt 2. Nuxt 3 users can use the new isomorphic [$fetch API](https://v3.nuxtjs.org/docs/usage/data-fetching/#usefetch) ([migration guide](https://v3.nuxtjs.org/docs/migration/component-options#isomorphic-fetch)).
+
+</alert>
+
 <img src="/preview.png" class="light-img" width="1280" height="640" alt="Nuxt Axios"/>
 <img src="/preview-dark.png" class="dark-img" width="1280" height="640" alt="Nuxt Axios"/>
 
