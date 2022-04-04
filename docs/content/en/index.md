@@ -17,7 +17,7 @@ features:
 
 <alert type="warning">
 
-Nuxt 3 users can use the new [$fetch](https://v3.nuxtjs.org/docs/usage/data-fetching/#usefetch) method integrated in the framework.
+Axios module supports Nuxt 2. Nuxt 3 users can use the new isomorphic [$fetch API](https://v3.nuxtjs.org/docs/usage/data-fetching/#usefetch) ([migration guide](https://v3.nuxtjs.org/docs/migration/component-options#isomorphic-fetch)).
 
 </alert>
 
