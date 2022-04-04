@@ -15,6 +15,12 @@ features:
   - Auto retry requests with axios-retry
 ---
 
+<alert type="warning">
+
+Nuxt 3 users can use the new [$fetch](https://v3.nuxtjs.org/docs/usage/data-fetching/#usefetch) method integrated in the framework.
+
+</alert>
+
 <img src="/preview.png" class="light-img" width="1280" height="640" alt="Nuxt Axios"/>
 <img src="/preview-dark.png" class="dark-img" width="1280" height="640" alt="Nuxt Axios"/>
 
