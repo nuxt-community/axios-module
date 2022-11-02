@@ -11,6 +11,7 @@ module.exports = {
     '^@@$': '<rootDir>',
     '^@/(.*)$': '<rootDir>/lib/$1'
   },
+  transformIgnorePatterns: ['/node_modules/(?!(axios)/)'],
   transform: {
     '^.+\\.js$': 'babel-jest'
   }
