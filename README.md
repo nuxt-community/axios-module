@@ -8,7 +8,7 @@
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-> Secure and easy [Axios](https://github.com/axios/axios) integration for [Nuxt](https://nuxtjs.org).
+> Secure and easy [Axios](https://github.com/axios/axios) integration for [Nuxt 2](https://nuxt.com).
 
 - [✨ &nbsp;Release Notes](https://axios.nuxtjs.org/releases)
 - [📖 &nbsp;Documentation](https://axios.nuxtjs.org)
