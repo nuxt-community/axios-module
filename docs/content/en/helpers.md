@@ -31,6 +31,25 @@ export default function ({ $axios, redirect }) {
 }
 ```
 
+Sometimes you might need a asynchronous function to run before every request (e.g. to refresh expired tokens).
+
+Example: (`plugins/axios.js`)
+
+```js
+export default function ({ $axios }) {
+    $axios.onRequest(async (config) => {
+        try {
+            await ["your async function"]
+        } catch (error) {
+            console.log("An error occured")
+        }
+        // it is crucial to return the config option so that the request can continue
+        return config
+    })
+
+}
+```
+
 When intercepting an error, you can return a resolved promise to prevent the error from propagating. 
 
 Example: (`plugins/axios.js`)
