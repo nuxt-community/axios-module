@@ -179,7 +179,7 @@ Ignoring headers like `x-forwarded-host` is necessary to avoid confusing reverse
 Headers added to all requests. If provided, will be merged with the defaults.
 
 ```js
-{
+headers:{
     common: {
       'Accept': 'application/json, text/plain, */*'
     },
