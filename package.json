@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@nuxtjs/proxy": "^2.1.0",
-    "axios": "^0.25.0",
+    "axios": "^1.0.0",
     "axios-retry": "^3.2.4",
     "consola": "^2.15.3",
     "defu": "^5.0.1"
@@ -34,7 +34,8 @@
     "babel-jest": "latest",
     "codecov": "latest",
     "eslint": "latest",
-    "jest": "latest",
+    "jest": "^29.2.2",
+    "jsdom": "latest",
     "nuxt-edge": "latest",
     "standard-version": "latest"
   }
