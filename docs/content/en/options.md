@@ -168,7 +168,7 @@ This also helps making consistent requests in both SSR and Client Side code.
 
 ## `proxyHeadersIgnore`
 
-* Default `['accept', 'host', 'x-forwarded-host', 'x-forwarded-port', 'x-forwarded-proto', 'cf-ray', 'cf-connecting-ip', 'content-length', 'content-md5', 'content-type']`
+* Default `['accept', 'host', 'x-forwarded-host', 'x-forwarded-port', 'x-forwarded-proto', 'cf-ray', 'cf-connecting-ip', 'content-length', 'content-md5', 'content-type', 'via']`
 
 This is useful and effective only when `proxyHeaders` is set to true. It removes unwanted requests headers to the API backend in SSR.
 
