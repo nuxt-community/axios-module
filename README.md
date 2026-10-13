@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository is archived. `@nuxtjs/axios` was built for Nuxt 2, which reached end of life on June 30, 2024. In Nuxt 3+, use the built-in [`$fetch`](https://nuxt.com/docs/api/utils/dollarfetch).
+
 [![@nuxtjs/axios](https://axios.nuxtjs.org/preview.png)](https://axios.nuxtjs.org)
 
 # @nuxtjs/axios
